@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutDialogContainer"
+    android:layout_margin="20dp"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_alert_dialog_bg"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/custom_alert_dialog_bg_title"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!-- 表格佈局 -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="30dp"
+            android:stretchColumns="1"
+            android:background="@drawable/event_detail_table_border"
+            android:divider="@drawable/event_detail_table_divider"
+            android:showDividers="middle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTitle">
+            <!-- 活動編號 -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="1dp"
+                    android:background="@drawable/event_detail_table_cell_right_border"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:text="@string/Event_ID"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+                <TextView
+                    android:id="@+id/text_EventID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:paddingStart="3dp"
+                    android:text="19890604"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+            </TableRow>
+            <!-- 活動日期 -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="1dp"
+                    android:background="@drawable/event_detail_table_cell_right_border"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:text="@string/Event_Time"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+                <TextView
+                    android:id="@+id/text_EventTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:paddingStart="3dp"
+                    android:text="1989/6/4上午00:00:00~\n1989/6/4下午23:59:59"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+            </TableRow>
+            <!-- 活動地點 -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="1dp"
+                    android:background="@drawable/event_detail_table_cell_right_border"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:text="@string/Event_Location"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+                <TextView
+                    android:id="@+id/text_EventLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:paddingStart="3dp"
+                    android:text="天安門"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+            </TableRow>
+            <!-- 活動說明 -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="1dp"
+                    android:background="@drawable/event_detail_table_cell_right_border"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:text="@string/Event_Detail"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="79dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/text_EventDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:paddingStart="3dp"
+                        android:text="活\n動\n說\n明"
+                        android:textColor="@color/text_color"
+                        android:textSize="13sp"
+                        android:scrollbars="vertical" />
+                </ScrollView>
+            </TableRow>
+            <!-- 主辦單位 -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="1dp"
+                    android:background="@drawable/event_detail_table_cell_right_border"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:text="@string/Event_Department"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+                <TextView
+                    android:id="@+id/text_EventDepartment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:paddingStart="3dp"
+                    android:text="窩不知道"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+            </TableRow>
+            <!-- 聯絡資訊 -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="67dp"
+                    android:padding="1dp"
+                    android:background="@drawable/event_detail_table_cell_right_border"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:text="@string/Event_ContactInfo"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:paddingStart="3dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:padding="1dp"
+                            android:src="@drawable/ic_contact_name" />
+                        <TextView
+                            android:id="@+id/text_EventContactInfoName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="窩不知道"
+                            android:textColor="@color/text_color"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:padding="1dp"
+                            android:src="@drawable/ic_contact_phone" />
+                        <TextView
+                            android:id="@+id/text_EventContactInfoTel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="窩不知道"
+                            android:textColor="@color/text_color"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:padding="1dp"
+                            android:src="@drawable/ic_contact_mail" />
+                        <TextView
+                            android:id="@+id/text_EventContactInfoMail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="窩不知道"
+                            android:textColor="@color/text_color"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </TableRow>
+            <!-- 相關連結 -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="1dp"
+                    android:background="@drawable/event_detail_table_cell_right_border"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:text="@string/Event_Link"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+                <TextView
+                    android:id="@+id/text_EventLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:paddingStart="3dp"
+                    android:text="https://youtu.be/xvFZjo5PgG0"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+            </TableRow>
+            <!-- 備註 -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="1dp"
+                    android:background="@drawable/event_detail_table_cell_right_border"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:text="@string/Event_Remark"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+                <TextView
+                    android:id="@+id/text_EventRemark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:paddingStart="3dp"
+                    android:text="我是備註"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+            </TableRow>
+            <!-- 多元認證 -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="1dp"
+                    android:background="@drawable/event_detail_table_cell_right_border"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:text="@string/Event_factor_authentication"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+                <TextView
+                    android:id="@+id/text_Event_FactorAuthentication"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:paddingStart="3dp"
+                    android:text="這裡啥都沒有"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+            </TableRow>
+            <!-- 報名時間 -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="1dp"
+                    android:background="@drawable/event_detail_table_cell_right_border"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:text="@string/Event_RegisterTime"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+                <TextView
+                    android:id="@+id/text_EventRegisterTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:paddingStart="3dp"
+                    android:text="過期囉~"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+            </TableRow>
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/buttonAction"
+        android:layout_marginStart="113dp"
+        android:layout_marginEnd="113dp"
+        android:background="@drawable/custom_alert_dialog_btn"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:text="@string/Dialog_OK"
+        app:layout_constraintBottom_toBottomOf="@id/layoutDialog"
+        app:layout_constraintTop_toBottomOf="@id/layoutDialog"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

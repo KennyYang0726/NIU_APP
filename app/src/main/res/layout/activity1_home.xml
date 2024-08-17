@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/_drawer"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:openDrawer="start">
+	<androidx.coordinatorlayout.widget.CoordinatorLayout
+		android:id="@+id/_coordinator"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<com.google.android.material.appbar.AppBarLayout
+			android:id="@+id/_app_bar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:theme="@style/AppTheme.AppBarOverlay">
+			<androidx.appcompat.widget.Toolbar
+				android:id="@+id/_toolbar"
+				android:layout_width="match_parent"
+				android:layout_height="?attr/actionBarSize"
+				android:background="?attr/colorPrimary"
+				app:popupTheme="@style/AppTheme.PopupOverlay">
+				<Button
+					android:id="@+id/button_appbar"
+					android:layout_width="wrap_content"
+					android:layout_height="31dp"
+					android:layout_gravity="end"
+					android:layout_marginRight="11dp"
+					android:background="@drawable/rounded_button"
+					android:textColor="@color/white"
+					android:visibility="gone"
+					android:textSize="13sp" />
+			</androidx.appcompat.widget.Toolbar>
+		</com.google.android.material.appbar.AppBarLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+			<!-- 主頁 -->
+			<LinearLayout
+				android:id="@+id/Linear_HomePage"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="11dp"
+					android:layout_marginRight="11dp"
+					android:layout_weight="1"
+					android:orientation="vertical">
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="29dp"
+						android:layout_weight="1"
+						android:gravity="center"
+						android:orientation="horizontal">
+
+						<!--M園區-->
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:orientation="vertical">
+
+							<ImageView
+								android:id="@+id/image_EUNI"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_weight="1"
+								android:gravity="center"
+								android:src="@drawable/euni" />
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_weight="1"
+								android:gravity="center"
+								android:text="@string/EUNI"
+								android:textColor="@color/text_color"
+								android:textSize="15sp" />
+						</LinearLayout>
+						<!--成績查詢-->
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:orientation="vertical">
+
+							<ImageView
+								android:id="@+id/image_Score_Inquiry"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_weight="1"
+								android:gravity="center"
+								android:src="@drawable/score_inquiry" />
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_weight="1"
+								android:gravity="center"
+								android:text="@string/Score_Inquiry"
+								android:textColor="@color/text_color"
+								android:textSize="15sp" />
+						</LinearLayout>
+						<!--郵局信箱-->
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:orientation="vertical">
+
+							<ImageView
+								android:id="@+id/image_MyClassSchedule"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_weight="1"
+								android:gravity="center"
+								android:src="@drawable/my_class_schedule" />
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_weight="1"
+								android:gravity="center"
+								android:text="@string/Class_Schedule"
+								android:textColor="@color/text_color"
+								android:textSize="15sp" />
+						</LinearLayout>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:gravity="center"
+						android:orientation="horizontal">
+
+						<!--活動報名-->
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:orientation="vertical">
+
+							<ImageView
+								android:id="@+id/image_Event_Registration"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_weight="1"
+								android:gravity="center"
+								android:src="@drawable/event_registration" />
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_weight="1"
+								android:gravity="center"
+								android:text="@string/Event_Registration"
+								android:textColor="@color/text_color"
+								android:textSize="15sp" />
+						</LinearLayout>
+						<!--聯絡我們-->
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:orientation="vertical">
+
+							<ImageView
+								android:id="@+id/image_Contact_Us"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_weight="1"
+								android:gravity="center"
+								android:src="@drawable/contact_us" />
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_weight="1"
+								android:gravity="center"
+								android:text="@string/Contact_Us"
+								android:textColor="@color/text_color"
+								android:textSize="15sp" />
+						</LinearLayout>
+						<!--畢業門檻-->
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:orientation="vertical">
+
+							<ImageView
+								android:id="@+id/image_Graduation_Threshold"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_weight="1"
+								android:gravity="center"
+								android:src="@drawable/graduation_threshold" />
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_weight="1"
+								android:gravity="center"
+								android:text="@string/Graduation_Threshold"
+								android:textColor="@color/text_color"
+								android:textSize="15sp" />
+						</LinearLayout>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="53dp"
+						android:layout_weight="1"
+						android:gravity="center"
+						android:orientation="horizontal">
+
+						<!--選課系統-->
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:orientation="vertical">
+
+							<ImageView
+								android:id="@+id/image_Subject_System"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_weight="1"
+								android:gravity="center"
+								android:src="@drawable/subject_system" />
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_weight="1"
+								android:gravity="center"
+								android:text="@string/Subject_System"
+								android:textColor="@color/text_color"
+								android:textSize="15sp" />
+						</LinearLayout>
+						<!--公車動態-->
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:orientation="vertical">
+
+							<ImageView
+								android:id="@+id/image_Bus"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_weight="1"
+								android:gravity="center"
+								android:src="@drawable/bus" />
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_weight="1"
+								android:gravity="center"
+								android:text="@string/Bus"
+								android:textColor="@color/text_color"
+								android:textSize="15sp" />
+						</LinearLayout>
+						<!--Zuvio-->
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:orientation="vertical">
+
+							<ImageView
+								android:id="@+id/image_Zuvio"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_weight="1"
+								android:gravity="center"
+								android:src="@drawable/zuvio" />
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_weight="1"
+								android:gravity="center"
+								android:text="@string/Zuvio"
+								android:textColor="@color/text_color"
+								android:textSize="15sp" />
+						</LinearLayout>
+
+					</LinearLayout>
+				</LinearLayout>
+
+				<ImageView
+					android:id="@+id/imageView"
+					android:layout_width="match_parent"
+					android:layout_height="213dp"
+					android:layout_weight="0"
+					android:src="@drawable/niu_background" />
+			</LinearLayout>
+
+			<!-- 公告 -->
+			<LinearLayout
+				android:id="@+id/Linear_Announcement"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical"
+				android:visibility="gone">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:gravity="center"
+					android:text="@string/Only_Show_First_15_Entries"
+					android:textColor="@color/text_color"
+					android:textSize="19sp"
+					android:padding="8dp"/>
+
+				<ListView
+					android:id="@+id/List_Announcement"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:divider="@null"
+					android:dividerHeight="11dp"
+					android:scrollbarStyle="outsideOverlay" />
+			</LinearLayout>
+
+			<!-- 行事曆 -->
+			<LinearLayout
+				android:id="@+id/Linear_Calender"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical"
+				android:visibility="gone">
+
+				<com.github.barteksc.pdfviewer.PDFView
+					android:id="@+id/PDF_Calender_View"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent" />
+
+			</LinearLayout>
+
+			<!-- 成就 -->
+			<LinearLayout
+				android:id="@+id/Linear_Achievements"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical"
+				android:visibility="gone">
+
+				<ListView
+					android:id="@+id/List_Achievements"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:divider="@null"
+					android:dividerHeight="7dp"
+					android:scrollbarStyle="outsideOverlay" />
+			</LinearLayout>
+
+			<!-- 說明 -->
+			<LinearLayout
+				android:id="@+id/Linear_huh"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical"
+				android:visibility="gone">
+
+				<ListView
+					android:id="@+id/List_huh"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent" />
+			</LinearLayout>
+
+			<!-- 關於 -->
+			<LinearLayout
+				android:id="@+id/Linear_About"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical"
+				android:visibility="gone">
+
+				<ScrollView
+					android:layout_width="match_parent"
+					android:layout_height="match_parent">
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="vertical">
+
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_margin="13dp"
+							android:background="@drawable/linear_inside"
+							android:orientation="vertical"
+							android:padding="11dp">
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_margin="13dp"
+								android:gravity="center"
+								android:text="@string/Developer"
+								android:textAllCaps="false"
+								android:textColor="@color/text_color"
+								android:textSize="31sp" />
+
+							<ImageView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:src="@drawable/james" />
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:gravity="center"
+								android:text="楊博凱"
+								android:textColor="@color/text_color"
+								android:textSize="23sp" />
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_margin="13dp"
+								android:gravity="center"
+								android:text="@string/Developer_0"
+								android:textAllCaps="false"
+								android:textColor="@color/text_color"
+								android:textSize="31sp" />
+
+							<LinearLayout
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:layout_marginLeft="23dp"
+								android:layout_marginRight="23dp"
+								android:layout_weight="1"
+								android:orientation="horizontal">
+
+								<LinearLayout
+									android:layout_width="match_parent"
+									android:layout_height="match_parent"
+									android:layout_weight="1"
+									android:orientation="vertical">
+
+									<ImageView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:src="@drawable/peter" />
+
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:gravity="center"
+										android:text="章沛倫"
+										android:textColor="@color/text_color"
+										android:textSize="23sp" />
+
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:gravity="center"
+										android:text="@string/Information_Engineering"
+										android:textColor="@color/text_color_secondary"
+										android:textSize="19sp" />
+								</LinearLayout>
+
+								<LinearLayout
+									android:layout_width="match_parent"
+									android:layout_height="match_parent"
+									android:layout_weight="1"
+									android:orientation="vertical">
+
+									<ImageView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:src="@drawable/shao" />
+
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:gravity="center"
+										android:text="呂紹誠"
+										android:textColor="@color/text_color"
+										android:textSize="23sp" />
+
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:gravity="center"
+										android:text="@string/Information_Engineering"
+										android:textColor="@color/text_color_secondary"
+										android:textSize="19sp" />
+								</LinearLayout>
+							</LinearLayout>
+
+							<LinearLayout
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:layout_marginLeft="23dp"
+								android:layout_marginRight="23dp"
+								android:layout_weight="1"
+								android:orientation="horizontal">
+
+								<LinearLayout
+									android:layout_width="match_parent"
+									android:layout_height="match_parent"
+									android:layout_weight="1"
+									android:orientation="vertical">
+
+									<ImageView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:src="@drawable/ken" />
+
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:gravity="center"
+										android:text="周楷崴"
+										android:textColor="@color/text_color"
+										android:textSize="23sp" />
+
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:gravity="center"
+										android:text="@string/Information_Engineering"
+										android:textColor="@color/text_color_secondary"
+										android:textSize="19sp" />
+								</LinearLayout>
+
+								<LinearLayout
+									android:layout_width="match_parent"
+									android:layout_height="match_parent"
+									android:layout_weight="1"
+									android:orientation="vertical">
+
+									<ImageView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:src="@drawable/david" />
+
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:gravity="center"
+										android:text="賴宥蓁"
+										android:textColor="@color/text_color"
+										android:textSize="23sp" />
+
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:gravity="center"
+										android:text="@string/Information_Engineering"
+										android:textColor="@color/text_color_secondary"
+										android:textSize="19sp" />
+								</LinearLayout>
+							</LinearLayout>
+
+
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_margin="13dp"
+							android:background="@drawable/linear_inside"
+							android:orientation="vertical"
+							android:padding="11dp">
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_margin="13dp"
+								android:gravity="center"
+								android:text="@string/Instructor"
+								android:textAllCaps="false"
+								android:textColor="@color/text_color"
+								android:textSize="31sp" />
+
+							<ImageView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:src="@drawable/chhuang" />
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:gravity="center"
+								android:text="@string/DR_ChaoXi"
+								android:textColor="@color/text_color"
+								android:textSize="23sp" />
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:gravity="center"
+								android:text="@string/Information_Engineering_DR"
+								android:textColor="@color/text_color_secondary"
+								android:textSize="19sp" />
+
+						</LinearLayout>
+					</LinearLayout>
+				</ScrollView>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/Linear_Debug"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical"
+				android:visibility="gone">
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<!-- 避免載入入度慢，設置1dp網頁 -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			tools:ignore="WebViewLayout">
+
+			<WebView
+				android:id="@+id/web_Announcement"
+				android:layout_width="1dp"
+				android:layout_height="1dp" />
+
+			<WebView
+				android:id="@+id/web_EUNI"
+				android:layout_width="1dp"
+				android:layout_height="1dp" />
+			<WebView
+				android:id="@+id/web_Zuvio"
+				android:layout_width="1dp"
+				android:layout_height="1dp" />
+			<WebView
+				android:id="@+id/web_CCSYS"
+				android:layout_width="1dp"
+				android:layout_height="1dp" />
+			<WebView
+				android:id="@+id/web_Acade"
+				android:layout_width="1dp"
+				android:layout_height="1dp" />
+		</LinearLayout>
+
+		<FrameLayout
+			android:id="@+id/WAITING"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+			<!-- 登出中 覆蓋層 -->
+			<include layout="@layout/progress_overlay"/>
+		</FrameLayout>
+
+	</androidx.coordinatorlayout.widget.CoordinatorLayout>
+	<LinearLayout
+		android:id="@+id/_nav_view"
+		android:layout_width="117dp"
+		android:layout_height="match_parent"
+		android:layout_gravity="start"
+		android:background="#EEEEEE">
+		<include layout="@layout/activity1_home_drawer" />
+	</LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

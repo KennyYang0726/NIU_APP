@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name" translatable="false">NIU app</string>
+	<string name="Notification_Title" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;Notification Permission&#160;&#160;&#160;&#160;&#160;&#160;</string>
+	<string name="Notification_Content" translatable="false">We don\'t want you to miss any notifications\nWe hope you can agree to notification permissions.</string>
+	<string name="Location_Title" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;Location Permission&#160;&#160;&#160;&#160;&#160;&#160;</string>
+	<string name="Location_Content" translatable="false">We only use your location information in the app\nsuch as Zuvio GPS roll call\n and "Night Market Guy" achievement.\nThere is no abuse of permission\nHope you can allow the location permission.</string>
+	<string name="Dialog_Cancel" translatable="false">Cancel</string>
+	<string name="Dialog_Cancel2" translatable="false">Reject Cruelly</string>
+	<string name="QAQ" translatable="false">QAQ</string>
+	<string name="Dialog_OK" translatable="false">OK</string>
+	<string name="Update_App" translatable="false">New Version Found</string>
+	<string name="school_num" translatable="false">Student number</string>
+	<string name="school_num_hint" translatable="false">Student number can not be empty</string>
+	<string name="pwd" translatable="false">Password</string>
+	<string name="pwd_hint" translatable="false">Password can not be empty</string>
+	<string name="wrong_hint" translatable="false">Wrong account or password</string>
+	<string name="login" translatable="false">Login</string>
+	<string name="loginING" translatable="false">Login...</string>
+	<string name="prog" translatable="false">Loading...</string>
+	<string name="login_success" translatable="false">Login successfully</string>
+	<string name="login_failed" translatable="false">Login failed</string>
+	<string name="Net_ERR" translatable="false">Network connection err</string>
+	<string name="TimeOut" translatable="false">Response timeout</string>
+	<string name="Login_TimeOut" translatable="false">Login timeout, please log in again</string>
+	<string name="back_again" translatable="false">Press again to exit</string>
+	<string name="WebViewDev_Title" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;Problem Logging？&#160;&#160;&#160;&#160;&#160;&#160;</string>
+	<string name="WebViewDev_Title2" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;Login failed&#160;&#160;&#160;&#160;&#160;&#160;</string>
+	<string name="WebViewDev_Message" translatable="false">Having trouble logging in? \nIf you confirm that the network status is ok but still cannot log in, there may be some problem with the default WebView implementation of your device. You can select the option below to see if the problem is solved.</string>
+	<string name="WebViewDev_Message2" translatable="false">Encountered this situation repeatedly？\nIf you confirm that the network status is ok but still show this dialog repeatedly, means there may be some problem with the default WebView implementation of your device. Please select the option below to see if the problem is solved.\nOf course it may also be caused by your inactivity for too long. If this is the case, you can ignore this prompt message and log in again.</string>
+	<string name="WebViewDev_Btn1" translatable="false">Install\nWebDev</string>
+	<string name="WebViewDev_Btn2" translatable="false">Update\nWebView</string>
+	<!-- 主頁 drawer -->
+	<string name="HomePage" translatable="false">Home</string>
+	<string name="Announcement" translatable="false">Announcement</string>
+	<string name="Calendar" translatable="false">Calendar</string>
+	<string name="Questionnaire" translatable="false">Questionnaire</string>
+	<string name="Satisfaction_Survey" translatable="false">Satisfaction Survey</string>
+	<string name="Satisfaction_Survey_Text" translatable="false">Hello:\n\n&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;This is a questionnaire satisfaction of this app. Please read it carefully and check the appropriate answers. This questionnaire is only for internal development and use of the app. The information you answer will never be public, please rest assured. Your valuable opinions will help us improve the quality of the app, thank you for your participation.\n</string>
+	<string name="Start_Satisfaction_Survey" translatable="false">Start</string>
+	<string name="Achievements" translatable="false">Achievements</string>
+	<string name="huh" translatable="false">Synopsis</string>
+	<string name="About" translatable="false">About</string>
+	<string name="LogOut" translatable="false">Logout</string>
+	<!-- 主頁 功能 -->
+	<string name="EUNI" translatable="false">EUNI</string>
+	<string name="Score_Inquiry" translatable="false">Score Inquiry</string>
+	<string name="Class_Schedule" translatable="false">Class Schedule</string>
+	<string name="Event_Registration" translatable="false">Event Registration</string>
+	<string name="Contact_Us" translatable="false">Contact Us</string>
+	<string name="Graduation_Threshold" translatable="false">Graduation Threshold</string>
+	<string name="Subject_System" translatable="false">Subject System</string>
+	<string name="Bus" translatable="false">Bus Trend</string>
+	<string name="Zuvio" translatable="false">ZUVIO</string>
+	<!-- 主頁 下載 -->
+	<string name="Download_Title" translatable="false">Downloading...</string>
+	<string name="Download_Title2" translatable="false">Downloading updates...</string>
+	<string name="Downloading" translatable="false">Downloading </string>
+	<string name="Download_Prog" translatable="false">Download progress：</string>
+	<string name="EUNI_Cources_INIT" translatable="false">Course initializing</string>
+	<!-- 主頁 其他 -->
+	<string name="Logout_Successful" translatable="false">Logout successfully</string>
+	<string name="Only_Show_First_15_Entries" translatable="false">Only show first 15 entries</string>
+	<string name="Dialog_JumpOutsideWebHint_Title" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;Hint&#160;&#160;&#160;&#160;&#160;&#160;</string>
+	<string name="Dialog_JumpOutsideWebHint_Message" translatable="false">You will be redirected to an external browser to browse the announcement content.</string>
+	<string name="Using_FakeGPS" translatable="false">FakeGPS detected!!\nThe "Night Market Guy" achievement can only be obtained after closing it.</string>
+	<!-- 說明 -->
+	<string name="EUNI_" translatable="false">browse courses on your phone</string>
+	<string name="EUNI_Page_0_1_Title" translatable="false">Course Overview</string>
+	<string name="EUNI_Page_0_1_Message" translatable="false">Enter to see all courses at a glance. Click to expand more course information, including "Announcements", "Grades", "Resources", "Assignments", and "Enter Courses". If you find that the course is not in the list, you can click on the upper right corner to refresh the course.</string>
+	<string name="EUNI_Page_1_1_Title" translatable="false">Resources</string>
+	<string name="EUNI_Page_1_1_Message" translatable="false">More convenient to check class resources on your phone, you can also download resources to your phone.</string>
+	<string name="EUNI_Page_2_1_Title" translatable="false">Homework</string>
+	<string name="EUNI_Page_2_1_Message" translatable="false">You can submit the assignment after completing it on your mobile phone, and it may be presented with a more beautiful and easier-to-use UI in the future.</string>
+	<string name="EUNI_Page_3_1_Title" translatable="false">Empty~</string>
+	<string name="EUNI_Page_3_1_Message" translatable="false">If the course does not have any announcements/resources/assignments, it will show empty~~</string>
+	<string name="Score_Inquiry_" translatable="false">know your results at a glance</string>
+	<string name="Score_Inquiry_Page_0_1_Title" translatable="false">Mid term results</string>
+	<string name="Score_Inquiry_Page_0_1_Message" translatable="false">The grade query system displays course mid-term grades after teachers upload grades to the school administration system. \nClick the upper Tab bar to switch between "Midterm Grades" and "Final Grades"</string>
+	<string name="Score_Inquiry_Page_1_1_Title" translatable="false">Final term results</string>
+	<string name="Score_Inquiry_Page_1_1_Message" translatable="false">Displays final grades and class ranking. Class ranking cannot be calculated until all courses have grade information.</string>
+	<string name="Class_Schedule_" translatable="false">check the class schedule more conveniently</string>
+	<string name="Class_Schedule_Page_0_1_Title" translatable="false">Class Schedule</string>
+	<string name="Class_Schedule_Page_0_1_Message" translatable="false">Forgetting the class schedule? Check this out~\nExtra features are expected to be added in the future.</string>
+	<string name="Event_Registration_" translatable="false">register events anytime, anywhere</string>
+	<string name="Event_Registration_Page_0_1_Title" translatable="false">Event Registration</string>
+	<string name="Event_Registration_Page_0_1_Message" translatable="false">"Event Registration" have 2 tabs, the left is the "Events List", and the right is the "Registered Events".\nClick the upper Tab bar to switch pages.</string>
+	<string name="Event_Registration_Page_1_1_Title" translatable="false">Registered Events</string>
+	<string name="Event_Registration_Page_1_1_Message" translatable="false">Here you can view the event information that has been registered. You can click the detail button to see the event information. If the event has not over, you can modify the information/cancel the registration.</string>
+	<string name="Event_Registration_Page_2_1_Title" translatable="false">Event Details</string>
+	<string name="Event_Registration_Page_2_1_Message" translatable="false">You can view event details, click on the phone column to copy, click on the mail column to open the email sending application, click on the relevant link to jump directly.</string>
+	<string name="Event_Registration_Page_3_1_Title" translatable="false">Modify/Cancel registration</string>
+	<string name="Event_Registration_Page_3_1_Message" translatable="false">Registration event can be modified/cancelled. Only the phone field, mail field, and remarks field can be edited, and the other fields cannot be edited.</string>
+	<string name="Contact_Us_" translatable="false">welcome to say something</string>
+	<string name="Contact_Us_Page_0_1_Title" translatable="false">Feedback</string>
+	<string name="Contact_Us_Page_0_1_Message" translatable="false">Is there anything you want to say to our developers? Or want to join the development team? Welcome to tell us ~ Click the upper Tab bar to switch between "Feedback" and "BUG Report"</string>
+	<string name="Contact_Us_Page_1_1_Title" translatable="false">BUG Report</string>
+	<string name="Contact_Us_Page_1_1_Message" translatable="false">Let the bugs disappeared!! thanks for reporting back, so that we can be informed and fixed.</string>
+	<string name="Graduation_Threshold_" translatable="false">view your graduation qualifications</string>
+	<string name="Graduation_Threshold_Page_0_1_Title" translatable="false">Multiple Hours</string>
+	<string name="Graduation_Threshold_Page_0_1_Message" translatable="false">Graphically displays the number of hours spent in school. If you want to know more complete details, you can click "Details" on the upper right to view.</string>
+	<string name="Graduation_Threshold_Page_1_1_Title" translatable="false">Various Thresholds</string>
+	<string name="Graduation_Threshold_Page_1_1_Message" translatable="false">Display various threshold goals required for graduation and quickly grasp the passing status.</string>
+	<string name="Subject_System_" translatable="false">come to the school administration to choose courses~~</string>
+	<string name="Subject_System_Page_0_1_Title" translatable="false">Subject System</string>
+	<string name="Subject_System_Page_0_1_Message" translatable="false">It’s time to choose courses, come and choose the courses you like~~</string>
+	<string name="Bus_" translatable="false">easily view NIU\'s bus information</string>
+	<string name="Bus_Page_0_1_Title" translatable="false">Bus Trend</string>
+	<string name="Bus_Page_0_1_Message" translatable="false">In this page, you can easily get all the bus routes passing through NIU. Click on one of them to view real-time information.</string>
+	<string name="Bus_Page_1_1_Title" translatable="false">Bus Trend</string>
+	<string name="Bus_Page_1_1_Message" translatable="false">This page allows you to view the route’s real-time updates, fares, timetables and route map.</string>
+	<string name="Zuvio_" translatable="false">good assistant for taking roll call and answering questions in class</string>
+	<string name="Zuvio_Page_0_1_Title" translatable="false">ZUVIO</string>
+	<string name="Zuvio_Page_0_1_Message" translatable="false">After entering Zuvio, you can click on this page and view the courses.</string>
+	<string name="Zuvio_Page_1_1_Title" translatable="false">ZUVIO</string>
+	<string name="Zuvio_Page_1_1_Message" translatable="false">After entering the course, there are 5 tabs below, which can be operated according to your own needs, allowing students to explore on their own~.</string>
+	<!-- 關於 -->
+	<string name="Developer" translatable="false"><u>Developer</u></string>
+	<string name="Developer_0" translatable="false"><u>Former developers</u></string>
+	<string name="Information_Engineering" translatable="false">Information Engineering</string>
+	<string name="Instructor" translatable="false"><u>Instructor</u></string>
+	<string name="DR_ChaoXi" translatable="false">Chao Xi Huang</string>
+	<string name="Information_Engineering_DR" translatable="false">Information Engineering\'s 副教授</string>
+	<!-- 成就 -->
+	<string name="Achievements_Get" translatable="false">New Achievements Get</string>
+	<string name="Achievements_01_Title" translatable="false">Welcome~~</string>
+	<string name="Achievements_01_Description" translatable="false">You can get it when you log in to this app for the first time.</string>
+	<string name="Achievements_02_Title" translatable="false">Thank you for your valuable feedback</string>
+	<string name="Achievements_02_Description" translatable="false">Fill out the feedback questionnaire to get.</string>
+	<string name="Achievements_03_Title" translatable="false">Oh boy! 3 a.m.!</string>
+	<string name="Achievements_03_Description" translatable="false">Log in to the app at 3:00 am to get it.(GMT+8)</string>
+	<string name="Achievements_04_Title" translatable="false">Today is not April Fool\'s</string>
+	<string name="Achievements_04_Description" translatable="false">Log in on 4/1 to get it.</string>
+	<string name="Achievements_05_Title" translatable="false">Developer\'s birthday</string>
+	<string name="Achievements_05_Description" translatable="false">It\'s the developer\'s birthday! Get it by logging in on 8/26.</string>
+	<string name="Achievements_06_Title" translatable="false">Merry Christmas?</string>
+	<string name="Achievements_06_Description" translatable="false">Should we celebrate Constitution Day or Christmas? Get it by logging in on 12/25.</string>
+	<string name="Achievements_07_Title" translatable="false">100 Days Together</string>
+	<string name="Achievements_07_Description" translatable="false">Get it by obtained 100 days after first login.</string>
+	<string name="Achievements_08_Title" translatable="false">1 Year Together</string>
+	<string name="Achievements_08_Description" translatable="false">Get it by obtained 1 year after first login.</string>
+	<string name="Achievements_09_Title" translatable="false">Unremitting Efforts</string>
+	<string name="Achievements_09_Description" translatable="false">Get it by logging in for 30 consecutive days. You are not allowed to log out in the middle!!</string>
+	<string name="Achievements_10_Title" translatable="false">Dark Repulsor</string>
+	<string name="Achievements_10_Description" translatable="false">Log in for 74 consecutive days and use light mode. You are not allowed to log out midway! !</string>
+	<string name="Achievements_11_Title" translatable="false">Night Market Guy</string>
+	<string name="Achievements_11_Description" translatable="false">Visit Yilan 14 Night Market, login after arrived the night market(5:30~10:30pm), click here for details.</string>
+	<string name="Achievements_11_showMessage0" translatable="false">Initializing...</string>
+	<string name="Achievements_11_showMessage1" translatable="false">Completed the "Night Market Guy" achievement</string>
+	<string name="Achievements_11_showMessage2" translatable="false">Location permission is not granted\nUnable to proceed"Night Market Guy" achievement</string>
+	<string name="Achievements_11_Dialog_Title" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;Night market list</string>
+	<string name="Achievements_11_Dialog_Message" translatable="false">In order to ensure correct judgment, the misjudgment rate is lower in the center of the night market.\n\n</string>
+	<string-array name="night_market_array">
+		<item>Dongmen(All day)</item>
+		<item>Luodong(All day)</item>
+		<item>Yuanshan(Thu.)</item>
+		<item>Dongshan(Sat.)</item>
+		<item>Jiaoxi Wenquan NightMarket(Sun.)</item>
+		<item>Jiaoxi Si Cheng(Mon., Tue.)</item>
+		<item>Sanxing(Fri.)</item>
+		<item>Toucheng Jixiang(Fri.)</item>
+		<item>Qinggou(Wed.)</item>
+		<item>Su\'ao Dingliao Rd(Thu.)</item>
+		<item>Su\'ao(Sun.)(near Township Office)</item>
+		<item>Masai(Sat.)</item>
+		<item>Nanfang Ao(Mon.)</item>
+		<item>Nan\'ao(Tue.)</item>
+	</string-array>
+	<item name="Image_Finished" type="drawable">@drawable/completed_en</item>
+	<item name="Image_UnFinished" type="drawable">@drawable/uncompleted_en</item>
+	<!-- M園區 -->
+	<string name="EUNI_Sub_Item1" translatable="false">Announcement</string>
+	<string name="EUNI_Sub_Item2" translatable="false">Grades</string>
+	<string name="EUNI_Sub_Item3" translatable="false">Resources</string>
+	<string name="EUNI_Sub_Item4" translatable="false">Homeworks</string>
+	<string name="EUNI_Sub_Item5" translatable="false">Enter Course</string>
+	<string name="EUNI_Course_Reload_Successful" translatable="false">Course Reload Successfully</string>
+	<string name="try_it_later" translatable="false">Please try again later</string>
+	<string name="ThisCourseDoesNotHaveAny" translatable="false">Empty~~&#160;&#160;&#160; ̄_(ツ)_/ ̄</string>
+	<string name="OpenSAFFailed" translatable="false">Failed to open file selector</string>
+	<string name="EUNI_First_Loading_Tip" translatable="false">It will take a long time to load the announcement for the first time\nPlease wait patiently.</string>
+	<string name="EUNI_GetAnnouncement_Failed" translatable="false">Unable to access the announcement\nPlease try again later.</string>
+	<!-- 成績查詢 -->
+	<string name="Mid_term_results" translatable="false">Mid term results</string>
+	<string name="Final_term_results" translatable="false">Final term results</string>
+	<string name="Mid_term_warning" translatable="false">Mid term warning</string>
+	<string name="Score" translatable="false">Score：</string>
+	<string name="Not_uploaded" translatable="false">Not uploaded</string>
+	<string name="Elective" translatable="false">Elective</string>
+	<string name="Obligatory" translatable="false">Obligatory</string>
+	<string name="Avg" translatable="false">Ending average：</string>
+	<string name="Ranking_Text" translatable="false">Class Rank：</string>
+	<string name="Ranking" translatable="false">No. {0}</string>
+	<string name="CanNotCalc" translatable="false">Unable to calculate</string>
+	<!-- 活動報名 -->
+	<string name="EventRegistration" translatable="false">Events List</string>
+	<string name="EventRegistrationSuccess" translatable="false">Registered Events</string>
+	<string name="Event_Detail_Title" translatable="false">Detail</string>
+	<string name="Event_Register_Success" translatable="false">Registered Successfully</string>
+	<string name="Event_State_ok" translatable="false">InProgress</string>
+	<string name="Event_State_notyet" translatable="false">Preparation</string>
+	<string name="Event_State_registerOver" translatable="false">Deadline</string>
+	<string name="Event_State_done" translatable="false">Over</string>
+	<string name="Event_State_Arrow_UP" translatable="false"> ˆ </string>
+	<string name="Event_State_Arrow_DOWN" translatable="false"> ˇ </string>
+	<string name="Event_BTN_Register" translatable="false">GoRegister</string>
+	<string name="Event_BTN_Detail" translatable="false">Detail</string>
+	<string name="Event_BTN_Modify_Information" translatable="false">&#160;&#160;&#160;ModInfo/Cancel&#160;&#160;&#160;</string>
+	<string name="Event_ShowMessageJsonERR" translatable="false">jsonization error\nPlease report it to the developer, thank you~</string>
+	<string name="Event_ID" translatable="false">&#160;EventID&#160;</string>
+	<string name="Event_Time" translatable="false">&#160;EventTime&#160;</string>
+	<string name="Event_Location" translatable="false">&#160;Location&#160;</string>
+	<string name="Event_Detail" translatable="false">&#160;Caption&#160;</string>
+	<string name="Event_Department" translatable="false">&#160;Department&#160;</string>
+	<string name="Event_ContactInfo" translatable="false">&#160;ContactInfo&#160;</string>
+	<string name="Event_Link" translatable="false">&#160;RelatedLinks&#160;</string>
+	<string name="Event_Remark" translatable="false">&#160;Remarks&#160;</string>
+	<string name="Event_factor_authentication" translatable="false">&#160;DiverseHours&#160;</string>
+	<string name="Event_RegisterTime" translatable="false">&#160;RegisterTime&#160;</string>
+	<string name="Event_People" translatable="false">&#160;Applicants&#160;</string>
+	<string name="Event_People2" translatable="false">&#160;Status&#160;</string>
+	<string name="Event_Mail_Title" translatable="false">Hello, I have something to ask</string>
+	<string name="Event_Mail_Content" translatable="false">StarBurst Stream</string>
+	<string name="Event_Mail_CannotHandle" translatable="false">Unable to process sending email</string>
+	<string name="Event_ModInfo" translatable="false">ModInfo/Cancel</string>
+	<string name="Event_ModInfo_role" translatable="false">&#160;Identity&#160;</string>
+	<string name="Event_ModInfo_class" translatable="false">&#160;Class&#160;</string>
+	<string name="Event_ModInfo_schnum" translatable="false">&#160;StudentNum&#160;</string>
+	<string name="Event_ModInfo_name" translatable="false">&#160;Name&#160;</string>
+	<string name="Event_ModInfo_tel" translatable="false">&#160;Tel&#160;</string>
+	<string name="Event_ModInfo_mail" translatable="false">&#160;Mail&#160;</string>
+	<string name="Event_ModInfo_remark" translatable="false">&#160;Remark&#160;</string>
+	<string name="Event_ModInfo_RadioTextTitle" translatable="false">please select, if provider have furnish</string>
+	<string name="Event_ModInfo_RadioTextMessage1" translatable="false">Eating Habits：</string>
+	<string name="Event_ModInfo_Radio1_1" translatable="false">Non-vegetarian</string>
+	<string name="Event_ModInfo_Radio1_2" translatable="false">Vegetarian</string>
+	<string name="Event_ModInfo_Radio1_3" translatable="false">No Need</string>
+	<string name="Event_ModInfo_RadioTextMessage2" translatable="false">Certification：</string>
+	<string name="Event_ModInfo_Radio2_1" translatable="false">No Need</string>
+	<string name="Event_ModInfo_Radio2_2" translatable="false">Yes</string>
+	<string name="Event_ModInfo_btn1" translatable="false">Cancel</string>
+	<string name="Event_ModInfo_btn2" translatable="false">Save</string>
+	<string name="Event_ModInfo_btn1_success" translatable="false">Cancel Successfully</string>
+	<string name="Event_ModInfo_btn2_success" translatable="false">Save Successfully</string>
+	<!-- 聯絡我們 -->
+	<string name="Feedback" translatable="false">Feedback</string>
+	<string name="Feedback_text" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Whether you have ideas for interface design, need additional features, want to help us continue to assist with app maintenance/new feature development, or are interested in app development, you are welcome to give us your valuable feedback. If you are willing to assist with the follow-up matters of the app, you can leave your email, Line and other contact information and we will contact you!</string>
+	<string name="WriteSomething" translatable="false">Write something~~</string>
+	<string name="ContactInfo" translatable="false">Contact Info (optional)</string>
+	<string name="Bug_Report" translatable="false">BUG Report</string>
+	<string name="Bug_Report_text" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Unfortunate that bugs bring bad feelings, and this form can help us fix the problem. If you know how to trigger this BUG to occur, please explain in detail the process and conditions that trigger this BUG. If don\'t know how to trigger this bug, or if the problem occurs without warning, please briefly describe the time when the problem occurs. Thank you again for helping our app continue to improve.</string>
+	<string name="Bug_Report_text1" translatable="false">Title</string>
+	<string name="Bug_Report_input1" translatable="false">bug type (ex:crash、ANR...)</string>
+	<string name="Bug_Report_text2" translatable="false">Steps</string>
+	<string name="Bug_Report_input2" translatable="false">Describe specific steps</string>
+	<string name="RegisteredSend" translatable="false">Send by registered</string>
+	<string name="DeviceInfoReport" translatable="false">Send device info</string>
+	<string name="Submit" translatable="false">Submit</string>
+	<string name="EmptyContent" translatable="false">Content cannot be empty</string>
+	<string name="Submit_Successful" translatable="false">Submit Successfully</string>
+	<!-- 畢業門檻 -->
+	<string name="Diverse_Hours" translatable="false">Diverse Hours</string>
+	<string name="Diverse_Hours_Services" translatable="false">Services</string>
+	<string name="Diverse_Hours_Diverse" translatable="false">Diverse</string>
+	<string name="Diverse_Hours_Major" translatable="false">Major</string>
+	<string name="Diverse_Hours_Complex" translatable="false">Complex</string>
+	<string name="English_Ability" translatable="false">English Ability</string>
+	<string name="Physical_Fitness" translatable="false">Physical Fitness</string>
+	<string name="Total_Credits_Required" translatable="false">TotalCreditsRequired</string>
+	<string name="Credit_Course" translatable="false">CreditCourse</string>
+	<string name="Credit_Course_None" translatable="false">None</string>
+	<string name="Check_Graduation_Threshold" translatable="false">&#160;&#160;&#160;Check Detail&#160;&#160;&#160;</string>
+	<string name="Check_Graduation_Threshold_0" translatable="false">&#160;&#160;&#160;Summary Query&#160;&#160;&#160;</string>
+	<!-- 選擇系統 -->
+	<string name="currently_not_a_course_selection_time" translatable="false">not in selection time！</string>
+	<!-- Zuvio -->
+	<string name="ECE_Building" translatable="false">ECE Building</string>
+	<string name="Engineering_Building" translatable="false">Engineering Building</string>
+	<string name="Bioresources_Building" translatable="false">Biology Building</string>
+	<string name="Teaching_Building" translatable="false">教穡 Building</string>
+	<string name="Comprehensive_Building" translatable="false">綜合 Building</string>
+	<string name="Guishan" translatable="false">Guishan Island</string>
+	<string name="showMessage0" translatable="false">Use Location「</string>
+	<string name="showMessage1" translatable="false">」\nValid only for roll call</string>
+	<string name="Close_GPS_Tips" translatable="false">Turn off GPS services\n Then try again</string>
+	<string name="State_NOW" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;State Info&#160;&#160;&#160;&#160;&#160;&#160;</string>
+	<string name="Permission_Location" translatable="false">Location Permission：</string>
+	<string name="GPS_State" translatable="false">\nGPS State：</string>
+	<string name="Fake_GPS_OK" translatable="false">\n\nYour current status can be customized zuvio location.\nTo use real location, please turn on the GPS service, or allow the positioning permission of this app.</string>
+	<string name="Fake_GPS_NoWay" translatable="false">\n\nYour current status would make zuvio use your real location.\nTo use mock location, please turn off the GPS service, or cancel the location permission of this app.</string>
+	<string name="Tips_Choose_Location" translatable="false">Click on the desired location\n to mock that longitude and latitude.</string>
+	<string name="Longitude" translatable="false">Longitude：</string>
+	<string name="Latitude" translatable="false">Latitude：</string>
+	<string name="Cancel_Choose" translatable="false">Select Cancel\nUse「ECE Building」</string>
+</resources>

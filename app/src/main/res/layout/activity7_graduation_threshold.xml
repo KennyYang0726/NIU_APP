@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/_coordinator"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".Activity7_Graduation_Threshold">
+	<com.google.android.material.appbar.AppBarLayout
+		android:id="@+id/_app_bar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:theme="@style/AppTheme.AppBarOverlay">
+		<androidx.appcompat.widget.Toolbar
+			android:id="@+id/_toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			android:background="?attr/colorPrimary"
+			app:popupTheme="@style/AppTheme.PopupOverlay">
+			<Button
+				android:id="@+id/button_appbar"
+				android:layout_width="wrap_content"
+				android:layout_height="31dp"
+				android:layout_gravity="end"
+				android:layout_marginRight="11dp"
+				android:background="@drawable/rounded_button"
+				android:textAllCaps="false"
+				android:textColor="@color/white"
+				android:textSize="13sp"
+				android:text="@string/Check_Graduation_Threshold" />
+		</androidx.appcompat.widget.Toolbar>
+
+
+	</com.google.android.material.appbar.AppBarLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+		<WebView
+			android:id="@+id/web_Graduation_Threshold"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:visibility="gone" />
+
+		<ScrollView
+			android:id="@+id/Linear_Page"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1" >
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="19dp"
+					android:layout_marginTop="23dp"
+					android:layout_marginRight="19dp"
+					android:background="@drawable/linear"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="17dp"
+						android:layout_marginEnd="17dp"
+						android:layout_marginTop="11dp"
+						android:textSize="19sp"
+						android:textColor="@color/text_color"
+						android:text="@string/Diverse_Hours" />
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="430dp"
+						android:layout_marginStart="5dp"
+						android:layout_marginEnd="5dp"
+						android:layout_marginTop="11dp"
+						android:layout_marginBottom="11dp"
+						android:padding="11dp"
+						android:background="@drawable/linear_inside"
+						android:orientation="vertical" >
+
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight="1"
+							android:orientation="vertical">
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Diverse_Hours_Services"
+								android:textColor="@color/text_color"
+								android:textSize="19sp" />
+
+							<LinearLayout
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:orientation="horizontal">
+
+								<FrameLayout
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:layout_gravity="center"
+									android:layout_marginRight="7dp"
+									android:layout_weight="1">
+
+									<!-- 自訂的進度條視圖 -->
+									<com.niu.csie.edu.app.CustomProgressBar.ProgressView
+										android:id="@+id/progressBar_Services"
+										android:layout_width="match_parent"
+										android:layout_height="match_parent"
+										android:translationY="16dp"
+										android:scaleType="fitXY"
+										android:layout_gravity="center" />
+									<!-- 上層的 ImageView (Progress 外框)-->
+									<ImageView
+										android:layout_width="match_parent"
+										android:layout_height="match_parent"
+										android:src="@drawable/progress_frame"
+										android:scaleType="fitXY"
+										android:layout_gravity="center" />
+									<TextView
+										android:id="@+id/Diverse_Hours_Services_0"
+										android:layout_width="23dp"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:gravity="center"
+										android:translationX="19dp"
+										android:translationY="14dp"
+										android:text="0"
+										android:textColor="@color/text_color"
+										android:textSize="17sp" />
+									<TextView
+										android:id="@+id/Diverse_Hours_Services_1"
+										android:layout_width="29dp"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:translationX="46dp"
+										android:translationY="14dp"
+										android:text="20"
+										android:textColor="@color/text_color"
+										android:textSize="17sp" />
+								</FrameLayout>
+							</LinearLayout>
+
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight="1"
+							android:orientation="vertical">
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Diverse_Hours_Diverse"
+								android:textColor="@color/text_color"
+								android:textSize="19sp" />
+
+							<LinearLayout
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:orientation="horizontal">
+
+								<FrameLayout
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:layout_gravity="center"
+									android:layout_marginRight="7dp"
+									android:layout_weight="1">
+
+									<!-- 自訂的進度條視圖 -->
+									<com.niu.csie.edu.app.CustomProgressBar.ProgressView
+										android:id="@+id/progressBar_Diverse"
+										android:layout_width="match_parent"
+										android:layout_height="match_parent"
+										android:translationY="16dp"
+										android:scaleType="fitXY"
+										android:layout_gravity="center" />
+									<!-- 上層的 ImageView (Progress 外框)-->
+									<ImageView
+										android:layout_width="match_parent"
+										android:layout_height="match_parent"
+										android:src="@drawable/progress_frame"
+										android:scaleType="fitXY"
+										android:layout_gravity="center" />
+									<TextView
+										android:id="@+id/Diverse_Hours_Diverse_0"
+										android:layout_width="23dp"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:gravity="center"
+										android:translationX="19dp"
+										android:translationY="14dp"
+										android:text="0"
+										android:textColor="@color/text_color"
+										android:textSize="17sp" />
+									<TextView
+										android:id="@+id/Diverse_Hours_Diverse_1"
+										android:layout_width="29dp"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:translationX="46dp"
+										android:translationY="14dp"
+										android:text="20"
+										android:textColor="@color/text_color"
+										android:textSize="17sp" />
+								</FrameLayout>
+							</LinearLayout>
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight="1"
+							android:orientation="vertical">
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Diverse_Hours_Major"
+								android:textColor="@color/text_color"
+								android:textSize="19sp" />
+
+							<LinearLayout
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:orientation="horizontal">
+
+								<FrameLayout
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:layout_gravity="center"
+									android:layout_marginRight="7dp"
+									android:layout_weight="1">
+
+									<!-- 自訂的進度條視圖 -->
+									<com.niu.csie.edu.app.CustomProgressBar.ProgressView
+										android:id="@+id/progressBar_Major"
+										android:layout_width="match_parent"
+										android:layout_height="match_parent"
+										android:translationY="16dp"
+										android:scaleType="fitXY"
+										android:layout_gravity="center" />
+									<!-- 上層的 ImageView (Progress 外框)-->
+									<ImageView
+										android:layout_width="match_parent"
+										android:layout_height="match_parent"
+										android:src="@drawable/progress_frame"
+										android:scaleType="fitXY"
+										android:layout_gravity="center" />
+									<TextView
+										android:id="@+id/Diverse_Hours_Major_0"
+										android:layout_width="23dp"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:gravity="center"
+										android:translationX="19dp"
+										android:translationY="14dp"
+										android:text="0"
+										android:textColor="@color/text_color"
+										android:textSize="17sp" />
+									<TextView
+										android:id="@+id/Diverse_Hours_Major_1"
+										android:layout_width="29dp"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:translationX="46dp"
+										android:translationY="14dp"
+										android:text="20"
+										android:textColor="@color/text_color"
+										android:textSize="17sp" />
+								</FrameLayout>
+							</LinearLayout>
+
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight="1"
+							android:orientation="vertical">
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Diverse_Hours_Complex"
+								android:textColor="@color/text_color"
+								android:textSize="19sp" />
+
+							<LinearLayout
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:orientation="horizontal">
+
+								<FrameLayout
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:layout_gravity="center"
+									android:layout_marginRight="7dp"
+									android:layout_weight="1">
+
+									<!-- 自訂的進度條視圖 -->
+									<com.niu.csie.edu.app.CustomProgressBar.ProgressView
+										android:id="@+id/progressBar_Complex"
+										android:layout_width="match_parent"
+										android:layout_height="match_parent"
+										android:translationY="16dp"
+										android:scaleType="fitXY"
+										android:layout_gravity="center" />
+									<!-- 上層的 ImageView (Progress 外框)-->
+									<ImageView
+										android:layout_width="match_parent"
+										android:layout_height="match_parent"
+										android:src="@drawable/progress_frame"
+										android:scaleType="fitXY"
+										android:layout_gravity="center" />
+									<TextView
+										android:id="@+id/Diverse_Hours_Complex_0"
+										android:layout_width="23dp"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:gravity="center"
+										android:translationX="19dp"
+										android:translationY="14dp"
+										android:text="0"
+										android:textColor="@color/text_color"
+										android:textSize="17sp" />
+									<TextView
+										android:id="@+id/Diverse_Hours_Complex_1"
+										android:layout_width="29dp"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:translationX="46dp"
+										android:translationY="14dp"
+										android:text="40"
+										android:textColor="@color/text_color"
+										android:textSize="17sp" />
+								</FrameLayout>
+							</LinearLayout>
+
+						</LinearLayout>
+
+					</LinearLayout>
+				</LinearLayout>
+
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="19dp"
+					android:layout_marginTop="23dp"
+					android:layout_marginRight="19dp"
+					android:padding="13dp"
+					android:background="@drawable/linear"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:layout_marginStart="17dp"
+						android:layout_marginEnd="17dp"
+						android:layout_weight="1"
+						android:text="@string/English_Ability"
+						android:textColor="@color/text_color"
+						android:textSize="19sp"
+						android:textStyle="bold" />
+
+					<TextView
+						android:id="@+id/English_Ability_Result"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:layout_marginStart="17dp"
+						android:layout_marginEnd="17dp"
+						android:gravity="center"
+						android:textColor="@color/text_color"
+						android:textSize="19sp" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="19dp"
+					android:layout_marginTop="23dp"
+					android:layout_marginRight="19dp"
+					android:padding="13dp"
+					android:background="@drawable/linear"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="17dp"
+						android:layout_marginEnd="17dp"
+						android:layout_gravity="center"
+						android:textSize="19sp"
+						android:textColor="@color/text_color"
+						android:layout_weight="1"
+						android:text="@string/Physical_Fitness"
+						android:textStyle="bold" />
+
+					<TextView
+						android:id="@+id/Physical_Fitness_Result"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:layout_marginStart="17dp"
+						android:layout_marginEnd="17dp"
+						android:gravity="center"
+						android:textColor="@color/text_color"
+						android:textSize="19sp" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="19dp"
+					android:layout_marginTop="23dp"
+					android:layout_marginRight="19dp"
+					android:padding="13dp"
+					android:background="@drawable/linear"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="17dp"
+						android:layout_marginEnd="17dp"
+						android:layout_gravity="center"
+						android:textSize="19sp"
+						android:textColor="@color/text_color"
+						android:layout_weight="1"
+						android:text="@string/Total_Credits_Required"
+						android:textStyle="bold" />
+
+					<TextView
+						android:id="@+id/Total_Credits_Required_Result"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:layout_marginStart="17dp"
+						android:layout_marginEnd="17dp"
+						android:gravity="center"
+						android:textColor="@color/text_color"
+						android:textSize="19sp" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="19dp"
+					android:layout_marginTop="23dp"
+					android:layout_marginBottom="23dp"
+					android:layout_marginRight="19dp"
+					android:padding="13dp"
+					android:background="@drawable/linear"
+					android:orientation="vertical">
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:orientation="horizontal">
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginStart="17dp"
+							android:layout_marginEnd="17dp"
+							android:layout_gravity="center"
+							android:textSize="19sp"
+							android:textColor="@color/text_color"
+							android:layout_weight="1"
+							android:text="@string/Credit_Course"
+							android:textStyle="bold" />
+						<TextView
+							android:id="@+id/Credit_Course_Result"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_gravity="center"
+							android:layout_marginStart="17dp"
+							android:layout_marginEnd="17dp"
+							android:gravity="center"
+							android:textColor="@color/text_color"
+							android:textSize="19sp" />
+					</LinearLayout>
+					<TextView
+						android:id="@+id/Credit_Course_Result2"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:layout_marginStart="13dp"
+						android:layout_marginEnd="13dp"
+						android:gravity="center"
+						android:textColor="@color/text_color"
+						android:textSize="0sp"/>
+				</LinearLayout>
+
+			</LinearLayout>
+		</ScrollView>
+
+	</LinearLayout>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<!-- 登出中 覆蓋層 -->
+		<include layout="@layout/progress_overlay"/>
+	</FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

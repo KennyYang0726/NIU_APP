@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity5_Event_Registration_Fragment2">
+
+    <WebView
+        android:id="@+id/web"
+        android:layout_width="1dp"
+        android:layout_height="1dp">
+
+    </WebView>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 登出中 覆蓋層 -->
+    <include layout="@layout/progress_overlay"/>
+</FrameLayout>

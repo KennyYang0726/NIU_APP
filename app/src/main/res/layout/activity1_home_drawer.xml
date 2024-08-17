@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/colorPrimaryDark"
+	android:orientation="vertical" >
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" >
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical">
+				<TextView
+					android:id="@+id/name"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingTop="11dp"
+					android:paddingBottom="11dp"
+					android:layout_gravity="center"
+					android:gravity="center"
+					android:text="帥哥"
+					android:textColor="@color/white"
+					android:textSize="23sp"
+					android:tag="@string/HomePage" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/linear1_home"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical"
+				android:onClick="HomeClick"
+				android:tag="@string/HomePage"> <!--TAG 才能有傳入值，以此改變標題-->
+
+				<ImageView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:src="@drawable/split_line" />
+
+				<!-- 美化排版用 -->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:padding="11dp"
+					android:orientation="vertical">
+					<ImageView
+						android:id="@+id/imageView1"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:src="@drawable/homepage"
+						android:onClick="HomeClick"
+						android:tag="@string/HomePage" />
+					<TextView
+						android:id="@+id/textView1"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:gravity="center"
+						android:text="@string/HomePage"
+						android:textColor="@color/white"
+						android:textSize="23sp"
+						android:onClick="HomeClick"
+						android:tag="@string/HomePage" />
+				</LinearLayout>
+
+				<ImageView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:src="@drawable/split_line" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/linear2_announcement"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical"
+				android:onClick="AnnouncementClick"
+				android:tag="@string/Announcement">
+
+				<!-- 美化排版用 -->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:padding="11dp"
+					android:orientation="vertical">
+					<ImageView
+						android:id="@+id/imageView2"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:src="@drawable/announcement"
+						android:onClick="AnnouncementClick"
+						android:tag="@string/Announcement" />
+					<TextView
+						android:id="@+id/textView2"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:gravity="center"
+						android:text="@string/Announcement"
+						android:textColor="@color/white"
+						android:textSize="23sp"
+						android:onClick="AnnouncementClick"
+						android:tag="@string/Announcement" />
+				</LinearLayout>
+
+				<ImageView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:src="@drawable/split_line" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/linear3_calender"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical"
+				android:onClick="CalendarClick"
+				android:tag="@string/Calendar">
+
+				<!-- 美化排版用 -->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:padding="11dp"
+					android:orientation="vertical">
+					<ImageView
+						android:id="@+id/imageView3"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:src="@drawable/calendar"
+						android:onClick="CalendarClick"
+						android:tag="@string/Calendar" />
+					<TextView
+						android:id="@+id/textView3"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:gravity="center"
+						android:text="@string/Calendar"
+						android:textColor="@color/white"
+						android:textSize="23sp"
+						android:onClick="CalendarClick"
+						android:tag="@string/Calendar" />
+				</LinearLayout>
+
+				<ImageView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:src="@drawable/split_line" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/linear4_quiz"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical"
+				android:onClick="QuizClick"
+				android:tag="@string/Questionnaire">
+
+				<!-- 美化排版用 -->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:padding="11dp"
+					android:orientation="vertical">
+					<ImageView
+						android:id="@+id/imageView4"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:src="@drawable/questionnaire"
+						android:onClick="QuizClick"
+						android:tag="@string/Questionnaire" />
+					<TextView
+						android:id="@+id/textView4"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:gravity="center"
+						android:text="@string/Questionnaire"
+						android:textColor="@color/white"
+						android:textSize="23sp"
+						android:onClick="QuizClick"
+						android:tag="@string/Questionnaire" />
+				</LinearLayout>
+
+				<ImageView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:src="@drawable/split_line" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/linear5_achievements"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical"
+				android:onClick="AchievementsClick"
+				android:tag="@string/Achievements">
+
+				<!-- 美化排版用 -->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:padding="11dp"
+					android:orientation="vertical">
+					<ImageView
+						android:id="@+id/imageView5"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:src="@drawable/achievements"
+						android:onClick="AchievementsClick"
+						android:tag="@string/Achievements" />
+					<TextView
+						android:id="@+id/textView5"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:gravity="center"
+						android:text="@string/Achievements"
+						android:textColor="@color/white"
+						android:textSize="23sp"
+						android:onClick="AchievementsClick"
+						android:tag="@string/Achievements" />
+				</LinearLayout>
+
+				<ImageView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:src="@drawable/split_line" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/linear6_huh"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical"
+				android:onClick="HuhClick"
+				android:tag="@string/huh">
+
+				<!-- 美化排版用 -->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:padding="11dp"
+					android:orientation="vertical">
+					<ImageView
+						android:id="@+id/imageView6"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:src="@drawable/huh"
+						android:onClick="HuhClick"
+						android:tag="@string/huh" />
+					<TextView
+						android:id="@+id/textView6"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:gravity="center"
+						android:text="@string/huh"
+						android:textColor="@color/white"
+						android:textSize="23sp"
+						android:onClick="HuhClick"
+						android:tag="@string/huh" />
+				</LinearLayout>
+
+				<ImageView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:src="@drawable/split_line" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/linear7_about"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical"
+				android:onClick="AboutClick"
+				android:tag="@string/About">
+
+				<!-- 美化排版用 -->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:padding="11dp"
+					android:orientation="vertical">
+					<ImageView
+						android:id="@+id/imageView7"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:src="@drawable/about"
+						android:onClick="AboutClick"
+						android:tag="@string/About" />
+					<TextView
+						android:id="@+id/textView7"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:gravity="center"
+						android:text="@string/About"
+						android:textColor="@color/white"
+						android:textSize="23sp"
+						android:onClick="AboutClick"
+						android:tag="@string/About" />
+				</LinearLayout>
+
+				<ImageView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:src="@drawable/split_line" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/linear8_logout"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical"
+				android:onClick="LogoutClick">
+
+				<!-- 美化排版用 -->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:padding="11dp"
+					android:orientation="vertical">
+					<ImageView
+						android:id="@+id/imageView8"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:src="@drawable/logout"
+						android:onClick="LogoutClick" />
+					<TextView
+						android:id="@+id/textView8"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:gravity="center"
+						android:text="@string/LogOut"
+						android:textColor="@color/white"
+						android:textSize="23sp"
+						android:onClick="LogoutClick" />
+				</LinearLayout>
+			</LinearLayout>
+
+		</LinearLayout>
+	</ScrollView>
+
+</LinearLayout>

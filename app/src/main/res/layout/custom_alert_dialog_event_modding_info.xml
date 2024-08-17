@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutDialogContainer"
+    android:layout_margin="20dp"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_alert_dialog_bg"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/custom_alert_dialog_bg_title"
+            android:padding="10dp"
+            android:text="@string/Event_ModInfo"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!-- 表格佈局 -->
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="73dp"
+            android:stretchColumns="1"
+            android:background="@drawable/event_detail_table_border"
+            android:divider="@drawable/event_detail_table_divider"
+            android:showDividers="middle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/textTitle">
+            <!-- 報名身分 -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="1dp"
+                    android:background="@drawable/event_detail_table_cell_right_border"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:text="@string/Event_ModInfo_role"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/text_Event_ModInfo_role"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:paddingStart="3dp"
+                    android:textAllCaps="false"
+                    android:text=""
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+            </TableRow>
+            <!-- 班級 -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="1dp"
+                    android:background="@drawable/event_detail_table_cell_right_border"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:text="@string/Event_ModInfo_class"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/text_Event_ModInfo_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:paddingStart="3dp"
+                    android:textAllCaps="false"
+                    android:text=""
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+            </TableRow>
+            <!-- 學號 -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="1dp"
+                    android:background="@drawable/event_detail_table_cell_right_border"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:text="@string/Event_ModInfo_schnum"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/text_Event_ModInfo_schnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:paddingStart="3dp"
+                    android:text="B19890604"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+            </TableRow>
+            <!-- 姓名 -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="1dp"
+                    android:background="@drawable/event_detail_table_cell_right_border"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:text="@string/Event_ModInfo_name"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/text_Event_ModInfo_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:paddingStart="3dp"
+                    android:textAllCaps="false"
+                    android:text="桐谷和人"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+            </TableRow>
+            <!-- 連絡電話 -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="1dp"
+                    android:background="@drawable/event_detail_table_cell_right_border"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:text="@string/Event_ModInfo_tel"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+                <EditText
+                    android:id="@+id/text_Event_ModInfo_tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:paddingStart="3dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:inputType="phone"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+            </TableRow>
+            <!-- 電子郵件 -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="1dp"
+                    android:background="@drawable/event_detail_table_cell_right_border"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:text="@string/Event_ModInfo_mail"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+                <EditText
+                    android:id="@+id/text_Event_ModInfo_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:paddingStart="3dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+            </TableRow>
+            <!-- 備註 -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="1dp"
+                    android:background="@drawable/event_detail_table_cell_right_border"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:text="@string/Event_ModInfo_remark"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+                <EditText
+                    android:id="@+id/text_Event_ModInfo_remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:paddingStart="3dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_color"
+                    android:textSize="17sp" />
+            </TableRow>
+        </TableLayout>
+
+        <!-- 空白View，用於調整間距 -->
+        <LinearLayout
+            android:id="@+id/spaceView"
+            android:layout_width="0dp"
+            android:layout_height="7dp"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintTop_toBottomOf="@id/table"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginEnd="19dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/spaceView">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:textAllCaps="false"
+                android:textColor="@color/text_color"
+                android:text="@string/Event_ModInfo_RadioTextTitle" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="13dp"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:textColor="@color/text_color"
+                android:text="@string/Event_ModInfo_RadioTextMessage1" />
+            <RadioGroup
+                android:id="@+id/radiogroup1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginEnd="29dp"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:textSize="13sp"
+                    android:text="@string/Event_ModInfo_Radio1_1"
+                    android:textColor="@color/text_color"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:textSize="13sp"
+                    android:text="@string/Event_ModInfo_Radio1_2"
+                    android:textColor="@color/text_color"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:textSize="13sp"
+                    android:text="@string/Event_ModInfo_Radio1_3"
+                    android:textColor="@color/text_color"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="13dp"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:textColor="@color/text_color"
+                android:text="@string/Event_ModInfo_RadioTextMessage2" />
+            <RadioGroup
+                android:id="@+id/radiogroup2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginEnd="29dp"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:textAllCaps="false"
+                    android:textSize="13sp"
+                    android:text="@string/Event_ModInfo_Radio2_1"
+                    android:textColor="@color/text_color"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:textSize="13sp"
+                    android:text="@string/Event_ModInfo_Radio2_2"
+                    android:textColor="@color/text_color"/>
+            </RadioGroup>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/buttonAction_Cancel"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@drawable/custom_alert_dialog_btn_red"
+        android:text="@string/Event_ModInfo_btn1"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@id/buttonAction_Save"
+        app:layout_constraintBottom_toBottomOf="@id/layoutDialog"
+        app:layout_constraintTop_toBottomOf="@id/layoutDialog"
+        app:layout_constraintStart_toStartOf="@id/layoutDialog"
+        app:layout_constraintWidth_percent="0.4"/>
+
+    <Button
+        android:id="@+id/buttonAction_Save"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@drawable/custom_alert_dialog_btn_blue"
+        android:text="@string/Event_ModInfo_btn2"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@id/layoutDialog"
+        app:layout_constraintBottom_toBottomOf="@id/layoutDialog"
+        app:layout_constraintTop_toBottomOf="@id/layoutDialog"
+        app:layout_constraintStart_toEndOf="@id/buttonAction_Cancel"
+        app:layout_constraintWidth_percent="0.4"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

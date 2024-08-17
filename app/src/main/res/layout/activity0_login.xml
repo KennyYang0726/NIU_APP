@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".Activity0_LoginActivity">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="?attr/colorPrimary"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="23dp"
+			android:layout_marginRight="23dp"
+			android:orientation="vertical">
+
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="101dp"
+				android:layout_marginTop="97dp"
+				android:src="@drawable/niu_logo" />
+
+			<TextView
+				android:id="@+id/textView"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="13dp"
+				android:gravity="center"
+				android:text="@string/app_name"
+				android:textColor="@color/text_color_midium"
+				android:textSize="31sp" />
+
+			<LinearLayout
+				android:id="@+id/Anim_linear"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="5dp"
+				android:layout_marginTop="13dp"
+				android:layout_marginRight="5dp"
+				android:background="@drawable/dialog"
+				android:visibility="gone"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:id="@+id/account_linear"
+					android:layout_width="match_parent"
+					android:layout_height="47dp"
+					android:layout_marginLeft="17dp"
+					android:layout_marginTop="17dp"
+					android:layout_marginRight="13dp"
+					android:background="@drawable/input_field"
+					android:orientation="horizontal">
+
+					<ImageView
+						android:layout_width="37dp"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="7dp"
+						android:src="@drawable/ic_person_grey" />
+
+					<EditText
+						android:id="@+id/account"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="7dp"
+						android:layout_marginRight="11dp"
+						android:layout_weight="1"
+						android:background="@null"
+						android:ems="10"
+						android:hint="@string/school_num"
+						android:inputType="text"
+						android:textColor="@color/gray"
+						android:textColorHint="@color/gray" />
+				</LinearLayout>
+
+				<TextView
+					android:id="@+id/empty0"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textColor="#ff0000"
+					android:layout_marginTop="5dp"
+					android:layout_marginLeft="23dp"
+					android:textSize="11sp"
+					android:visibility="gone" />
+
+				<LinearLayout
+					android:id="@+id/pwd_linear"
+					android:layout_width="match_parent"
+					android:layout_height="47dp"
+					android:layout_marginLeft="17dp"
+					android:layout_marginTop="17dp"
+					android:layout_marginRight="13dp"
+					android:background="@drawable/input_field"
+					android:orientation="horizontal">
+
+					<ImageView
+						android:layout_width="37dp"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="7dp"
+						android:src="@drawable/ic_key_grey" />
+
+					<EditText
+						android:id="@+id/pwd"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="7dp"
+						android:layout_marginRight="11dp"
+						android:layout_weight="1"
+						android:background="@null"
+						android:ems="10"
+						android:hint="@string/pwd"
+						android:inputType="textWebPassword"
+						android:textColor="@color/gray"
+						android:textColorHint="@color/gray" />
+
+					<ImageView
+						android:id="@+id/show_pwd"
+						android:layout_width="31dp"
+						android:layout_height="match_parent"
+						android:layout_marginRight="7dp"
+						android:src="@drawable/ic_visibility_off_grey" />
+				</LinearLayout>
+
+				<TextView
+					android:id="@+id/empty1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textColor="#ff0000"
+					android:layout_marginTop="5dp"
+					android:layout_marginLeft="23dp"
+					android:textSize="11sp"
+					android:visibility="gone" />
+
+				<Button
+					android:id="@+id/button"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="67dp"
+					android:layout_marginTop="23dp"
+					android:layout_marginRight="67dp"
+					android:layout_marginBottom="23dp"
+					android:background="@drawable/rounded_button"
+					android:text="@string/login"
+					android:layout_gravity="center"
+					android:gravity="center"
+					android:textColor="#FFFFFF"
+					android:textSize="23sp" />
+			</LinearLayout>
+
+		</LinearLayout>
+
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:orientation="horizontal" >
+			<!--Zuvio-->
+			<WebView
+				android:id="@+id/web"
+				android:layout_width="1dp"
+				android:layout_height="1dp" />
+			<!--M園區-->
+			<WebView
+				android:id="@+id/web_EUNI"
+				android:layout_width="1dp"
+				android:layout_height="1dp" />
+			<!--校務行政-->
+			<WebView
+				android:id="@+id/web_Acade"
+				android:layout_width="1dp"
+				android:layout_height="1dp" />
+			<!--宜大活動-->
+			<WebView
+				android:id="@+id/web_ccsys"
+				android:layout_width="1dp"
+				android:layout_height="1dp" />
+
+		</LinearLayout>
+	</LinearLayout>
+	<!-- 請稍等 覆蓋層 -->
+	<include layout="@layout/progress_overlay" />
+</FrameLayout>

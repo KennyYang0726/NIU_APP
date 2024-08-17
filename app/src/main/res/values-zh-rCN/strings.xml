@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">宜大學生app</string>
+    <string name="Notification_Title" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;通知權限&#160;&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="Notification_Content" translatable="false">我們不希望您錯過任何通知\n希望您能同意通知權限</string>
+    <string name="Location_Title" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;定位權限&#160;&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="Location_Content" translatable="false">我們僅於app使用中定位功能\n如 Zuvio GPS 點名\n及「夜市星人」成就項目\n絕無濫用權限\n希望能幫我開啟定位權限~~</string>
+    <string name="Dialog_Cancel" translatable="false">取消</string>
+    <string name="Dialog_Cancel2" translatable="false">狠心拒絕</string>
+    <string name="QAQ" translatable="false">QAQ</string>
+    <string name="Dialog_OK" translatable="false">OK</string>
+    <string name="Update_App" translatable="false">發現新版本</string>
+    <string name="school_num" translatable="false">學號(無需@ms.niu.edu.tw)</string>
+    <string name="school_num_hint" translatable="false">學號不能為空！</string>
+    <string name="pwd" translatable="false">密碼</string>
+    <string name="pwd_hint" translatable="false">密碼不能為空！</string>
+    <string name="wrong_hint" translatable="false">帳號或密碼錯誤</string>
+    <string name="login" translatable="false">登入</string>
+    <string name="loginING" translatable="false">登入中...</string>
+    <string name="prog" translatable="false">請稍等...</string>
+    <string name="login_success" translatable="false">登入成功</string>
+    <string name="login_failed" translatable="false">登入失敗</string>
+    <string name="Net_ERR" translatable="false">網路連線異常</string>
+    <string name="TimeOut" translatable="false">回應超時</string>
+    <string name="Login_TimeOut" translatable="false">登入逾時，請重新登入</string>
+    <string name="back_again" translatable="false">再按一次退出應用</string>
+    <string name="WebViewDev_Title" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;登入出現問題？&#160;&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="WebViewDev_Title2" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;登入網頁失敗&#160;&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="WebViewDev_Message" translatable="false">遇到無法登入的問題嗎？\n若確認網路狀態是ok的，卻仍無法登入，或許是您裝置預設WebView實作出了點問題，可選擇底下選項，看看是否解決無法登入問題。</string>
+    <string name="WebViewDev_Message2" translatable="false">屢次遇到該狀況？\n若確認網路狀態是ok的，卻仍屢次出現此訊息，表示您裝置預設WebView實作出了點問題，請選擇底下選項，看看是否解決問題。\n當然也可能是您閒置時間過長導致，若是此原因，可忽略此提示訊息，重新登入即可。</string>
+    <string name="WebViewDev_Btn1" translatable="false">下載安裝WebDev</string>
+    <string name="WebViewDev_Btn2" translatable="false">更新WebView</string>
+    <!-- 主頁 drawer -->
+    <string name="HomePage" translatable="false">首頁</string>
+    <string name="Announcement" translatable="false">公告</string>
+    <string name="Calendar" translatable="false">行事曆</string>
+    <string name="Questionnaire" translatable="false">問卷</string>
+    <string name="Satisfaction_Survey" translatable="false">滿意度調查</string>
+    <string name="Satisfaction_Survey_Text" translatable="false">您好:\n\n&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;這是一份宜大學生app滿意度調查問卷，請您仔細閱讀，並在適當的答案中勾選，本問卷僅提供app內部開發使用，您鎖填答的資料絕對不會對外公開，請您放心作答，您的寶貴意見有助於我們改善app品質，感謝您的參與。\n</string>
+    <string name="Start_Satisfaction_Survey" translatable="false">開始填寫</string>
+    <string name="Achievements" translatable="false">成就</string>
+    <string name="huh" translatable="false">說明</string>
+    <string name="About" translatable="false">關於</string>
+    <string name="LogOut" translatable="false">登出</string>
+    <!-- 主頁 功能 -->
+    <string name="EUNI" translatable="false">M園區</string>
+    <string name="Score_Inquiry" translatable="false">成績查詢</string>
+    <string name="Class_Schedule" translatable="false">我的課表</string>
+    <string name="Event_Registration" translatable="false">活動報名</string>
+    <string name="Contact_Us" translatable="false">聯絡我們</string>
+    <string name="Graduation_Threshold" translatable="false">畢業門檻</string>
+    <string name="Subject_System" translatable="false">選課系統</string>
+    <string name="Bus" translatable="false">公車動態</string>
+    <string name="Zuvio" translatable="false">ZUVIO</string>
+    <!-- 主頁 下載 -->
+    <string name="Download_Title" translatable="false">下載中...</string>
+    <string name="Download_Title2" translatable="false">正在下載更新...</string>
+    <string name="Downloading" translatable="false">正在下載 </string>
+    <string name="Download_Prog" translatable="false">下載進度：</string>
+    <string name="EUNI_Cources_INIT" translatable="false">課程初始化中</string>
+    <!-- 主頁 其他 -->
+    <string name="Logout_Successful" translatable="false">登出成功</string>
+    <string name="Only_Show_First_15_Entries" translatable="false">僅顯示前 15 筆資料</string>
+    <string name="Dialog_JumpOutsideWebHint_Title" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;提示&#160;&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="Dialog_JumpOutsideWebHint_Message" translatable="false">即將為您跳轉\n至外部瀏覽器\n瀏覽公告內容</string>
+    <string name="Using_FakeGPS" translatable="false">檢測到使用FakeGPS\n關閉後方可進行「夜市星人」成就</string>
+    <!-- 說明 -->
+    <string name="EUNI_" translatable="false">在手機上瀏覽課程</string>
+    <string name="EUNI_Page_0_1_Title" translatable="false">課程總覽</string>
+    <string name="EUNI_Page_0_1_Message" translatable="false">進入即可一覽所有課程，點擊展開更多課程資訊，包含「公告」、「成績」、「資源」、「作業」、「進入課程」，若發現課程不在列表，可點擊右上角刷新課程</string>
+    <string name="EUNI_Page_1_1_Title" translatable="false">資源</string>
+    <string name="EUNI_Page_1_1_Message" translatable="false">在手機上更方便查詢上課資源，也能夠將資源下載至手機</string>
+    <string name="EUNI_Page_2_1_Title" translatable="false">作業</string>
+    <string name="EUNI_Page_2_1_Message" translatable="false">在手機上完成作業後即可繳交，未來可能以更美更好用的 UI 呈現</string>
+    <string name="EUNI_Page_3_1_Title" translatable="false">空空如也</string>
+    <string name="EUNI_Page_3_1_Message" translatable="false">如果該課程沒有任何 公告/資源/作業，會是空空如也喔~~</string>
+    <string name="Score_Inquiry_" translatable="false">對自己的成績一目了然</string>
+    <string name="Score_Inquiry_Page_0_1_Title" translatable="false">期中成績</string>
+    <string name="Score_Inquiry_Page_0_1_Message" translatable="false">成績查詢系統，待教師上傳成績至校務系統後，顯示課程期中成績。\n點選上方功能條，可切換「期中成績」、「期末成績」</string>
+    <string name="Score_Inquiry_Page_1_1_Title" translatable="false">期末成績</string>
+    <string name="Score_Inquiry_Page_1_1_Message" translatable="false">顯示期末成績與班排名，班排名需要等所有課程皆有成績資訊才能計算！</string>
+    <string name="Class_Schedule_" translatable="false">更方便的查看課表</string>
+    <string name="Class_Schedule_Page_0_1_Title" translatable="false">我的課表</string>
+    <string name="Class_Schedule_Page_0_1_Message" translatable="false">老是忘記要上甚麼課？點進來看看吧~\n未來有望加入額外功能</string>
+    <string name="Event_Registration_" translatable="false">隨時隨地報名參與活動</string>
+    <string name="Event_Registration_Page_0_1_Title" translatable="false">活動報名</string>
+    <string name="Event_Registration_Page_0_1_Message" translatable="false">「活動報名」有2個分頁，左邊是活動列表，右邊是已報名的活動，點擊上方分頁按鈕或是滑動螢幕即可切換頁面。</string>
+    <string name="Event_Registration_Page_1_1_Title" translatable="false">已報名的活動</string>
+    <string name="Event_Registration_Page_1_1_Message" translatable="false">在這裡可以查看已報名的活動資訊，可點擊詳情查看活動資訊，未結束活動可修改資訊/取消報名。</string>
+    <string name="Event_Registration_Page_2_1_Title" translatable="false">活動詳情</string>
+    <string name="Event_Registration_Page_2_1_Message" translatable="false">可以查看活動詳細資訊，電話欄點擊可複製、mail欄點擊可開啟發送郵件應用程式、相關連結點擊亦可直接跳轉。</string>
+    <string name="Event_Registration_Page_3_1_Title" translatable="false">修改/取消 報名</string>
+    <string name="Event_Registration_Page_3_1_Message" translatable="false">可以修改/取消 報名活動，僅 電話欄、mail欄、備註欄 可以編輯，其餘欄位無法編輯。</string>
+    <string name="Contact_Us_" translatable="false">想說些什麼隨時歡迎</string>
+    <string name="Contact_Us_Page_0_1_Title" translatable="false">意見回饋</string>
+    <string name="Contact_Us_Page_0_1_Message" translatable="false">有什麼想跟我們開發人員說的嗎？或是想加入開發團隊呢？歡迎來說說~點選上方功能條，可切換「意見回饋」、「BUG回報」</string>
+    <string name="Contact_Us_Page_1_1_Title" translatable="false">BUG回報</string>
+    <string name="Contact_Us_Page_1_1_Message" translatable="false">讓臭蟲蟲無影無蹤，感謝您的回報，使我們得知並修復。</string>
+    <string name="Graduation_Threshold_" translatable="false">深入了解自己畢業資格</string>
+    <string name="Graduation_Threshold_Page_0_1_Title" translatable="false">多元時數</string>
+    <string name="Graduation_Threshold_Page_0_1_Message" translatable="false">圖形化顯示，在校之多元時數，想了解更完整的細項，可點擊右上方「詳細」查看。</string>
+    <string name="Graduation_Threshold_Page_1_1_Title" translatable="false">各類門檻</string>
+    <string name="Graduation_Threshold_Page_1_1_Message" translatable="false">顯示畢業所需各類門檻目標，快速掌握通過狀態。</string>
+    <string name="Subject_System_" translatable="false">來校務行政選課囉~~</string>
+    <string name="Subject_System_Page_0_1_Title" translatable="false">選課系統</string>
+    <string name="Subject_System_Page_0_1_Message" translatable="false">選課時間到了，來選擇自己喜歡的課程修讀吧~~</string>
+    <string name="Bus_" translatable="false">輕鬆查看宜大公車資訊</string>
+    <string name="Bus_Page_0_1_Title" translatable="false">公車動態</string>
+    <string name="Bus_Page_0_1_Message" translatable="false">在這個頁面可以輕鬆取得所有經過宜大的公車路線，點擊其中之一即可查看即時資訊。</string>
+    <string name="Bus_Page_1_1_Title" translatable="false">公車動態</string>
+    <string name="Bus_Page_1_1_Message" translatable="false">這個頁面可以查看該條路線即時動態、票價、時刻表與路線簡圖。</string>
+    <string name="Zuvio_" translatable="false">上課點名、題目的好助手</string>
+    <string name="Zuvio_Page_0_1_Title" translatable="false">ZUVIO</string>
+    <string name="Zuvio_Page_0_1_Message" translatable="false">進入Zuvio後可於該頁面點擊並查看課程。</string>
+    <string name="Zuvio_Page_1_1_Title" translatable="false">ZUVIO</string>
+    <string name="Zuvio_Page_1_1_Message" translatable="false">進入課程後，下方有5個分頁，可以根據自己的需求進行操作，讓同學們自行探索了~。</string>
+    <!-- 關於 -->
+    <string name="Developer" translatable="false"><u>開發者</u></string>
+    <string name="Developer_0" translatable="false"><u>前開發者們</u></string>
+    <string name="Information_Engineering" translatable="false">資工系</string>
+    <string name="Instructor" translatable="false"><u>指導老師</u></string>
+    <string name="DR_ChaoXi" translatable="false">黃朝曦</string>
+    <string name="Information_Engineering_DR" translatable="false">資訊工程學系 副教授</string>
+    <!-- 成就 -->
+    <string name="Achievements_Get" translatable="false">新成就解鎖</string>
+    <string name="Achievements_01_Title" translatable="false">歡迎您的加入</string>
+    <string name="Achievements_01_Description" translatable="false">首次登入此app即可獲得</string>
+    <string name="Achievements_02_Title" translatable="false">感謝您寶貴的意見</string>
+    <string name="Achievements_02_Description" translatable="false">填寫回饋問卷即可獲得</string>
+    <string name="Achievements_03_Title" translatable="false">好棒，三點了</string>
+    <string name="Achievements_03_Description" translatable="false">凌晨 3:00 登入app即可獲得</string>
+    <string name="Achievements_04_Title" translatable="false">今天不是愚人節</string>
+    <string name="Achievements_04_Description" translatable="false">4/1登入即可獲得</string>
+    <string name="Achievements_05_Title" translatable="false">開發者生日</string>
+    <string name="Achievements_05_Description" translatable="false">是開發者生日ㄟ，不過一下嗎？\n8/26登入即可獲得</string>
+    <string name="Achievements_06_Title" translatable="false">聖誕快樂</string>
+    <string name="Achievements_06_Description" translatable="false">過行憲紀念日，還是過聖誕呢？\n12/25登入即可獲得</string>
+    <string name="Achievements_07_Title" translatable="false">相伴100天</string>
+    <string name="Achievements_07_Description" translatable="false">距首次登入滿100天即可獲得</string>
+    <string name="Achievements_08_Title" translatable="false">相伴一週年</string>
+    <string name="Achievements_08_Description" translatable="false">距首次登入滿一年即可獲得</string>
+    <string name="Achievements_09_Title" translatable="false">努力不懈</string>
+    <string name="Achievements_09_Description" translatable="false">連續登入30天即可獲得\n中途不得登出！！</string>
+    <string name="Achievements_10_Title" translatable="false">逐暗者</string>
+    <string name="Achievements_10_Description" translatable="false">連續74天登入，皆使用亮色模式(非暗黑模式)\n中途不得登出！！</string>
+    <string name="Achievements_11_Title" translatable="false">夜市星人</string>
+    <string name="Achievements_11_Description" translatable="false">逛遍宜蘭14夜市，抵達後登入即可紀錄，集滿14個即可獲得(晚上5:30~10:30)，點我看詳情</string>
+    <string name="Achievements_11_showMessage0" translatable="false">初始化中...</string>
+    <string name="Achievements_11_showMessage1" translatable="false">已完成「夜市星人」成就</string>
+    <string name="Achievements_11_showMessage2" translatable="false">未授予定位精確定位權限\n無法進行「夜市星人」成就</string>
+    <string name="Achievements_11_Dialog_Title" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;夜市列表</string>
+    <string name="Achievements_11_Dialog_Message" translatable="false">為確保判定正確，於夜市靠中心處誤判率更低\n\n</string>
+    <string-array name="night_market_array">
+        <item>東門(全天)</item>
+        <item>羅東(全天)</item>
+        <item>員山(四)</item>
+        <item>冬山(六)</item>
+        <item>礁溪溫泉夜市(日)</item>
+        <item>礁溪四城澤蘭宮(一、二)</item>
+        <item>三星(五)</item>
+        <item>頭城(五)</item>
+        <item>清溝(三)</item>
+        <item>蘇澳頂寮(四)</item>
+        <item>蘇澳(日)</item>
+        <item>馬賽(六)</item>
+        <item>南方澳(一)</item>
+        <item>南澳(二)</item>
+    </string-array>
+    <item name="Image_Finished" type="drawable">@drawable/completed_zh_tw</item>
+    <item name="Image_UnFinished" type="drawable">@drawable/uncompleted_zh_tw</item>
+    <!-- M園區 -->
+    <string name="EUNI_Sub_Item1" translatable="false">公告</string>
+    <string name="EUNI_Sub_Item2" translatable="false">成績</string>
+    <string name="EUNI_Sub_Item3" translatable="false">資源</string>
+    <string name="EUNI_Sub_Item4" translatable="false">作業</string>
+    <string name="EUNI_Sub_Item5" translatable="false">進入課程</string>
+    <string name="EUNI_Course_Reload_Successful" translatable="false">課程重新載入成功</string>
+    <string name="try_it_later" translatable="false">請稍後再進行嘗試</string>
+    <string name="ThisCourseDoesNotHaveAny" translatable="false">空空如也&#160;&#160;&#160; ̄_(ツ)_/ ̄</string>
+    <string name="OpenSAFFailed" translatable="false">開啟檔案選擇器失敗</string>
+    <string name="EUNI_First_Loading_Tip" translatable="false">首次加載公告時間較長\n請耐心等候</string>
+    <string name="EUNI_GetAnnouncement_Failed" translatable="false">無法進入該公告\n請稍後再試一次</string>
+    <!-- 成績查詢 -->
+    <string name="Mid_term_results" translatable="false">期中成績</string>
+    <string name="Final_term_results" translatable="false">期末成績</string>
+    <string name="Mid_term_warning" translatable="false">期中預警</string>
+    <string name="Score" translatable="false">分數：</string>
+    <string name="Not_uploaded" translatable="false">未上傳</string>
+    <string name="Elective" translatable="false">選修</string>
+    <string name="Obligatory" translatable="false">必修</string>
+    <string name="Avg" translatable="false">期末平均：</string>
+    <string name="Ranking_Text" translatable="false">班級排名：</string>
+    <string name="Ranking" translatable="false">第 {0} 名</string>
+    <string name="CanNotCalc" translatable="false">無法計算</string>
+    <!-- 活動報名 -->
+    <string name="EventRegistration" translatable="false">≡活動報名</string>
+    <string name="EventRegistrationSuccess" translatable="false">✔已報名</string>
+    <string name="Event_Detail_Title" translatable="false">詳細資料</string>
+    <string name="Event_Register_Success" translatable="false">報名成功</string>
+    <string name="Event_State_ok" translatable="false">報名中</string>
+    <string name="Event_State_notyet" translatable="false">準備中</string>
+    <string name="Event_State_registerOver" translatable="false">報名截止</string>
+    <string name="Event_State_done" translatable="false">已結束</string>
+    <string name="Event_State_Arrow_UP" translatable="false"> ˆ </string>
+    <string name="Event_State_Arrow_DOWN" translatable="false"> ˇ </string>
+    <string name="Event_BTN_Register" translatable="false">前往報名</string>
+    <string name="Event_BTN_Detail" translatable="false">詳情</string>
+    <string name="Event_BTN_Modify_Information" translatable="false">&#160;&#160;&#160;修改資料/取消報名&#160;&#160;&#160;</string>
+    <string name="Event_ShowMessageJsonERR" translatable="false">json化錯誤\n請回報給開發者，謝謝~</string>
+    <string name="Event_ID" translatable="false">&#160;活動編號&#160;</string>
+    <string name="Event_Time" translatable="false">&#160;活動時間&#160;</string>
+    <string name="Event_Location" translatable="false">&#160;活動地點&#160;</string>
+    <string name="Event_Detail" translatable="false">&#160;活動說明&#160;</string>
+    <string name="Event_Department" translatable="false">&#160;主辦單位&#160;</string>
+    <string name="Event_ContactInfo" translatable="false">&#160;聯絡資訊&#160;</string>
+    <string name="Event_Link" translatable="false">&#160;相關連結&#160;</string>
+    <string name="Event_Remark" translatable="false">&#160;備註&#160;</string>
+    <string name="Event_factor_authentication" translatable="false">&#160;多元認證&#160;</string>
+    <string name="Event_RegisterTime" translatable="false">&#160;報名時間&#160;</string>
+    <string name="Event_People" translatable="false">&#160;報名人數&#160;</string>
+    <string name="Event_People2" translatable="false">&#160;報名狀態&#160;</string>
+    <string name="Event_Mail_Title" translatable="false">您好，我有些事情想詢問</string>
+    <string name="Event_Mail_Content" translatable="false">星爆氣流斬</string>
+    <string name="Event_Mail_CannotHandle" translatable="false">無法處理發送郵件</string>
+    <string name="Event_ModInfo" translatable="false">修改資料/取消報名</string>
+    <string name="Event_ModInfo_role" translatable="false">&#160;報名身分&#160;</string>
+    <string name="Event_ModInfo_class" translatable="false">&#160;班級&#160;</string>
+    <string name="Event_ModInfo_schnum" translatable="false">&#160;學號&#160;</string>
+    <string name="Event_ModInfo_name" translatable="false">&#160;姓名&#160;</string>
+    <string name="Event_ModInfo_tel" translatable="false">&#160;連絡電話&#160;</string>
+    <string name="Event_ModInfo_mail" translatable="false">&#160;電子郵件&#160;</string>
+    <string name="Event_ModInfo_remark" translatable="false">&#160;備註&#160;</string>
+    <string name="Event_ModInfo_RadioTextTitle" translatable="false">以下選項，活動單位如有提供的話，請選擇</string>
+    <string name="Event_ModInfo_RadioTextMessage1" translatable="false">飲食習慣：</string>
+    <string name="Event_ModInfo_Radio1_1" translatable="false">葷食</string>
+    <string name="Event_ModInfo_Radio1_2" translatable="false">素食</string>
+    <string name="Event_ModInfo_Radio1_3" translatable="false">不用餐</string>
+    <string name="Event_ModInfo_RadioTextMessage2" translatable="false">活動認證：</string>
+    <string name="Event_ModInfo_Radio2_1" translatable="false">不需要</string>
+    <string name="Event_ModInfo_Radio2_2" translatable="false">參加證明</string>
+    <string name="Event_ModInfo_btn1" translatable="false">取消報名</string>
+    <string name="Event_ModInfo_btn2" translatable="false">儲存修改</string>
+    <string name="Event_ModInfo_btn1_success" translatable="false">取消報名成功</string>
+    <string name="Event_ModInfo_btn2_success" translatable="false">儲存成功</string>
+    <!-- 聯絡我們 -->
+    <string name="Feedback" translatable="false">意見回饋</string>
+    <string name="Feedback_text" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;無論是對介面設計有想法，或是須要額外功能，或是想幫助我們持續協助app的 維護/新功能開發，亦或是對app開發感興趣，歡迎向我們回饋您寶貴的想法。若您願意協助app的後續事宜，可以留下您的Mail、Line等聯繫方式，我們將與您聯繫！</string>
+    <string name="WriteSomething" translatable="false">寫點什麼吧~~</string>
+    <string name="ContactInfo" translatable="false">聯繫方式(選填)</string>
+    <string name="Bug_Report" translatable="false">BUG回報</string>
+    <string name="Bug_Report_text" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;很遺憾，發生臭蟲帶來的壞心情，這份表單可以協助我們修復這個問題。如果您知道如何觸發此BUG發生，請詳細說明，觸發此BUG的流程與條件。如果不清楚如何觸發這個BUG，或者是無預警的出現問題，請大略描述出現的問題時機。再次感謝您，讓我們app持續進步。</string>
+    <string name="Bug_Report_text1" translatable="false">標題</string>
+    <string name="Bug_Report_input1" translatable="false">bug 類型 (ex:閃退、沒有回應...)</string>
+    <string name="Bug_Report_text2" translatable="false">步驟</string>
+    <string name="Bug_Report_input2" translatable="false">描述如何重現 bug 的具體步驟</string>
+    <string name="RegisteredSend" translatable="false">以記名方式送出</string>
+    <string name="DeviceInfoReport" translatable="false">同意傳送設備資訊</string>
+    <string name="Submit" translatable="false">送出</string>
+    <string name="EmptyContent" translatable="false">內容不能為空</string>
+    <string name="Submit_Successful" translatable="false">提交回饋成功</string>
+    <!-- 畢業門檻 -->
+    <string name="Diverse_Hours" translatable="false">多元時數</string>
+    <string name="Diverse_Hours_Services" translatable="false">服務</string>
+    <string name="Diverse_Hours_Diverse" translatable="false">多元</string>
+    <string name="Diverse_Hours_Major" translatable="false">專業</string>
+    <string name="Diverse_Hours_Complex" translatable="false">綜合</string>
+    <string name="English_Ability" translatable="false">英語能力</string>
+    <string name="Physical_Fitness" translatable="false">體適能</string>
+    <string name="Total_Credits_Required" translatable="false">應修學分總數</string>
+    <string name="Credit_Course" translatable="false">學分學程</string>
+    <string name="Credit_Course_None" translatable="false">尚未選擇</string>
+    <string name="Check_Graduation_Threshold" translatable="false">&#160;&#160;&#160;查詢畢業門檻&#160;&#160;&#160;</string>
+    <string name="Check_Graduation_Threshold_0" translatable="false">&#160;&#160;&#160;返回摘要查詢&#160;&#160;&#160;</string>
+    <!-- 選擇系統 -->
+    <string name="currently_not_a_course_selection_time" translatable="false">目前非選課時間！</string>
+    <!-- Zuvio -->
+    <string name="ECE_Building" translatable="false">格致大樓</string>
+    <string name="Engineering_Building" translatable="false">工學院</string>
+    <string name="Bioresources_Building" translatable="false">生資院</string>
+    <string name="Teaching_Building" translatable="false">教穡大樓</string>
+    <string name="Comprehensive_Building" translatable="false">綜合大樓</string>
+    <string name="Guishan" translatable="false">龜山島</string>
+    <string name="showMessage0" translatable="false">使用位置「</string>
+    <string name="showMessage1" translatable="false">」\n僅對此點名有效</string>
+    <string name="Close_GPS_Tips" translatable="false">請先關閉 GPS 定位服務\n再嘗試一次</string>
+    <string name="State_NOW" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;狀態資訊&#160;&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="Permission_Location" translatable="false">定位權限：</string>
+    <string name="GPS_State" translatable="false">\nGPS狀態：</string>
+    <string name="Fake_GPS_OK" translatable="false">\n\n您目前的狀態可自定\nzuvio 點名的位置\n若要使用真實位置\n請開啟 GPS 定位服務\n或允許此app的定位權限</string>
+    <string name="Fake_GPS_NoWay" translatable="false">\n\n您目前的狀態會讓 zuvio\n讀取到您真實的位置\n若要使用虛擬位置\n請關閉 GPS 定位服務\n或撤銷此app定位權限</string>
+    <string name="Tips_Choose_Location" translatable="false">點擊想要的位置\n即可模擬該經緯度</string>
+    <string name="Longitude" translatable="false">經度：</string>
+    <string name="Latitude" translatable="false">緯度：</string>
+    <string name="Cancel_Choose" translatable="false">取消選擇\n使用「格致大樓」</string>
+</resources>

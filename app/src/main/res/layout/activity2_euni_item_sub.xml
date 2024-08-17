@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/dialog_sub">
+
+    <TextView
+        android:id="@+id/textViewSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Sub Item"
+        android:textColor="@color/text_color"
+        android:textSize="15sp"
+        android:padding="6dp"/>
+</LinearLayout>
