@@ -56,6 +56,11 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.appcheck.FirebaseAppCheck;
+import com.google.firebase.appcheck.playintegrity.PlayIntegrityAppCheckProviderFactory;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -168,7 +173,29 @@ public class Activity0_LoginActivity extends AppCompatActivity {
 		account_linear.setBackgroundResource(R.drawable.input_field);
 		pwd_linear.setBackgroundResource(R.drawable.input_field);
 		sharedPreferences = getSharedPreferences("sp", Activity.MODE_PRIVATE);
+
 		// Firebase 初始化
+		FirebaseAppCheck firebaseAppCheck = FirebaseAppCheck.getInstance();
+		firebaseAppCheck.installAppCheckProviderFactory(
+				PlayIntegrityAppCheckProviderFactory.getInstance());
+
+		FirebaseAuth mAuth = FirebaseAuth.getInstance();
+		mAuth.signInAnonymously()
+				.addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+					@Override
+					public void onComplete(@NonNull Task<AuthResult> task) {
+						if (task.isSuccessful()) {
+							// 登入成功
+							Log.d("TAG", "signInAnonymously:success");
+							FirebaseUser user = mAuth.getCurrentUser();
+							// 在這裡可以使用 user 物件
+						} else {
+							// 登入失敗
+							Log.w("TAG", "signInAnonymously:failure", task.getException());
+						}
+					}
+				});
+
 		FirebaseDatabase database = FirebaseDatabase.getInstance();
 		DatabaseReference mDatabase = database.getReference();
 
@@ -388,6 +415,7 @@ public class Activity0_LoginActivity extends AppCompatActivity {
 										handler.postDelayed(new Runnable() {
 											@Override
 											public void run() {
+												Log.d("登入狀態", "Zuvio："+Zuvio_Login+"\nEUNI："+EUNI_Login+"\nACADE："+ACADE_Login+"\nCCSYS："+CCSYS_Login);
 												if (Zuvio_Login && EUNI_Login && ACADE_Login && CCSYS_Login) {
 													webView.loadUrl("https://irs.zuvio.com.tw/student5/setting/index");
 													collapse(Anim_Linear);
@@ -748,7 +776,6 @@ public class Activity0_LoginActivity extends AppCompatActivity {
 
 	// 登入 M園區 方法，先確保取得到 token
 	private void Login_EUNI(String account, String pwd) {
-
 		webView_EUNI.setWebViewClient(new WebViewClient() {
 			@Override
 			public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
@@ -756,19 +783,29 @@ public class Activity0_LoginActivity extends AppCompatActivity {
 				return true; // 表示我們已經處理這個 URL，不需要再外部處理，eg: 跳轉外部瀏覽器
 			}
 		});
-		webView_EUNI.setWebChromeClient(new WebChromeClient() {
-			@Override
-			public void onProgressChanged(WebView view, int newProgress) {
-				super.onProgressChanged(view, newProgress);
-				if (newProgress == 100) {
-					// 頁面加載完成
-					webView_EUNI.evaluateJavascript("document.querySelector('[name=\"logintoken\"]').value", token -> {
-						token = token.replaceAll("\"", "");
-						handleTokenResponse_EUNI(token, account, pwd);
-					});
+		if (!Login_Method.equals("BTN")) {
+			webView_EUNI.setWebChromeClient(new WebChromeClient() {
+				@Override
+				public void onProgressChanged(WebView view, int newProgress) {
+					super.onProgressChanged(view, newProgress);
+					if (newProgress == 100) {
+						// 頁面加載完成
+						webView_EUNI.evaluateJavascript("document.querySelector('[name=\"logintoken\"]').value", token -> {
+							token = token.replaceAll("\"", "");
+							handleTokenResponse_EUNI(token, account, pwd);
+						});
+					}
 				}
-			}
-		});
+			});
+		} else {
+			// 若是 BTN ，頁面早就加載完，加入 PageFinish 反而無法觸發
+			// 頁面加載完成
+			webView_EUNI.evaluateJavascript("document.querySelector('[name=\"logintoken\"]').value", token -> {
+				token = token.replaceAll("\"", "");
+				handleTokenResponse_EUNI(token, account, pwd);
+			});
+		}
+
 	}
 
 	private void handleTokenResponse_EUNI(String token, String account, String pwd) {

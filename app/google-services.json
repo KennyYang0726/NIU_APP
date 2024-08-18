@@ -1,14 +1,14 @@
 {
   "project_info": {
-    "project_number": "926705427045",
-    "firebase_url": "https://niu-acade-app-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "niu-acade-app",
-    "storage_bucket": "niu-acade-app.appspot.com"
+    "project_number": "685548693463",
+    "firebase_url": "https://niu-csie-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "niu-csie",
+    "storage_bucket": "niu-csie.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:926705427045:android:74f51063d7b8457bf65c8c",
+        "mobilesdk_app_id": "1:685548693463:android:6693b89a9a5ba31c930d92",
         "android_client_info": {
           "package_name": "com.niu.csie.edu.app"
         }
@@ -16,7 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyA9gWnNdLfb-eqBhJ8UN_zQxPYectLGaLs"
+          "current_key": "AIzaSyDaz9H_ADHnpdE3woYvqv6paBQ-Vj84S3Q"
         }
       ],
       "services": {

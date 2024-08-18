@@ -23,7 +23,7 @@
 			<ImageView
 				android:layout_width="match_parent"
 				android:layout_height="101dp"
-				android:layout_marginTop="97dp"
+				android:layout_marginTop="79dp"
 				android:src="@drawable/niu_logo" />
 
 			<TextView

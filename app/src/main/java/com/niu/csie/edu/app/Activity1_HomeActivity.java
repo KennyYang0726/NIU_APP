@@ -481,8 +481,8 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 					}
 					// 添加 第11 成就 (夜市)
 					achievementsRef.child("11").setValue((String) "00000000000000");
-					// 解鎖 01 成就 首次登入
-					AchievementsGet("01");
+
+					Log.d("asdfg", "創建使用者");
 
 					// 返回時間日期
 					client.newCall(request).enqueue(new Callback() {
@@ -505,6 +505,10 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 
 									// 添加首次登入日期
 									achievementsRef.child("首次登入日期").setValue(formattedDateNow);
+
+									// 解鎖 01 成就 首次登入
+									// 之所以要在這裡，是因為 AchievementsGet 裡面有 AchievementCheck，有判定星期，放在上面的話，因為 DayOfWeekNow 尚未抓取完成為null，會閃退
+									AchievementsGet("01");
 
 									// 日期成就
 									if (formattedDateNow.contains("-04-01")) {
@@ -530,6 +534,7 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 
 				} else {
 					/** ID 已存在，檢查成就列表，以初始化成就" */
+					Log.d("asdfg", "已存在使用者");
 
 					// 返回時間日期
 					client.newCall(request).enqueue(new Callback() {
@@ -1280,7 +1285,7 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 			case 3: // 冬山
 				return currentDayOfWeek.equals("6");
 			case 4: // 礁溪
-				return currentDayOfWeek.equals("7");
+				return currentDayOfWeek.equals("0"); // 星期日是 0
 			case 5: // 礁溪澤蘭宮
 				return currentDayOfWeek.equals("1") || currentDayOfWeek.equals("2");
 			case 6: // 三星
@@ -1292,7 +1297,7 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 			case 9: // 蘇澳頂寮
 				return currentDayOfWeek.equals("4");
 			case 10: // 蘇澳
-				return currentDayOfWeek.equals("7");
+				return currentDayOfWeek.equals("0"); // 星期日是 0
 			case 11: // 馬賽
 				return currentDayOfWeek.equals("6");
 			case 12: // 南方澳
