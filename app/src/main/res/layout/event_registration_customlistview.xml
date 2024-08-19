@@ -264,6 +264,7 @@
                 android:layout_height="37dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="11dp"
+                android:textAllCaps="false"
                 android:text="@string/Event_BTN_Register"
                 android:textColor="@color/white"
                 android:background="@drawable/rounded_button2"/>

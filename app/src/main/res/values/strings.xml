@@ -120,16 +120,16 @@
 	<string name="Information_Engineering" translatable="false">Information Engineering</string>
 	<string name="Instructor" translatable="false"><u>Instructor</u></string>
 	<string name="DR_ChaoXi" translatable="false">Chao Xi Huang</string>
-	<string name="Information_Engineering_DR" translatable="false">Information Engineering\'s 副教授</string>
+	<string name="Information_Engineering_DR" translatable="false">Information Engineering\'s Professor</string>
 	<!-- 成就 -->
 	<string name="Achievements_Get" translatable="false">New Achievements Get</string>
 	<string name="Achievements_01_Title" translatable="false">Welcome~~</string>
 	<string name="Achievements_01_Description" translatable="false">You can get it when you log in to this app for the first time.</string>
-	<string name="Achievements_02_Title" translatable="false">Thank you for your valuable feedback</string>
+	<string name="Achievements_02_Title" translatable="false">Thx your feedback</string>
 	<string name="Achievements_02_Description" translatable="false">Fill out the feedback questionnaire to get.</string>
 	<string name="Achievements_03_Title" translatable="false">Oh boy! 3 a.m.!</string>
 	<string name="Achievements_03_Description" translatable="false">Log in to the app at 3:00 am to get it.(GMT+8)</string>
-	<string name="Achievements_04_Title" translatable="false">Today is not April Fool\'s</string>
+	<string name="Achievements_04_Title" translatable="false">Not April Fool\'s day</string>
 	<string name="Achievements_04_Description" translatable="false">Log in on 4/1 to get it.</string>
 	<string name="Achievements_05_Title" translatable="false">Developer\'s birthday</string>
 	<string name="Achievements_05_Description" translatable="false">It\'s the developer\'s birthday! Get it by logging in on 8/26.</string>
@@ -244,11 +244,11 @@
 	<string name="Event_ModInfo_btn2_success" translatable="false">Save Successfully</string>
 	<!-- 聯絡我們 -->
 	<string name="Feedback" translatable="false">Feedback</string>
-	<string name="Feedback_text" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Whether you have ideas for interface design, need additional features, want to help us continue to assist with app maintenance/new feature development, or are interested in app development, you are welcome to give us your valuable feedback. If you are willing to assist with the follow-up matters of the app, you can leave your email, Line and other contact information and we will contact you!</string>
+	<string name="Feedback_text" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Whether you have ideas for interface design, translate, need additional features, or are interested in app development, you are welcome to give us your valuable feedback. If you are willing to assist with the follow-up matters of the app, you can leave your email, Line and other contact information and we will contact you!</string>
 	<string name="WriteSomething" translatable="false">Write something~~</string>
 	<string name="ContactInfo" translatable="false">Contact Info (optional)</string>
 	<string name="Bug_Report" translatable="false">BUG Report</string>
-	<string name="Bug_Report_text" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Unfortunate that bugs bring bad feelings, and this form can help us fix the problem. If you know how to trigger this BUG to occur, please explain in detail the process and conditions that trigger this BUG. If don\'t know how to trigger this bug, or if the problem occurs without warning, please briefly describe the time when the problem occurs. Thank you again for helping our app continue to improve.</string>
+	<string name="Bug_Report_text" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Unfortunate that bugs bring bad feelings, and this form can help us fix the problem. If you know how to trigger this BUG to occur, please explain in detail the process and conditions that trigger this BUG. If don\'t know how to trigger this bug, or if the problem occurs without warning, please briefly describe the time when the problem occurs.</string>
 	<string name="Bug_Report_text1" translatable="false">Title</string>
 	<string name="Bug_Report_input1" translatable="false">bug type (ex:crash、ANR...)</string>
 	<string name="Bug_Report_text2" translatable="false">Steps</string>

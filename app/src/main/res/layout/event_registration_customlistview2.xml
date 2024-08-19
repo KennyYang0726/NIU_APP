@@ -235,6 +235,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
                         android:layout_weight="1"
+                        android:textAllCaps="false"
                         android:text="@string/Event_BTN_Detail"
                         android:textColor="@color/white"
                         android:background="@drawable/rounded_button3"/>
@@ -250,6 +251,7 @@
                         android:layout_height="37dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
+                        android:textAllCaps="false"
                         android:text="@string/Event_BTN_Modify_Information"
                         android:textColor="@color/white"
                         android:background="@drawable/rounded_button3"/>
