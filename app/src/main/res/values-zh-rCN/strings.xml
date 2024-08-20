@@ -52,6 +52,7 @@
     <string name="Subject_System" translatable="false">選課系統</string>
     <string name="Bus" translatable="false">公車動態</string>
     <string name="Zuvio" translatable="false">ZUVIO</string>
+    <string name="Take_Leave" translatable="false">請假系統</string>
     <!-- 主頁 下載 -->
     <string name="Download_Title" translatable="false">下載中...</string>
     <string name="Download_Title2" translatable="false">正在下載更新...</string>
@@ -114,6 +115,9 @@
     <string name="Zuvio_Page_0_1_Message" translatable="false">進入Zuvio後可於該頁面點擊並查看課程。</string>
     <string name="Zuvio_Page_1_1_Title" translatable="false">ZUVIO</string>
     <string name="Zuvio_Page_1_1_Message" translatable="false">進入課程後，下方有5個分頁，可以根據自己的需求進行操作，讓同學們自行探索了~。</string>
+    <string name="Take_Leave_" translatable="false">不方便上課？請假休息一下吧。</string>
+    <string name="Take_Leave_Page_0_1_Title" translatable="false">請假系統</string>
+    <string name="Take_Leave_Page_0_1_Message" translatable="false">直接跳轉至校務行政請假頁面。</string>
     <!-- 關於 -->
     <string name="Developer" translatable="false"><u>開發者</u></string>
     <string name="Developer_0" translatable="false"><u>前開發者們</u></string>

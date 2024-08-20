@@ -52,6 +52,7 @@
 	<string name="Subject_System" translatable="false">Subject System</string>
 	<string name="Bus" translatable="false">Bus Trend</string>
 	<string name="Zuvio" translatable="false">ZUVIO</string>
+	<string name="Take_Leave" translatable="false">Take Leave</string>
 	<!-- 主頁 下載 -->
 	<string name="Download_Title" translatable="false">Downloading...</string>
 	<string name="Download_Title2" translatable="false">Downloading updates...</string>
@@ -101,7 +102,7 @@
 	<string name="Graduation_Threshold_Page_0_1_Message" translatable="false">Graphically displays the number of hours spent in school. If you want to know more complete details, you can click "Details" on the upper right to view.</string>
 	<string name="Graduation_Threshold_Page_1_1_Title" translatable="false">Various Thresholds</string>
 	<string name="Graduation_Threshold_Page_1_1_Message" translatable="false">Display various threshold goals required for graduation and quickly grasp the passing status.</string>
-	<string name="Subject_System_" translatable="false">come to the school administration to choose courses~~</string>
+	<string name="Subject_System_" translatable="false">come acade system to choose courses~~</string>
 	<string name="Subject_System_Page_0_1_Title" translatable="false">Subject System</string>
 	<string name="Subject_System_Page_0_1_Message" translatable="false">It’s time to choose courses, come and choose the courses you like~~</string>
 	<string name="Bus_" translatable="false">easily view NIU\'s bus information</string>
@@ -109,11 +110,14 @@
 	<string name="Bus_Page_0_1_Message" translatable="false">In this page, you can easily get all the bus routes passing through NIU. Click on one of them to view real-time information.</string>
 	<string name="Bus_Page_1_1_Title" translatable="false">Bus Trend</string>
 	<string name="Bus_Page_1_1_Message" translatable="false">This page allows you to view the route’s real-time updates, fares, timetables and route map.</string>
-	<string name="Zuvio_" translatable="false">good assistant for taking roll call and answering questions in class</string>
+	<string name="Zuvio_" translatable="false">taking roll call and answering questions in class</string>
 	<string name="Zuvio_Page_0_1_Title" translatable="false">ZUVIO</string>
 	<string name="Zuvio_Page_0_1_Message" translatable="false">After entering Zuvio, you can click on this page and view the courses.</string>
 	<string name="Zuvio_Page_1_1_Title" translatable="false">ZUVIO</string>
 	<string name="Zuvio_Page_1_1_Message" translatable="false">After entering the course, there are 5 tabs below, which can be operated according to your own needs, allowing students to explore on their own~.</string>
+	<string name="Take_Leave_" translatable="false">go take some time off and rest</string>
+	<string name="Take_Leave_Page_0_1_Title" translatable="false">Take Leave</string>
+	<string name="Take_Leave_Page_0_1_Message" translatable="false">Jump to school\'s acade to apply for leave.</string>
 	<!-- 關於 -->
 	<string name="Developer" translatable="false"><u>Developer</u></string>
 	<string name="Developer_0" translatable="false"><u>Former developers</u></string>

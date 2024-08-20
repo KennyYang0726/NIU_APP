@@ -92,7 +92,7 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 	private Button BTN_Calender_AppBar;
 	private PDFView PDF_Calender_View;
 
-	private ImageView M園區, 成績查詢, 我的課表, 活動報名, 聯絡我們, 畢業門檻, 選課系統, 公車動態, ZUVIO;
+	private ImageView M園區, 成績查詢, 我的課表, 活動報名, 聯絡我們, 畢業門檻, 選課系統, 公車動態, ZUVIO, 請假系統;
 	public static WebView Web_M園區;
 	private WebView Web_Acade, Web_Zuvio, Web_CCSYS, Web_Announcement;
 	private ListView List_Announcement, List_Achievements, List_Huh;
@@ -199,6 +199,7 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 		選課系統 = findViewById(R.id.image_Subject_System);
 		公車動態 = findViewById(R.id.image_Bus);
 		ZUVIO = findViewById(R.id.image_Zuvio);
+		請假系統 = findViewById(R.id.image_Take_Leave);
 
 		Web_M園區 = findViewById(R.id.web_EUNI);
 		Web_Zuvio = findViewById(R.id.web_Zuvio);
@@ -252,6 +253,7 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 		huhItemList.add(new HuhItem(R.drawable.subject_system, getString(R.string.Subject_System), getString(R.string.Subject_System_)));
 		huhItemList.add(new HuhItem(R.drawable.bus, getString(R.string.Bus), getString(R.string.Bus_)));
 		huhItemList.add(new HuhItem(R.drawable.zuvio, getString(R.string.Zuvio), getString(R.string.Zuvio_)));
+		huhItemList.add(new HuhItem(R.drawable.take_leave, getString(R.string.Take_Leave), getString(R.string.Take_Leave_)));
 		// 說明 Adapter 建立
 		huhItemAdapter = new HuhItemAdapter(this, huhItemList);
 		List_Huh.setAdapter(huhItemAdapter);
@@ -392,6 +394,14 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 			@Override
 			public void onClick(View view) {
 				page.setClass(getApplicationContext(), Activity10_Zuvio.class);
+				startActivity(page);
+				overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+			}
+		});
+		請假系統.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				page.setClass(getApplicationContext(), Activity11_Take_Leave.class);
 				startActivity(page);
 				overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 			}
@@ -997,6 +1007,7 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 			} catch (Exception e) {
 				// 點太快，成就尚未抓取成功 
 				showMessage(getResources().getString(R.string.Achievements_11_showMessage0));
+				Log.d("asdfgh", e.getMessage());
 			}
 
 

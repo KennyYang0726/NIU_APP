@@ -52,281 +52,321 @@
 					android:layout_height="match_parent"
 					android:layout_marginLeft="11dp"
 					android:layout_marginRight="11dp"
-					android:layout_weight="1"
+					android:layout_weight="6"
 					android:orientation="vertical">
 
-					<LinearLayout
+					<!-- Wrap the content in a ScrollView -->
+					<ScrollView
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:layout_marginTop="29dp"
-						android:layout_weight="1"
-						android:gravity="center"
-						android:orientation="horizontal">
-
-						<!--M園區-->
+						android:layout_height="match_parent"
+						android:fillViewport="true">
 						<LinearLayout
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:layout_weight="1"
 							android:orientation="vertical">
-
-							<ImageView
-								android:id="@+id/image_EUNI"
-								android:layout_width="wrap_content"
-								android:layout_height="wrap_content"
-								android:layout_gravity="center"
-								android:layout_weight="1"
-								android:gravity="center"
-								android:src="@drawable/euni" />
-
-							<TextView
+							<!-- Your inner LinearLayouts here -->
+							<LinearLayout
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
-								android:layout_gravity="center"
+								android:layout_marginTop="29dp"
 								android:layout_weight="1"
 								android:gravity="center"
-								android:text="@string/EUNI"
-								android:textColor="@color/text_color"
-								android:textSize="15sp" />
-						</LinearLayout>
-						<!--成績查詢-->
-						<LinearLayout
-							android:layout_width="match_parent"
-							android:layout_height="wrap_content"
-							android:layout_weight="1"
-							android:orientation="vertical">
+								android:orientation="horizontal">
+								<!--M園區-->
+								<LinearLayout
+									android:layout_width="match_parent"
+									android:layout_height="wrap_content"
+									android:layout_weight="1"
+									android:orientation="vertical">
+									<ImageView
+										android:id="@+id/image_EUNI"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:src="@drawable/euni" />
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="@string/EUNI"
+										android:textColor="@color/text_color"
+										android:textSize="15sp" />
+								</LinearLayout>
+								<!--成績查詢-->
+								<LinearLayout
+									android:layout_width="match_parent"
+									android:layout_height="wrap_content"
+									android:layout_weight="1"
+									android:orientation="vertical">
+									<ImageView
+										android:id="@+id/image_Score_Inquiry"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:src="@drawable/score_inquiry" />
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="@string/Score_Inquiry"
+										android:textColor="@color/text_color"
+										android:textSize="15sp" />
+								</LinearLayout>
+								<!--郵局信箱-->
+								<LinearLayout
+									android:layout_width="match_parent"
+									android:layout_height="wrap_content"
+									android:layout_weight="1"
+									android:orientation="vertical">
+									<ImageView
+										android:id="@+id/image_MyClassSchedule"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:src="@drawable/my_class_schedule" />
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="@string/Class_Schedule"
+										android:textColor="@color/text_color"
+										android:textSize="15sp" />
+								</LinearLayout>
 
-							<ImageView
-								android:id="@+id/image_Score_Inquiry"
-								android:layout_width="wrap_content"
-								android:layout_height="wrap_content"
-								android:layout_gravity="center"
-								android:layout_weight="1"
-								android:gravity="center"
-								android:src="@drawable/score_inquiry" />
+							</LinearLayout>
 
-							<TextView
+							<LinearLayout
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
-								android:layout_gravity="center"
 								android:layout_weight="1"
 								android:gravity="center"
-								android:text="@string/Score_Inquiry"
-								android:textColor="@color/text_color"
-								android:textSize="15sp" />
-						</LinearLayout>
-						<!--郵局信箱-->
-						<LinearLayout
-							android:layout_width="match_parent"
-							android:layout_height="wrap_content"
-							android:layout_weight="1"
-							android:orientation="vertical">
+								android:orientation="horizontal">
+								<!--活動報名-->
+								<LinearLayout
+									android:layout_width="match_parent"
+									android:layout_height="wrap_content"
+									android:layout_weight="1"
+									android:orientation="vertical">
+									<ImageView
+										android:id="@+id/image_Event_Registration"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:src="@drawable/event_registration" />
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="@string/Event_Registration"
+										android:textColor="@color/text_color"
+										android:textSize="15sp" />
+								</LinearLayout>
+								<!--聯絡我們-->
+								<LinearLayout
+									android:layout_width="match_parent"
+									android:layout_height="wrap_content"
+									android:layout_weight="1"
+									android:orientation="vertical">
+									<ImageView
+										android:id="@+id/image_Contact_Us"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:src="@drawable/contact_us" />
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="@string/Contact_Us"
+										android:textColor="@color/text_color"
+										android:textSize="15sp" />
+								</LinearLayout>
+								<!--畢業門檻-->
+								<LinearLayout
+									android:layout_width="match_parent"
+									android:layout_height="wrap_content"
+									android:layout_weight="1"
+									android:orientation="vertical">
+									<ImageView
+										android:id="@+id/image_Graduation_Threshold"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:src="@drawable/graduation_threshold" />
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="@string/Graduation_Threshold"
+										android:textColor="@color/text_color"
+										android:textSize="15sp" />
+								</LinearLayout>
 
-							<ImageView
-								android:id="@+id/image_MyClassSchedule"
-								android:layout_width="wrap_content"
-								android:layout_height="wrap_content"
-								android:layout_gravity="center"
-								android:layout_weight="1"
-								android:gravity="center"
-								android:src="@drawable/my_class_schedule" />
+							</LinearLayout>
 
-							<TextView
+							<LinearLayout
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
-								android:layout_gravity="center"
 								android:layout_weight="1"
 								android:gravity="center"
-								android:text="@string/Class_Schedule"
-								android:textColor="@color/text_color"
-								android:textSize="15sp" />
-						</LinearLayout>
+								android:orientation="horizontal">
+								<!--選課系統-->
+								<LinearLayout
+									android:layout_width="match_parent"
+									android:layout_height="wrap_content"
+									android:layout_weight="1"
+									android:orientation="vertical">
+									<ImageView
+										android:id="@+id/image_Subject_System"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:src="@drawable/subject_system" />
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="@string/Subject_System"
+										android:textColor="@color/text_color"
+										android:textSize="15sp" />
+								</LinearLayout>
+								<!--公車動態-->
+								<LinearLayout
+									android:layout_width="match_parent"
+									android:layout_height="wrap_content"
+									android:layout_weight="1"
+									android:orientation="vertical">
+									<ImageView
+										android:id="@+id/image_Bus"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:src="@drawable/bus" />
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="@string/Bus"
+										android:textColor="@color/text_color"
+										android:textSize="15sp" />
+								</LinearLayout>
+								<!--Zuvio-->
+								<LinearLayout
+									android:layout_width="match_parent"
+									android:layout_height="wrap_content"
+									android:layout_weight="1"
+									android:orientation="vertical">
+									<ImageView
+										android:id="@+id/image_Zuvio"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:src="@drawable/zuvio" />
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="@string/Zuvio"
+										android:textColor="@color/text_color"
+										android:textSize="15sp" />
+								</LinearLayout>
 
-					</LinearLayout>
+							</LinearLayout>
 
-					<LinearLayout
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:layout_weight="1"
-						android:gravity="center"
-						android:orientation="horizontal">
-
-						<!--活動報名-->
-						<LinearLayout
-							android:layout_width="match_parent"
-							android:layout_height="wrap_content"
-							android:layout_weight="1"
-							android:orientation="vertical">
-
-							<ImageView
-								android:id="@+id/image_Event_Registration"
-								android:layout_width="wrap_content"
-								android:layout_height="wrap_content"
-								android:layout_gravity="center"
-								android:layout_weight="1"
-								android:gravity="center"
-								android:src="@drawable/event_registration" />
-
-							<TextView
+							<LinearLayout
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
-								android:layout_gravity="center"
 								android:layout_weight="1"
+								android:layout_marginBottom="37dp"
 								android:gravity="center"
-								android:text="@string/Event_Registration"
-								android:textColor="@color/text_color"
-								android:textSize="15sp" />
-						</LinearLayout>
-						<!--聯絡我們-->
-						<LinearLayout
-							android:layout_width="match_parent"
-							android:layout_height="wrap_content"
-							android:layout_weight="1"
-							android:orientation="vertical">
+								android:orientation="horizontal">
+								<!--請假系統-->
+								<LinearLayout
+									android:layout_width="match_parent"
+									android:layout_height="wrap_content"
+									android:layout_weight="1"
+									android:orientation="vertical">
+									<ImageView
+										android:id="@+id/image_Take_Leave"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:src="@drawable/take_leave" />
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="@string/Take_Leave"
+										android:textColor="@color/text_color"
+										android:textSize="15sp" />
+								</LinearLayout>
+								<!--暫無-->
+								<LinearLayout
+									android:layout_width="match_parent"
+									android:layout_height="wrap_content"
+									android:layout_weight="1"
+									android:orientation="vertical" />
+								<!--暫無-->
+								<LinearLayout
+									android:layout_width="match_parent"
+									android:layout_height="wrap_content"
+									android:layout_weight="1"
+									android:orientation="vertical" />
 
-							<ImageView
-								android:id="@+id/image_Contact_Us"
-								android:layout_width="wrap_content"
-								android:layout_height="wrap_content"
-								android:layout_gravity="center"
-								android:layout_weight="1"
-								android:gravity="center"
-								android:src="@drawable/contact_us" />
+							</LinearLayout>
 
-							<TextView
-								android:layout_width="match_parent"
-								android:layout_height="wrap_content"
-								android:layout_gravity="center"
-								android:layout_weight="1"
-								android:gravity="center"
-								android:text="@string/Contact_Us"
-								android:textColor="@color/text_color"
-								android:textSize="15sp" />
-						</LinearLayout>
-						<!--畢業門檻-->
-						<LinearLayout
-							android:layout_width="match_parent"
-							android:layout_height="wrap_content"
-							android:layout_weight="1"
-							android:orientation="vertical">
-
-							<ImageView
-								android:id="@+id/image_Graduation_Threshold"
-								android:layout_width="wrap_content"
-								android:layout_height="wrap_content"
-								android:layout_gravity="center"
-								android:layout_weight="1"
-								android:gravity="center"
-								android:src="@drawable/graduation_threshold" />
-
-							<TextView
-								android:layout_width="match_parent"
-								android:layout_height="wrap_content"
-								android:layout_gravity="center"
-								android:layout_weight="1"
-								android:gravity="center"
-								android:text="@string/Graduation_Threshold"
-								android:textColor="@color/text_color"
-								android:textSize="15sp" />
 						</LinearLayout>
 
-					</LinearLayout>
-
-					<LinearLayout
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:layout_marginBottom="53dp"
-						android:layout_weight="1"
-						android:gravity="center"
-						android:orientation="horizontal">
-
-						<!--選課系統-->
-						<LinearLayout
-							android:layout_width="match_parent"
-							android:layout_height="wrap_content"
-							android:layout_weight="1"
-							android:orientation="vertical">
-
-							<ImageView
-								android:id="@+id/image_Subject_System"
-								android:layout_width="wrap_content"
-								android:layout_height="wrap_content"
-								android:layout_gravity="center"
-								android:layout_weight="1"
-								android:gravity="center"
-								android:src="@drawable/subject_system" />
-
-							<TextView
-								android:layout_width="match_parent"
-								android:layout_height="wrap_content"
-								android:layout_gravity="center"
-								android:layout_weight="1"
-								android:gravity="center"
-								android:text="@string/Subject_System"
-								android:textColor="@color/text_color"
-								android:textSize="15sp" />
-						</LinearLayout>
-						<!--公車動態-->
-						<LinearLayout
-							android:layout_width="match_parent"
-							android:layout_height="wrap_content"
-							android:layout_weight="1"
-							android:orientation="vertical">
-
-							<ImageView
-								android:id="@+id/image_Bus"
-								android:layout_width="wrap_content"
-								android:layout_height="wrap_content"
-								android:layout_gravity="center"
-								android:layout_weight="1"
-								android:gravity="center"
-								android:src="@drawable/bus" />
-
-							<TextView
-								android:layout_width="match_parent"
-								android:layout_height="wrap_content"
-								android:layout_gravity="center"
-								android:layout_weight="1"
-								android:gravity="center"
-								android:text="@string/Bus"
-								android:textColor="@color/text_color"
-								android:textSize="15sp" />
-						</LinearLayout>
-						<!--Zuvio-->
-						<LinearLayout
-							android:layout_width="match_parent"
-							android:layout_height="wrap_content"
-							android:layout_weight="1"
-							android:orientation="vertical">
-
-							<ImageView
-								android:id="@+id/image_Zuvio"
-								android:layout_width="wrap_content"
-								android:layout_height="wrap_content"
-								android:layout_gravity="center"
-								android:layout_weight="1"
-								android:gravity="center"
-								android:src="@drawable/zuvio" />
-
-							<TextView
-								android:layout_width="match_parent"
-								android:layout_height="wrap_content"
-								android:layout_gravity="center"
-								android:layout_weight="1"
-								android:gravity="center"
-								android:text="@string/Zuvio"
-								android:textColor="@color/text_color"
-								android:textSize="15sp" />
-						</LinearLayout>
-
-					</LinearLayout>
+					</ScrollView>
 				</LinearLayout>
+
 
 				<ImageView
 					android:id="@+id/imageView"
 					android:layout_width="match_parent"
 					android:layout_height="213dp"
-					android:layout_weight="0"
+					android:layout_weight="1"
+					android:scaleType="fitXY"
 					android:src="@drawable/niu_background" />
 			</LinearLayout>
 

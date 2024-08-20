@@ -27,6 +27,7 @@
             android:layout_height="33dp"
             android:layout_marginTop="15dp"
             android:layout_gravity="left"
+            android:translationY="-2dp"
             android:gravity="left"
             android:text="Main Item Content"
             android:textStyle="bold"
@@ -37,12 +38,12 @@
             android:id="@+id/textViewSub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:translationY="-7dp"
+            android:translationY="-9dp"
             android:layout_gravity="left"
             android:gravity="left"
             android:text="Item Content\nItem Content"
             android:textColor="@color/text_color_secondary"
-            android:textSize="17sp" />
+            android:textSize="15sp" />
     </LinearLayout>
 
     <TextView

@@ -128,6 +128,7 @@ public class HuhItemViewPagerAdapter extends PagerAdapter {
             case 6:
                 if (pagePosition == 0) {
                     titleTextView.setText(context.getString(R.string.Subject_System_Page_0_1_Title));
+                    imageView.setImageDrawable(context.getDrawable(R.drawable.frame_subject_system_001));
                     messageTextView.setText(context.getString(R.string.Subject_System_Page_0_1_Message));
                 }
                 break;
@@ -151,6 +152,13 @@ public class HuhItemViewPagerAdapter extends PagerAdapter {
                     titleTextView.setText(context.getString(R.string.Zuvio_Page_1_1_Title));
                     imageView.setImageDrawable(context.getDrawable(R.drawable.frame_zuvio_002));
                     messageTextView.setText(Html.fromHtml(context.getString(R.string.Zuvio_Page_1_1_Message), Html.FROM_HTML_MODE_LEGACY));
+                }
+                break;
+            case 9:
+                if (pagePosition == 0) {
+                    titleTextView.setText(context.getString(R.string.Take_Leave_Page_0_1_Title));
+                    imageView.setImageDrawable(context.getDrawable(R.drawable.frame_take_leave_001));
+                    messageTextView.setText(context.getString(R.string.Take_Leave_Page_0_1_Message));
                 }
                 break;
             default:
@@ -188,6 +196,8 @@ public class HuhItemViewPagerAdapter extends PagerAdapter {
                 return 2; // 2頁
             case 8:
                 return 2; // 2頁
+            case 9:
+                return 1; // 1頁
             default:
                 return 0;
         }
