@@ -22,7 +22,7 @@
 4. 使用 Android Studio 直接開啟專案目錄即可
 
 ### Android APK
-[- Release 安裝下載](https://github.com/KennyYang0726/NIU_APP/releases/tag/Android)
+- [Release 安裝下載](https://github.com/KennyYang0726/NIU_APP/releases/tag/Android)
 
 
 ## 使用方式
