@@ -12,6 +12,7 @@ import android.os.Build;
 import androidx.core.app.NotificationCompat;
 
 import com.niu.csie.edu.app.Activity0_LoginActivity;
+import com.niu.csie.edu.app.Activity1_HomeActivity;
 import com.niu.csie.edu.app.R;
 
 public class NotificationPost {
@@ -23,7 +24,7 @@ public class NotificationPost {
     }
 
     public void sendNotification(String messageTitle, String messageBody) {
-        Intent intent = new Intent(context, Activity0_LoginActivity.class);
+        Intent intent = new Intent(context, Activity1_HomeActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_IMMUTABLE);
 
