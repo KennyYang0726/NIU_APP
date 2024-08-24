@@ -108,6 +108,7 @@ public class Activity0_LoginActivity extends AppCompatActivity {
 	private String app_lastest_ver = "";
 	private String app_ver = "";
 	private String app_lastest_DLlink = "";
+	private String DeviceABI = ""; // 裝置類型
 	private boolean IsDirectDownload = false;
 	private boolean IsFromPlayStore = false;
 	private static final int LOCATION_PERMISSION_REQUEST_CODE = 19890604;
@@ -326,6 +327,8 @@ public class Activity0_LoginActivity extends AppCompatActivity {
 
 
 	private void initializeLogic() {
+		// 取得裝置 ABI
+		checkDeviceArchitecture();
 		// 刪除緩存
 		WebStorage.getInstance().deleteAllData();
 		CookieManager cookieManager = CookieManager.getInstance();
@@ -984,6 +987,40 @@ public class Activity0_LoginActivity extends AppCompatActivity {
 		}
 	}
 
+	// 取得裝置類型
+	private void checkDeviceArchitecture() {
+		String[] supportedAbis = Build.SUPPORTED_ABIS;
+		if (supportedAbis.length > 0) {
+			String primaryAbi = supportedAbis[0];
+
+			switch (primaryAbi) {
+				case "armeabi-v7a":
+					Log.d("DeviceArchitecture", "Device architecture is ARM (32-bit).");
+					DeviceABI = primaryAbi;
+					break;
+				case "arm64-v8a":
+					Log.d("DeviceArchitecture", "Device architecture is ARM (64-bit).");
+					DeviceABI = primaryAbi;
+					break;
+				case "x86":
+					Log.d("DeviceArchitecture", "Device architecture is x86.");
+					DeviceABI = primaryAbi;
+					break;
+				case "x86_64":
+					Log.d("DeviceArchitecture", "Device architecture is x86_64.");
+					DeviceABI = primaryAbi;
+					break;
+				default:
+					Log.d("DeviceArchitecture", "other device architecture.");
+					DeviceABI = "all";
+					break;
+			}
+		} else {
+			Log.d("DeviceArchitecture", "No supported ABIs found.");
+			DeviceABI = "all";
+		}
+	}
+
 
 	// 更新 app
 	private void Update_App() {
@@ -1045,7 +1082,7 @@ public class Activity0_LoginActivity extends AppCompatActivity {
 							// install_package(app_lastest_ver + ".apk");
 						} else {
 							// 下載更新
-							// DownloadAndInstall(app_lastest_DLlink, "/storage/emulated/0/Android/data/com.niu.csie.edu.app/files/", app_lastest_ver + ".apk");
+							// DownloadAndInstall(app_lastest_DLlink+app_lastest_ver+"-"+DeviceABI+".apk", "/storage/emulated/0/Android/data/com.niu.csie.edu.app/files/", app_lastest_ver + ".apk");
 						}
 					} else {
 						// 跳轉 apk release github 頁面

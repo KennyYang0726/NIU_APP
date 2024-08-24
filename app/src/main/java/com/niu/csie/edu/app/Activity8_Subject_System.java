@@ -75,6 +75,8 @@ public class Activity8_Subject_System extends AppCompatActivity {
 		Web_選課系統.getSettings().setDisplayZoomControls(false);
 		// 讓 WebView 的寬度適應屏幕寬度
 		Web_選課系統.setInitialScale(1);
+		// 顯示等待中
+		showProgressOverlay();
 
 		// 網站Load
 		Map<String, String> headers = new HashMap<>();
@@ -104,11 +106,6 @@ public class Activity8_Subject_System extends AppCompatActivity {
 			@Override
 			public void onPermissionRequest(PermissionRequest request) {
 				request.grant(request.getResources());
-			}
-			@Override
-			public void onProgressChanged(WebView view, int newProgress) {
-				// 顯示等待中
-				showProgressOverlay();
 			}
 			@Override
 			public boolean onJsAlert(WebView view, String url, String message, JsResult result) {
