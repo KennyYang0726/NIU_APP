@@ -103,8 +103,15 @@ public class Activity11_Take_Leave extends AppCompatActivity {
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
                 if (url.equals("https://acade.niu.edu.tw/NIU/Application/SEC/SEC20/SEC2010_01.aspx")) {
-                    hideProgressOverlay();
-                    // GetValueOfAspx();
+                    String js = "document.getElementById('QTable2').style.display = 'none';";
+                    view.evaluateJavascript(js, new ValueCallback<String>() {
+                        @Override
+                        public void onReceiveValue(String value) {
+                            // 確認是執行完 js 才隱藏請稍等
+                            hideProgressOverlay();
+                            // GetValueOfAspx();
+                        }
+                    });
                     /*
                     String js = "javascript:(function() { " +
                             "document.body.innerHTML = document.body.innerHTML.replaceAll('XXX', '桐谷和人');" +
