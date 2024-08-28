@@ -41,6 +41,18 @@
 	<string name="Achievements" translatable="false">Achievements</string>
 	<string name="huh" translatable="false">Synopsis</string>
 	<string name="About" translatable="false">About</string>
+	<string name="Settings" translatable="false">Settings</string>
+	<string name="Theme" translatable="false">Theme：</string>
+	<string-array name="theme_array">
+		<item>System</item>
+		<item>Light</item>
+		<item>Dark</item>
+	</string-array>
+	<string name="ThemeChangedDialogTitle" translatable="false">&#160;&#160;&#160;&#160;Apply theme immediately&#160;&#160;&#160;&#160;</string>
+	<string name="ThemeChangedDialogMessage" translatable="false">Changing themes requires restarting the application to apply the changes. Do you need to restart the app immediately?</string>
+	<string name="DelUserDatabase" translatable="false">&#160;&#160;&#160;Delete Your Data&#160;&#160;&#160;</string>
+	<string name="DelUserDatabaseMessage" translatable="false">Do you really want to delete your user data in database? This way, Achievements records will be lost, if you just have deep concerns about the information stored in our database, check the photo below, it shows the information stored in our Database, which does not contain sensitive information. Do you really want to delete anyway?</string>
+	<string name="DelUserDatabaseSuccess" translatable="false">Delete Successfully</string>
 	<string name="LogOut" translatable="false">Logout</string>
 	<!-- 主頁 功能 -->
 	<string name="EUNI" translatable="false">EUNI</string>
@@ -277,6 +289,15 @@
 	<string name="Check_Graduation_Threshold_0" translatable="false">&#160;&#160;&#160;Summary Query&#160;&#160;&#160;</string>
 	<!-- 選擇系統 -->
 	<string name="currently_not_a_course_selection_time" translatable="false">not in selection time！</string>
+	<string name="Set_Calender_Notification" translatable="false">Set Google Calendar Reminders&#160;&#160;&#160;&#160;&#160;&#160;</string>
+	<string name="Enter_Date_Time" translatable="false">&#160;&#160;Enter Date Time</string>
+	<string name="Enter_Title" translatable="false">&#160;&#160;Enter Title</string>
+	<string name="Enter_Description" translatable="false">&#160;&#160;Enter Description</string>
+	<string name="Parse_DateTime_Err" translatable="false">Error format Date Time</string>
+	<string name="Empty_Title" translatable="false">Title cannot be empty</string>
+	<string name="Set_Calender_Success" translatable="false">Set Reminder Successfully</string>
+	<string name="Set_Calender_Failed" translatable="false">Plz allow write calender permission</string>
+	<string name="None_Google_Calender" translatable="false">Failed to set reminder event.\nMake sure Google Calendar is installed.</string>
 	<!-- Zuvio -->
 	<string name="ECE_Building" translatable="false">ECE Building</string>
 	<string name="Engineering_Building" translatable="false">Engineering Building</string>

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -70,8 +71,14 @@ public class LoginManager_LightMode {
     }
 
     private boolean isDarkMode() {
+        int nightMode = AppCompatDelegate.getDefaultNightMode();
         int nightModeFlags = context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
-        return nightModeFlags == Configuration.UI_MODE_NIGHT_YES;
+
+        boolean isSystemDarkMode = nightModeFlags == Configuration.UI_MODE_NIGHT_YES;
+        boolean isAppDarkMode = nightMode == AppCompatDelegate.MODE_NIGHT_YES;
+        boolean isFollowSystem = nightMode == AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM;
+
+        return isAppDarkMode || (isFollowSystem && isSystemDarkMode);
     }
 }
 

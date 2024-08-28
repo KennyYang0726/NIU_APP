@@ -9,6 +9,7 @@ import android.location.Location;
 import android.net.Uri;
 import android.os.*;
 import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.*;
 import android.view.View.*;
@@ -21,6 +22,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.view.GravityCompat;
@@ -49,7 +51,9 @@ import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -88,9 +92,10 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 	private Toolbar _toolbar;
 	private DrawerLayout _drawer;
 	private TextView Name;
-	private LinearLayout Linear_HomePage, Linear_Announcement, Linear_Calender, Linear_Achievements, Linear_huh, Linear_About, Linear_Debug; // Debug 搭載3個網頁頁面，調式用
-	private Button BTN_Calender_AppBar;
+	private LinearLayout Linear_HomePage, Linear_Announcement, Linear_Calender, Linear_Achievements, Linear_huh, Linear_About, Linear_Settings;
+	private Button BTN_Calender_AppBar, Btn_DeleteUserData;
 	private PDFView PDF_Calender_View;
+	private Spinner Theme_Spinner;
 
 	private ImageView M園區, 成績查詢, 我的課表, 活動報名, 聯絡我們, 畢業門檻, 選課系統, 公車動態, ZUVIO, 請假系統;
 	public static WebView Web_M園區;
@@ -100,9 +105,10 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 
 	/**Components*/
 	private SharedPreferences sharedPreferences; // 儲存登入資訊
+	private SharedPreferences sharedPreferences_Settings; // 儲存設定值
 	public static SharedPreferences SP_EUNI_Course; // EUNI課程資訊
 	private FusedLocationProviderClient fusedLocationClient;
-	private AlertDialog TimeOutWebViewDevDialog;
+	private AlertDialog TimeOutWebViewDevDialog, ThemeChangedDialog, DeleteUserDatDialog;
 	private Handler handler;
 	private Runnable refreshRunnable;
 	private FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -118,6 +124,7 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 	private String Achievement11;
 	private String Achievement11_DialogContent;
 	private int 行事曆_cnt = 0;
+	private boolean CreateChooseThemeSpinner = true; // OnCreate 指定 theme 主題，為必免觸發
 	private boolean quit = false;
 	public static boolean EUNI_Login = true; // 登入true，登出false
 	private boolean ACADE_Login = true; // 登入true，登出false
@@ -185,9 +192,12 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 
 		Linear_About = findViewById(R.id.Linear_About);
 
-		Linear_Debug = findViewById(R.id.Linear_Debug);
+		Linear_Settings = findViewById(R.id.Linear_Settings);
 
 		ProgressOverlay = findViewById(R.id.progress_overlay); // 登出中
+
+		Theme_Spinner = findViewById(R.id.Theme_Spinner);
+		Btn_DeleteUserData = findViewById(R.id.Btn_DeleteUserData);
 
 		// 主畫面 9 大功能
 		M園區 = findViewById(R.id.image_EUNI);
@@ -214,6 +224,8 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 		// 初始化設置
 		sharedPreferences = getSharedPreferences("sp", Activity.MODE_PRIVATE);
 		SP_EUNI_Course = getSharedPreferences("EUNI_course_data", Activity.MODE_PRIVATE);
+		sharedPreferences_Settings = getSharedPreferences("AppSettings", Activity.MODE_PRIVATE);
+
 		Web_M園區.getSettings().setJavaScriptEnabled(true);
 		Web_Acade.getSettings().setJavaScriptEnabled(true);
 		Web_Zuvio.getSettings().setJavaScriptEnabled(true);
@@ -222,6 +234,26 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 		Web_Announcement.getSettings().setJavaScriptEnabled(true);
 
 		fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
+		// 主題設置 Adapter 建立
+		ArrayAdapter<CharSequence> Theme_Adapter = ArrayAdapter.createFromResource(this, R.array.theme_array, android.R.layout.simple_spinner_item);
+		Theme_Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		Theme_Spinner.setAdapter(Theme_Adapter);
+
+		try {
+			String theme = sharedPreferences_Settings.getString("themePreference", "");
+			if (theme.contains("light")) {
+				Theme_Spinner.setSelection(1, false);
+			} else if (theme.contains("dark")) {
+				Theme_Spinner.setSelection(2, false);
+			} else {
+				Theme_Spinner.setSelection(0, false);
+			}
+		} catch (Exception e) {
+			Theme_Spinner.setSelection(0, false);
+		}
+
+
 
 		// 公告 Adapter 建立
 		announcementItemAdapter = new AnnouncementItemAdapter(this, R.layout.announcement_customlistview, announcementItemList);
@@ -317,6 +349,41 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 					BTN_Calender_AppBar.setText(Key1);
 					LoadCalenderPDF(Calender_URL2);
 				}
+			}
+		});
+
+		Theme_Spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+				if (!CreateChooseThemeSpinner || Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
+					showDialogRestart();
+				}
+
+				if (position == 0) {
+					sharedPreferences_Settings.edit().putString("themePreference", "System").apply();
+					// AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+					CreateChooseThemeSpinner = false;
+				} else if (position == 1) {
+					sharedPreferences_Settings.edit().putString("themePreference", "light").apply();
+					// AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+					CreateChooseThemeSpinner = false;
+				} else if (position == 2) {
+					sharedPreferences_Settings.edit().putString("themePreference", "dark").apply();
+					// AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+					CreateChooseThemeSpinner = false;
+				}
+				/** 直接應用主題會掉網頁登入，所以跳 Dialog 讓使用者重啟 */
+			}
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
+			}
+		});
+
+		Btn_DeleteUserData.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				showDeleteUserDataDialog();
 			}
 		});
 
@@ -1335,6 +1402,101 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 	}
 
 
+	// 使用者選擇主題
+	private void showDialogRestart() {
+		AlertDialog.Builder builder = new AlertDialog.Builder(Activity1_HomeActivity.this, R.style.AlertDialogTheme);
+		View view = LayoutInflater.from(Activity1_HomeActivity.this).inflate(
+				R.layout.custom_alert_dialog2,
+				findViewById(R.id.layoutDialogContainer)
+		);
+		builder.setView(view);
+		((TextView) view.findViewById(R.id.textTitle)).setText(getResources().getString(R.string.ThemeChangedDialogTitle));
+		((TextView) view.findViewById(R.id.textMessage)).setText(getResources().getString(R.string.ThemeChangedDialogMessage));
+		((Button) view.findViewById(R.id.buttonAction_Cancel)).setText(getResources().getString(R.string.Dialog_Cancel));
+		((Button) view.findViewById(R.id.buttonAction)).setText(getResources().getString(R.string.Dialog_OK));
+
+		builder.setCancelable(true);
+		ThemeChangedDialog = builder.create();
+
+		view.findViewById(R.id.buttonAction_Cancel).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				ThemeChangedDialog.dismiss();
+			}
+		});
+		view.findViewById(R.id.buttonAction).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				ThemeChangedDialog.dismiss();
+				Intent page = new Intent(Activity1_HomeActivity.this, Activity0_LoginActivity.class);
+				startActivity(page);
+				restartApp();
+				overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+				finish();
+			}
+		});
+
+		if (ThemeChangedDialog.getWindow() != null){
+			ThemeChangedDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+		}
+		ThemeChangedDialog.show();
+	}
+
+	// 使用者刪除資料
+	private void showDeleteUserDataDialog() {
+		AlertDialog.Builder builder = new AlertDialog.Builder(Activity1_HomeActivity.this, R.style.AlertDialogTheme);
+		View view = LayoutInflater.from(Activity1_HomeActivity.this).inflate(
+				R.layout.custom_alert_dialog2,
+				findViewById(R.id.layoutDialogContainer)
+		);
+		builder.setView(view);
+		((TextView) view.findViewById(R.id.textTitle)).setText(getResources().getString(R.string.DelUserDatabase));
+		// 設置消息並使連結可點擊
+		TextView textMessage = view.findViewById(R.id.textMessage);
+		textMessage.setText(Html.fromHtml(getResources().getString(R.string.DelUserDatabaseMessage) + "<br><br><a href='https://github.com/KennyYang0726/NIU_APP/raw/main/database_content.jpg'>Image</a><br>"));
+		textMessage.setMovementMethod(LinkMovementMethod.getInstance());
+		((Button) view.findViewById(R.id.buttonAction_Cancel)).setText(getResources().getString(R.string.Dialog_Cancel));
+		((Button) view.findViewById(R.id.buttonAction)).setText(getResources().getString(R.string.Dialog_OK));
+
+		builder.setCancelable(true);
+		DeleteUserDatDialog = builder.create();
+
+		view.findViewById(R.id.buttonAction_Cancel).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				DeleteUserDatDialog.dismiss();
+			}
+		});
+		view.findViewById(R.id.buttonAction).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				DeleteUserDatDialog.dismiss();
+				DatabaseReference userRef = usersRef.child(Objects.requireNonNull(sharedPreferences.getString("account", null)));
+				userRef.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+					@Override
+					public void onComplete(@NonNull Task<Void> task) {
+						if (task.isSuccessful()) {
+							sharedPreferences.edit().remove("account").commit();
+							sharedPreferences.edit().remove("pwd").commit();
+							SP_EUNI_Course.edit().clear().commit();
+							FileUtil.deleteFile("/data/user/0/com.niu.csie.edu.app/shared_prefs");
+							showMessage(getResources().getString(R.string.DelUserDatabaseSuccess));
+							Intent page = new Intent(Activity1_HomeActivity.this, Activity0_LoginActivity.class);
+							startActivity(page);
+							restartApp();
+							overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+							finish();
+						}
+					}
+				});
+			}
+		});
+
+		if (DeleteUserDatDialog.getWindow() != null){
+			DeleteUserDatDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+		}
+		DeleteUserDatDialog.show();
+	}
 
 
 
@@ -1359,8 +1521,7 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 		Linear_Achievements.setVisibility(View.GONE);
 		Linear_huh.setVisibility(View.GONE);
 		Linear_About.setVisibility(View.GONE);
-		/**調式用*/
-		Linear_Debug.setVisibility(View.GONE);
+		Linear_Settings.setVisibility(View.GONE);
 	}
 	public void AnnouncementClick(View view) {
 		ClickEvent(view);
@@ -1371,8 +1532,7 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 		Linear_Achievements.setVisibility(View.GONE);
 		Linear_huh.setVisibility(View.GONE);
 		Linear_About.setVisibility(View.GONE);
-		/**調式用*/
-		Linear_Debug.setVisibility(View.GONE);
+		Linear_Settings.setVisibility(View.GONE);
 	}
 	public void CalendarClick(View view) {
 		ClickEvent(view);
@@ -1395,8 +1555,7 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 		Linear_Achievements.setVisibility(View.GONE);
 		Linear_huh.setVisibility(View.GONE);
 		Linear_About.setVisibility(View.GONE);
-		/**調式用*/
-		Linear_Debug.setVisibility(View.GONE);
+		Linear_Settings.setVisibility(View.GONE);
 	}
 	public void QuizClick(View view) {
 		page.setClass(getApplicationContext(), Activity1_QuestionnaireActivity.class);
@@ -1410,11 +1569,9 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 		Linear_Announcement.setVisibility(View.GONE);
 		Linear_Calender.setVisibility(View.GONE);
 		Linear_Achievements.setVisibility(View.VISIBLE);
-		//Linear_Achievements.setVisibility(View.GONE);
 		Linear_huh.setVisibility(View.GONE);
 		Linear_About.setVisibility(View.GONE);
-		/**調式用*/
-		Linear_Debug.setVisibility(View.GONE);
+		Linear_Settings.setVisibility(View.GONE);
 	}
 	public void HuhClick(View view) {
 		ClickEvent(view);
@@ -1425,8 +1582,7 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 		Linear_Achievements.setVisibility(View.GONE);
 		Linear_huh.setVisibility(View.VISIBLE);
 		Linear_About.setVisibility(View.GONE);
-		/**調式用*/
-		Linear_Debug.setVisibility(View.GONE);
+		Linear_Settings.setVisibility(View.GONE);
 	}
 	// 處理說明 Item 點擊事件
 	public void onDirectionsItemClick(int position) {
@@ -1437,9 +1593,7 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 		page.putExtra("position", position); // 傳遞 position
 		page.putExtra("title", item.getMainText());
 		startActivity(page);
-
 	}
-
 	public void AboutClick(View view) {
 		ClickEvent(view);
 		BTN_Calender_AppBar.setVisibility(View.GONE);
@@ -1449,8 +1603,18 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 		Linear_Achievements.setVisibility(View.GONE);
 		Linear_huh.setVisibility(View.GONE);
 		Linear_About.setVisibility(View.VISIBLE);
-		/**調式用*/
-		Linear_Debug.setVisibility(View.GONE);
+		Linear_Settings.setVisibility(View.GONE);
+	}
+	public void SettingsClick(View view) {
+		ClickEvent(view);
+		BTN_Calender_AppBar.setVisibility(View.GONE);
+		Linear_HomePage.setVisibility(View.GONE);
+		Linear_Announcement.setVisibility(View.GONE);
+		Linear_Calender.setVisibility(View.GONE);
+		Linear_Achievements.setVisibility(View.GONE);
+		Linear_huh.setVisibility(View.GONE);
+		Linear_About.setVisibility(View.GONE);
+		Linear_Settings.setVisibility(View.VISIBLE);
 	}
 	public void LogoutClick(View view) {
 		// 刪除SP

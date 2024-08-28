@@ -7,6 +7,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.webkit.*;
 import android.widget.*;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -40,10 +43,18 @@ public class Activity8_Subject_System extends AppCompatActivity {
 
 	@Override
 	public void onBackPressed() {
-		super.onBackPressed();
-		page.setClass(getApplicationContext(), Activity1_HomeActivity.class);
-		startActivity(page);
-		overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+		if (Web_選課系統.canGoBack()) {
+			showProgressOverlay();
+			// 網站Load
+			Map<String, String> headers = new HashMap<>();
+			headers.put("Referer", "https://acade.niu.edu.tw/NIU/Application/TKE/TKE20/TKE2011_.aspx?progcd=TKE2011");
+			Web_選課系統.loadUrl("https://acade.niu.edu.tw/NIU/Application/TKE/TKE20/TKE2011_01.aspx", headers);
+		} else {
+			super.onBackPressed();
+			page.setClass(getApplicationContext(), Activity1_HomeActivity.class);
+			startActivity(page);
+			overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+		}
 	}
 	
 	private void initialize(Bundle _savedInstanceState) {
@@ -55,7 +66,9 @@ public class Activity8_Subject_System extends AppCompatActivity {
 		_toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _v) {
-				onBackPressed();
+				page.setClass(getApplicationContext(), Activity1_HomeActivity.class);
+				startActivity(page);
+				overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
 			}
 		});
 		
@@ -88,6 +101,9 @@ public class Activity8_Subject_System extends AppCompatActivity {
 				String url = request.getUrl().toString();
 				if (url.contains("chart.googleapis.com")) {
 					return true;
+				}
+				if (url.startsWith("about:blank")) {
+					showMessage("Not Support");
 				}
 				return false;
 			}

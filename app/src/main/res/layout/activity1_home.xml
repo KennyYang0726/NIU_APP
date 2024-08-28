@@ -694,11 +694,53 @@
 			</LinearLayout>
 
 			<LinearLayout
-				android:id="@+id/Linear_Debug"
+				android:id="@+id/Linear_Settings"
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
 				android:orientation="vertical"
 				android:visibility="gone">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_margin="29dp"
+					android:orientation="vertical">
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal">
+						<ImageView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:src="@drawable/ic_theme"
+							android:scaleType="fitXY" />
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="match_parent"
+							android:layout_marginLeft="7dp"
+							android:textAllCaps="false"
+							android:text="@string/Theme"
+							android:textSize="17sp"
+							android:textColor="@color/text_color" />
+						<Spinner
+							android:id="@+id/Theme_Spinner"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent" />
+					</LinearLayout>
+
+					<Button
+						android:id="@+id/Btn_DeleteUserData"
+						android:layout_width="wrap_content"
+						android:layout_height="37dp"
+						android:layout_marginTop="43dp"
+						android:layout_gravity="center"
+						android:gravity="center"
+						android:background="@drawable/custom_alert_dialog_btn_red"
+						android:textSize="17sp"
+						android:textColor="@color/white"
+						android:textAllCaps="false"
+						android:text="@string/DelUserDatabase" />
+				</LinearLayout>
 
 			</LinearLayout>
 

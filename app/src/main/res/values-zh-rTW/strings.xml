@@ -41,6 +41,18 @@
     <string name="Achievements" translatable="false">成就</string>
     <string name="huh" translatable="false">說明</string>
     <string name="About" translatable="false">關於</string>
+    <string name="Settings" translatable="false">設定</string>
+    <string name="Theme" translatable="false">主題：</string>
+    <string-array name="theme_array">
+        <item>跟隨系統</item>
+        <item>亮色</item>
+        <item>暗色</item>
+    </string-array>
+    <string name="ThemeChangedDialogTitle" translatable="false">&#160;&#160;&#160;&#160;立即應用主題變更&#160;&#160;&#160;&#160;</string>
+    <string name="ThemeChangedDialogMessage" translatable="false">切換主題須重新啟動應用程式才能應用變更，請問需要立即重啟嗎？</string>
+    <string name="DelUserDatabase" translatable="false">&#160;&#160;&#160;刪除使用者資料&#160;&#160;&#160;</string>
+    <string name="DelUserDatabaseMessage" translatable="false">您想刪除儲存於我們資料庫，關於您的使用者資料嗎？若刪除了，成就進度將遺失，或是如果您只是對於我們儲存的資料深感疑慮，點擊下方連結查看，該圖片顯示我們資料庫儲存的資訊，當中並未包含敏感資訊或個資。您仍然堅決要刪除嗎？</string>
+    <string name="DelUserDatabaseSuccess" translatable="false">刪除成功</string>
     <string name="LogOut" translatable="false">登出</string>
     <!-- 主頁 功能 -->
     <string name="EUNI" translatable="false">M園區</string>
@@ -277,6 +289,15 @@
     <string name="Check_Graduation_Threshold_0" translatable="false">&#160;&#160;&#160;返回摘要查詢&#160;&#160;&#160;</string>
     <!-- 選擇系統 -->
     <string name="currently_not_a_course_selection_time" translatable="false">目前非選課時間！</string>
+    <string name="Set_Calender_Notification" translatable="false">&#160;&#160;&#160;&#160;&#160;&#160;設置Google日曆提醒&#160;&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="Enter_Date_Time" translatable="false">&#160;&#160;選擇日期和時間</string>
+    <string name="Enter_Title" translatable="false">&#160;&#160;輸入標題</string>
+    <string name="Enter_Description" translatable="false">&#160;&#160;輸入描述</string>
+    <string name="Parse_DateTime_Err" translatable="false">錯誤的日期格式</string>
+    <string name="Empty_Title" translatable="false">標題不得留空</string>
+    <string name="Set_Calender_Success" translatable="false">設置提醒成功</string>
+    <string name="Set_Calender_Failed" translatable="false">請允許寫入日曆權限</string>
+    <string name="None_Google_Calender" translatable="false">設置提醒事件失敗\n您可能尚未安裝Google日曆</string>
     <!-- Zuvio -->
     <string name="ECE_Building" translatable="false">格致大樓</string>
     <string name="Engineering_Building" translatable="false">工學院</string>
