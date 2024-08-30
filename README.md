@@ -7,6 +7,7 @@
 
 
 ## 目錄
+- [play商店連結](https://play.google.com/store/apps/details?id=com.niu.csie.edu.app)  
 - [安裝](https://github.com/KennyYang0726/NIU_APP#安裝)
   - [Android Studio](https://github.com/KennyYang0726/NIU_APP#Android-studio)
   - [Android APK](https://github.com/KennyYang0726/NIU_APP#android-apk)
