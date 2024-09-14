@@ -11,6 +11,7 @@ import java.util.Map;
 import android.app.AlertDialog;
 import android.content.*;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.*;
@@ -24,6 +25,8 @@ import android.view.animation.AnimationUtils;
 import android.webkit.*;
 import android.widget.*;
 import android.Manifest;
+
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -43,6 +46,7 @@ public class Activity4_My_Class_Schedule extends AppCompatActivity {
 
 	/**Element*/
 	private Toolbar _toolbar;
+	private Button appbar_btn;
 	private WebView Web_Class_Schedule;
 	private TableLayout tableLayout;
 	private View ProgressOverlay;
@@ -55,6 +59,7 @@ public class Activity4_My_Class_Schedule extends AppCompatActivity {
 	private final Handler handler = new Handler(Looper.getMainLooper());
 
 	/**Variable*/
+	private boolean ViewMode = true; // false 為 網頁模式
 	private static final int PERMISSIONS_REQUEST_CODE = 100;
 	private boolean State = false; // 由於要先載入，再post，載入後post前->改為ture，避免post後重複進入onPageFinished
 	private String[] startTimes = {
@@ -98,6 +103,7 @@ public class Activity4_My_Class_Schedule extends AppCompatActivity {
 		});
 		
 		// 主畫面UI
+		appbar_btn = findViewById(R.id.button_appbar);
 		Web_Class_Schedule = findViewById(R.id.web_class_schedule);
 		ProgressOverlay = findViewById(R.id.progress_overlay);
 		tableLayout = findViewById(R.id.tableLayout);
@@ -247,9 +253,10 @@ public class Activity4_My_Class_Schedule extends AppCompatActivity {
 												// Log.d("WebViewwwww", jsonValue);
 												FileUtil.writeFile(FileUtil.getPackageDataDir(getApplicationContext())+"/ClassSchedule.json", jsonValue);
 
-												tableLayout.setVisibility(View.VISIBLE);
+												// tableLayout.setVisibility(View.VISIBLE);
+												Web_Class_Schedule.setVisibility(View.VISIBLE);
 												hideProgressOverlay();
-
+/*
 												try {
 													JSONObject jsonObject = new JSONObject(jsonValue);
 													// 動態添加課程信息
@@ -302,18 +309,18 @@ public class Activity4_My_Class_Schedule extends AppCompatActivity {
 
 												} catch (Exception e) {
 													e.printStackTrace();
-												}
+												}*/
 											}
 										});
 
-										/*
+
 										table2Html = "<html><head><style>" +
 												"table { border-collapse: collapse; width: 100%; }" +
 												"td, th { border: 1px solid black; padding: 8px; text-align: center; }" +
 												"</style></head><body>" +
 												table2Html +
 												"</body></html>";
-										LoadWeb(table2Html);*/
+										LoadWeb(table2Html);
 
 									} else {
 										System.out.println("Element with id 'table2' not found.");
@@ -342,8 +349,56 @@ public class Activity4_My_Class_Schedule extends AppCompatActivity {
 		Web_Class_Schedule.loadUrl("https://acade.niu.edu.tw/NIU/Application/TKE/TKE22/TKE2240_01.aspx", headers);
 
 		// 事件
-		
+		appbar_btn.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				ViewMode = !ViewMode;
+				if (!ViewMode) {
+					// 若是網頁模式，則顯示網頁
+					Web_Class_Schedule.setVisibility(View.VISIBLE);
+					appbar_btn.setText(getResources().getString(R.string.AppBar_BTN_Form));
+				} else {
+					Web_Class_Schedule.setVisibility(View.GONE);
+					appbar_btn.setText(getResources().getString(R.string.AppBar_BTN_Web));
+				}
+			}
+		});
 	}
+
+
+	private void LoadWeb(String content) {
+		Web_Class_Schedule.loadDataWithBaseURL(null, content, "text/html", "UTF-8", null);
+		Web_Class_Schedule.setWebViewClient(new WebViewClient() {
+			@Override
+			public void onPageFinished(WebView view, String url) {
+				if (isDarkMode()) {
+					// 暗黑模式更改 UI
+					BlackMode();
+				}
+			}
+		});
+	}
+
+	private boolean isDarkMode() {
+		int nightMode = AppCompatDelegate.getDefaultNightMode();
+		int nightModeFlags = getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
+		boolean isSystemDarkMode = nightModeFlags == Configuration.UI_MODE_NIGHT_YES;
+		boolean isAppDarkMode = nightMode == AppCompatDelegate.MODE_NIGHT_YES;
+		boolean isFollowSystem = nightMode == AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM;
+		return isAppDarkMode || (isFollowSystem && isSystemDarkMode);
+	}
+
+	private void BlackMode() {
+		String js =
+				"document.lastElementChild.appendChild(document.createElement('style')).textContent = '" +
+						"html, body { background-color: #121212; color: #e0e0e0; }" + // 黑灰色背景，亮灰色文字
+						"table { border-collapse: collapse; width: 100%; border: 1px solid #ffffff; }" + // 白色框線
+						"td, th { border: 1px solid #ffffff; padding: 8px; text-align: center; color: #e0e0e0; }" + // 白色框線，亮灰色文字
+						"a { color: #DFA909; }" + // 連結文字顏色變成暗黃色
+						"a:hover { color: #FFC107; }'"; // 連結懸停狀態顏色變為暗黃色
+		Web_Class_Schedule.evaluateJavascript(js, null);
+	}
+
 
 	private int getDayIndex(String day) {
 		switch (day) {

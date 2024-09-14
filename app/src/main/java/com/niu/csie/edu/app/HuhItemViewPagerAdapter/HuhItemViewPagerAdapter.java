@@ -79,9 +79,18 @@ public class HuhItemViewPagerAdapter extends PagerAdapter {
                 break;
             case 2:
                 if (pagePosition == 0) {
-                    titleTextView.setText(context.getString(R.string.Class_Schedule_Page_0_1_Title));
+                    titleTextView.setText(context.getString(R.string.Class_Schedule_Page_0_1_Title));/*
                     imageView.setImageDrawable(context.getDrawable(R.drawable.frame_class_schedule_001));
                     messageTextView.setText(context.getString(R.string.Class_Schedule_Page_0_1_Message));
+                } else if (pagePosition == 1) {
+                    titleTextView.setText(context.getString(R.string.Class_Schedule_Page_1_1_Title));
+                    imageView.setImageDrawable(context.getDrawable(R.drawable.frame_class_schedule_002));
+                    messageTextView.setText(context.getString(R.string.Class_Schedule_Page_1_1_Message));
+                }
+                else if (pagePosition == 2) {
+                    titleTextView.setText(context.getString(R.string.Class_Schedule_Page_2_1_Title));*/
+                    imageView.setImageDrawable(context.getDrawable(R.drawable.frame_class_schedule_003));
+                    messageTextView.setText(context.getString(R.string.Class_Schedule_Page_2_1_Message));
                 }
                 break;
             case 3:

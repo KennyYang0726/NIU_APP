@@ -444,13 +444,14 @@ public class Activity0_LoginActivity extends AppCompatActivity {
 						});
 
 			}
+			/*
 			@Override
 			public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
 				super.onReceivedError(view, request, error);
 				// 處理網路錯誤
 				if (!PageFinished)
 					showMessage(getResources().getString(R.string.Net_ERR));
-			}
+			}*/
 		});
 
 		expand(Anim_Linear); // 展開Linear

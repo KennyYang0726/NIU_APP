@@ -17,13 +17,32 @@
 			android:layout_width="match_parent"
 			android:layout_height="?attr/actionBarSize"
 			android:background="?attr/colorPrimary"
-			app:popupTheme="@style/AppTheme.PopupOverlay" />
+			app:popupTheme="@style/AppTheme.PopupOverlay">
+			<Button
+				android:id="@+id/button_appbar"
+				android:layout_width="wrap_content"
+				android:layout_height="31dp"
+				android:layout_gravity="end"
+				android:layout_marginRight="11dp"
+				android:background="@drawable/rounded_button"
+				android:visibility="gone"
+				android:textAllCaps="false"
+				android:textColor="@color/white"
+				android:textSize="13sp"
+				android:text="@string/AppBar_BTN_Web" />
+		</androidx.appcompat.widget.Toolbar>
 	</com.google.android.material.appbar.AppBarLayout>
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:orientation="vertical"
 		app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+		<WebView
+			android:id="@+id/web_class_schedule"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:visibility="gone"/>
 
 		<HorizontalScrollView
 			android:layout_width="match_parent"
@@ -57,43 +76,43 @@
 								android:layout_width="wrap_content"
 								android:layout_weight="1" />
 							<TextView
-								android:text="   一   "
+								android:text="@string/Mon"
 								android:gravity="center"
 								android:background="@drawable/event_detail_table_cell_right_border"
 								android:layout_width="wrap_content"
 								android:layout_weight="3" />
 							<TextView
-								android:text="   二   "
+								android:text="@string/Tue"
 								android:gravity="center"
 								android:background="@drawable/event_detail_table_cell_right_border"
 								android:layout_width="wrap_content"
 								android:layout_weight="3" />
 							<TextView
-								android:text="   三   "
+								android:text="@string/Wed"
 								android:gravity="center"
 								android:background="@drawable/event_detail_table_cell_right_border"
 								android:layout_width="wrap_content"
 								android:layout_weight="3" />
 							<TextView
-								android:text="   四   "
+								android:text="@string/Thu"
 								android:gravity="center"
 								android:background="@drawable/event_detail_table_cell_right_border"
 								android:layout_width="wrap_content"
 								android:layout_weight="3" />
 							<TextView
-								android:text="   五   "
+								android:text="@string/Fri"
 								android:gravity="center"
 								android:background="@drawable/event_detail_table_cell_right_border"
 								android:layout_width="wrap_content"
 								android:layout_weight="3" />
 							<TextView
-								android:text="   六   "
+								android:text="@string/Sat"
 								android:gravity="center"
 								android:background="@drawable/event_detail_table_cell_right_border"
 								android:layout_width="wrap_content"
 								android:layout_weight="3" />
 							<TextView
-								android:text="   日   "
+								android:text="@string/Sun"
 								android:gravity="center"
 								android:layout_width="wrap_content"
 								android:layout_weight="3" />
@@ -106,7 +125,7 @@
 								android:background="@drawable/event_detail_table_cell_right_border"
 								android:layout_width="wrap_content"
 								android:layout_weight="1"
-								android:text="特早課\n07:10\n|\n08:00" />
+								android:text="@string/ClassSchedule0" />
 							<TextView
 								android:gravity="center"
 								android:layout_width="wrap_content"
@@ -156,7 +175,7 @@
 								android:background="@drawable/event_detail_table_cell_right_border"
 								android:layout_width="wrap_content"
 								android:layout_weight="1"
-								android:text="第一節\n08:10\n|\n09:00" />
+								android:text="@string/ClassSchedule1" />
 							<TextView
 								android:gravity="center"
 								android:layout_width="wrap_content"
@@ -206,7 +225,7 @@
 								android:background="@drawable/event_detail_table_cell_right_border"
 								android:layout_width="wrap_content"
 								android:layout_weight="1"
-								android:text="第二節\n09:10\n|\n10:00" />
+								android:text="@string/ClassSchedule2" />
 							<TextView
 								android:gravity="center"
 								android:layout_width="wrap_content"
@@ -256,7 +275,7 @@
 								android:background="@drawable/event_detail_table_cell_right_border"
 								android:layout_width="wrap_content"
 								android:layout_weight="1"
-								android:text="第三節\n10:10\n|\n11:00" />
+								android:text="@string/ClassSchedule3" />
 							<TextView
 								android:gravity="center"
 								android:layout_width="wrap_content"
@@ -306,7 +325,7 @@
 								android:background="@drawable/event_detail_table_cell_right_border"
 								android:layout_width="wrap_content"
 								android:layout_weight="1"
-								android:text="第四節\n11:10\n|\n12:00" />
+								android:text="@string/ClassSchedule4" />
 							<TextView
 								android:gravity="center"
 								android:layout_width="wrap_content"
@@ -356,7 +375,7 @@
 								android:background="@drawable/event_detail_table_cell_right_border"
 								android:layout_width="wrap_content"
 								android:layout_weight="1"
-								android:text="第五節\n13:10\n|\n14:00" />
+								android:text="@string/ClassSchedule5" />
 							<TextView
 								android:gravity="center"
 								android:layout_width="wrap_content"
@@ -406,7 +425,7 @@
 								android:background="@drawable/event_detail_table_cell_right_border"
 								android:layout_width="wrap_content"
 								android:layout_weight="1"
-								android:text="第六節\n14:10\n|\n15:00" />
+								android:text="@string/ClassSchedule6" />
 							<TextView
 								android:gravity="center"
 								android:layout_width="wrap_content"
@@ -456,7 +475,7 @@
 								android:background="@drawable/event_detail_table_cell_right_border"
 								android:layout_width="wrap_content"
 								android:layout_weight="1"
-								android:text="第七節\n15:10\n|\n16:00" />
+								android:text="@string/ClassSchedule7" />
 							<TextView
 								android:gravity="center"
 								android:layout_width="wrap_content"
@@ -506,7 +525,7 @@
 								android:background="@drawable/event_detail_table_cell_right_border"
 								android:layout_width="wrap_content"
 								android:layout_weight="1"
-								android:text="第八節\n16:10\n|\n17:00" />
+								android:text="@string/ClassSchedule8" />
 							<TextView
 								android:gravity="center"
 								android:layout_width="wrap_content"
@@ -556,7 +575,7 @@
 								android:background="@drawable/event_detail_table_cell_right_border"
 								android:layout_width="wrap_content"
 								android:layout_weight="1"
-								android:text="第九節\n17:10\n|\n18:00" />
+								android:text="@string/ClassSchedule9" />
 							<TextView
 								android:gravity="center"
 								android:layout_width="wrap_content"
@@ -606,7 +625,7 @@
 								android:background="@drawable/event_detail_table_cell_right_border"
 								android:layout_width="wrap_content"
 								android:layout_weight="1"
-								android:text="第A節\n18:20\n|\n19:10" />
+								android:text="@string/ClassScheduleA" />
 							<TextView
 								android:gravity="center"
 								android:layout_width="wrap_content"
@@ -656,7 +675,7 @@
 								android:background="@drawable/event_detail_table_cell_right_border"
 								android:layout_width="wrap_content"
 								android:layout_weight="1"
-								android:text="第B節\n19:15\n|\n20:05" />
+								android:text="@string/ClassScheduleB" />
 							<TextView
 								android:gravity="center"
 								android:layout_width="wrap_content"
@@ -706,7 +725,7 @@
 								android:background="@drawable/event_detail_table_cell_right_border"
 								android:layout_width="wrap_content"
 								android:layout_weight="1"
-								android:text="第C節\n20:10\n|\n21:00" />
+								android:text="@string/ClassScheduleC" />
 							<TextView
 								android:gravity="center"
 								android:layout_width="wrap_content"
@@ -756,7 +775,7 @@
 								android:background="@drawable/event_detail_table_cell_right_border"
 								android:layout_width="wrap_content"
 								android:layout_weight="1"
-								android:text="第D節\n21:05\n|\n21:55" />
+								android:text="@string/ClassScheduleD" />
 							<TextView
 								android:gravity="center"
 								android:layout_width="wrap_content"
@@ -806,12 +825,6 @@
 			</ScrollView>
 		</HorizontalScrollView>
 
-
-		
-		<WebView
-			android:id="@+id/web_class_schedule"
-			android:layout_width="1dp"
-			android:layout_height="1dp" />
 	</LinearLayout>
 
 	<FrameLayout
