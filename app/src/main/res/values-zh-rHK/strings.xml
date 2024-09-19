@@ -30,6 +30,11 @@
     <string name="WebViewDev_Message2" translatable="false">屢次遇到該狀況？\n若確認網路狀態是ok的，卻仍屢次出現此訊息，表示您裝置預設WebView實作出了點問題，請選擇底下選項，看看是否解決問題。\n當然也可能是您閒置時間過長導致，若是此原因，可忽略此提示訊息，重新登入即可。</string>
     <string name="WebViewDev_Btn1" translatable="false">下載安裝WebDev</string>
     <string name="WebViewDev_Btn2" translatable="false">更新WebView</string>
+    <string name="App_Update_Ver" translatable="false">版本：</string>
+    <string name="App_Update_Btn0" translatable="false">忽略</string>
+    <string name="App_Update_Btn1" translatable="false">更新</string>
+    <string name="App_Update_Btn1_Download" translatable="false">下載更新</string>
+    <string name="App_Update_Btn1_Install" translatable="false">安裝更新</string>
     <!-- 主頁 drawer -->
     <string name="HomePage" translatable="false">首頁</string>
     <string name="Announcement" translatable="false">公告</string>

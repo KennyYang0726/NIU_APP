@@ -76,7 +76,7 @@
                         android:layout_width="300dp"
                         android:layout_height="240dp"
                         android:gravity="center_horizontal|top"
-                        android:background="@color/custom_dialog_bg"
+                        android:background="@drawable/app_update_main_bgd1"
                         android:orientation="vertical"
                         android:translationY="-350.0dp">
 
@@ -102,7 +102,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
                                 android:padding="8dp"
-                                android:text="版本："
                                 android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/text_color" />
@@ -139,12 +138,13 @@
                                     android:id="@+id/bt01"
                                     android:layout_width="130dp"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:padding="8dp"
                                     android:background="@android:color/transparent"
-                                    android:text="離開"
+                                    android:text="@string/App_Update_Btn0"
+                                    android:textAllCaps="false"
                                     android:textSize="17sp"
-                                    android:textColor="@color/text_color"
-                                    android:layout_weight="1" />
+                                    android:textColor="@color/text_color" />
                                 <LinearLayout
                                     android:id="@+id/linear02"
                                     android:layout_width="15dp"
@@ -155,12 +155,13 @@
                                     android:id="@+id/bt02"
                                     android:layout_width="130dp"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:padding="8dp"
                                     android:background="@android:color/transparent"
-                                    android:text="更新"
+                                    android:text="@string/App_Update_Btn1"
+                                    android:textAllCaps="false"
                                     android:textSize="17sp"
-                                    android:textColor="@color/text_color"
-                                    android:layout_weight="1" />
+                                    android:textColor="@color/text_color" />
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>

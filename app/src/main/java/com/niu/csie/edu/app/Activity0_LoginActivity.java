@@ -9,6 +9,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -218,9 +219,9 @@ public class Activity0_LoginActivity extends AppCompatActivity {
 
 
 		// 取得app資訊 (版本, 版本號)
-		android.content.pm.PackageInfo pinfo = null;
+		PackageInfo pinfo = null;
 		try {
-			pinfo = getPackageManager().getPackageInfo("com.niu.csie.edu.app", android.content.pm.PackageManager.GET_ACTIVITIES);
+			pinfo = getPackageManager().getPackageInfo("com.niu.csie.edu.app", PackageManager.GET_ACTIVITIES);
 			app_ver = pinfo.versionName;
 		} catch (PackageManager.NameNotFoundException e) {
 			throw new RuntimeException(e);
@@ -1035,15 +1036,18 @@ public class Activity0_LoginActivity extends AppCompatActivity {
 		LinearLayout main_bgd1 = convertView.findViewById(R.id.main_bgd1);
 		TextView ttext01 = convertView.findViewById(R.id.ttext01);
 		TextView ttext03 = convertView.findViewById(R.id.ttext03);
-		ttext03.setText("版本："+ app_lastest_ver);
+		ttext03.setText(getResources().getString(R.string.App_Update_Ver) + app_lastest_ver);
 		Button bt01 = convertView.findViewById(R.id.bt01);
 		Button bt02 = convertView.findViewById(R.id.bt02);
 
-		if(FileUtil.isExistFile("/storage/emulated/0/Android/data/com.niu.csie.edu.app/files/" + app_lastest_ver + ".apk")){
-			bt02.setText("安裝更新");
-		} else {
-			bt02.setText("下載更新");
+		if (!IsFromPlayStore) {
+			if (FileUtil.isExistFile("/storage/emulated/0/Android/data/com.niu.csie.edu.app/files/" + app_lastest_ver + ".apk")){
+				bt02.setText(getResources().getString(R.string.App_Update_Btn1_Install));
+			} else {
+				bt02.setText(getResources().getString(R.string.App_Update_Btn1_Download));
+			}
 		}
+
 		db.setCancelable(false);
 		ObjectAnimator anim = ObjectAnimator.ofFloat(ttext01, "Alpha", 0, 1);
 		anim.setDuration(8000);
@@ -1064,7 +1068,10 @@ public class Activity0_LoginActivity extends AppCompatActivity {
 		bt01.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _view) {
-				finishAffinity();
+				// finishAffinity();
+				Intent page = new Intent(Activity0_LoginActivity.this, Activity1_HomeActivity.class);
+				startActivity(page);
+				overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 			}
 		});
 		bt02.setOnClickListener(new View.OnClickListener() {
@@ -1095,9 +1102,8 @@ public class Activity0_LoginActivity extends AppCompatActivity {
 
 			}
 		});
-		Shape(0, 0, 30, 30, R.color.custom_dialog_bg, 0, R.color.custom_dialog_bg, 0, main_bgd1, getApplicationContext());
-		Shape(20, 20, 20, 20, R.color.app_update_btn, 6, R.color.black, 6, bt01, getApplicationContext());
-		Shape(20, 20, 20, 20, R.color.app_update_btn, 6, R.color.black, 6, bt02, getApplicationContext());
+		Shape(20, 20, 20, 20, R.color.app_update_btn, 5, R.color.black, 5, bt01, getApplicationContext());
+		Shape(20, 20, 20, 20, R.color.app_update_btn, 5, R.color.black, 5, bt02, getApplicationContext());
 		db.show();
 	}
 

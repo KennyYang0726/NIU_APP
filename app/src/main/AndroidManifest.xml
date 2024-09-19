@@ -31,6 +31,7 @@
             android:name=".Activity0_LoginActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="true"
+            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
             android:supportsPictureInPicture="true">
@@ -44,6 +45,7 @@
             android:name=".Activity1_HomeActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
+            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
             android:supportsPictureInPicture="true" />
@@ -51,6 +53,7 @@
             android:name=".Activity1_HuhViewPagerActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
+            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
             android:supportsPictureInPicture="true" />
@@ -58,6 +61,7 @@
             android:name=".Activity1_QuestionnaireActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
+            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
             android:supportsPictureInPicture="true" />
@@ -65,6 +69,7 @@
             android:name=".Activity2_EUNI"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
+            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
             android:supportsPictureInPicture="true" />
@@ -72,6 +77,7 @@
             android:name=".Activity2_EUNI2"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
+            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
             android:supportsPictureInPicture="true" />
@@ -79,6 +85,7 @@
             android:name=".Activity3_Score_Inquiry"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
+            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
             android:supportsPictureInPicture="true" />
@@ -86,6 +93,7 @@
             android:name=".Activity4_My_Class_Schedule"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
+            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
             android:supportsPictureInPicture="true" />
@@ -93,6 +101,7 @@
             android:name=".Activity5_Event_Registration"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
+            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
             android:supportsPictureInPicture="true" />
@@ -100,6 +109,7 @@
             android:name=".Activity6_Contact_Us"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
+            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
             android:supportsPictureInPicture="true" />
@@ -107,6 +117,7 @@
             android:name=".Activity7_Graduation_Threshold"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
+            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
             android:supportsPictureInPicture="true" />
@@ -114,6 +125,7 @@
             android:name=".Activity8_Subject_System"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
+            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
             android:supportsPictureInPicture="true" />
@@ -121,6 +133,7 @@
             android:name=".Activity9_Bus"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
+            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
             android:supportsPictureInPicture="true" />
@@ -128,6 +141,7 @@
             android:name=".Activity10_Zuvio"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
+            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
             android:supportsPictureInPicture="true" />
@@ -135,6 +149,7 @@
             android:name=".Activity10_ChooseLocation"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
+            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
             android:supportsPictureInPicture="true" />
@@ -142,6 +157,7 @@
             android:name=".Activity11_Take_Leave"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
+            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
             android:supportsPictureInPicture="true" />

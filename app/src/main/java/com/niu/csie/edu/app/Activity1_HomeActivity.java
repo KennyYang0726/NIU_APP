@@ -356,7 +356,7 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-				if (!CreateChooseThemeSpinner || Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
+				if (!CreateChooseThemeSpinner) {
 					showDialogRestart();
 				}
 
@@ -1281,12 +1281,12 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 									{24.676150, 121.769659, 250}, // 羅東
 									{24.745119, 121.724427, 190}, // 員山
 									{24.634899, 121.792794, 200}, // 冬山
-									{24.830381, 121.786570, 310}, // 礁溪
-									{24.788901, 121.756742, 60}, // 礁溪澤蘭宮
-									{24.669425, 121.653343, 100}, // 三星
+									{24.830015, 121.784825, 370}, // 礁溪
+									{24.788901, 121.756742, 110}, // 礁溪澤蘭宮
+									{24.669425, 121.653343, 100}, // 三星 (座標可能有誤)
 									{24.855386, 121.821405, 230}, // 頭城 (座標可能有誤)
 									{24.661063, 121.760875, 600}, // 清溝
-									{24.644374, 121.832876, 100}, // 頂寮路 (座標可能有誤)
+									{24.644374, 121.832876, 100}, // 頂寮路
 									{24.593593, 121.841677, 230}, // 蘇澳 (座標可能有誤)
 									{24.617340, 121.838315, 100}, // 馬賽
 									{24.584273, 121.865151, 100}, // 南方澳
@@ -1354,9 +1354,9 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 
 	private boolean checkDayOfWeek(int index, String currentDayOfWeek) {
 		switch (index) {
-			case 0: // 員山
+			case 0: // 東門
 				return true;
-			case 1: // 員山
+			case 1: // 羅東
 				return true;
 			case 2: // 員山
 				return currentDayOfWeek.equals("4");

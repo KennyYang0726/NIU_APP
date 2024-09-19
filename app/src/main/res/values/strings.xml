@@ -30,6 +30,11 @@
 	<string name="WebViewDev_Message2" translatable="false">Encountered this situation repeatedly？\nIf you confirm that the network status is ok but still show this dialog repeatedly, means there may be some problem with the default WebView implementation of your device. Please select the option below to see if the problem is solved.\nOf course it may also be caused by your inactivity for too long. If this is the case, you can ignore this prompt message and log in again.</string>
 	<string name="WebViewDev_Btn1" translatable="false">Install\nWebDev</string>
 	<string name="WebViewDev_Btn2" translatable="false">Update\nWebView</string>
+	<string name="App_Update_Ver" translatable="false">Version:&#160;</string>
+	<string name="App_Update_Btn0" translatable="false">Ignore</string>
+	<string name="App_Update_Btn1" translatable="false">Update</string>
+	<string name="App_Update_Btn1_Download" translatable="false">Download\nUpdate</string>
+	<string name="App_Update_Btn1_Install" translatable="false">Install\nUpdate</string>
 	<!-- 主頁 drawer -->
 	<string name="HomePage" translatable="false">Home</string>
 	<string name="Announcement" translatable="false">Announcement</string>
