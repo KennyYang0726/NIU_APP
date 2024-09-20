@@ -125,6 +125,7 @@ public class Activity5_Event_Registration_Fragment1 extends Fragment implements 
                 "    var count = document.querySelector('.col-md-11.col-md-offset-1.col-sm-10.col-xs-12.col-xs-offset-0').querySelectorAll('.row.enr-list-sec').length;" +
                 "    for(let i=0; i<count; i++) {" +
                 "        let row = document.querySelectorAll('.row.enr-list-sec')[i];" +
+                "        let dialog = row.querySelector('.table');" + // 活動詳情 Dialog 父容器
                 "        let name = row.querySelector('h3').innerText.trim();" + // 名稱
                 "        let department = row.querySelector('.col-sm-3.text-center.enr-list-dep-nam.hidden-xs').title.split('：')[1].trim();" + // 主辦單位
                 "        let state = row.querySelector('.badge.alert-danger').innerText.trim();" + // 報名狀態
@@ -135,10 +136,11 @@ public class Activity5_Event_Registration_Fragment1 extends Fragment implements 
                 "        let eventTime = row.querySelector('.fa-calendar').parentElement.innerText.replace(/\\s+/g,'').replace('~','起\\n')+'止'.trim();" + // 活動時間
                 "        let eventLocation = row.querySelector('.fa-map-marker').parentElement.innerText.trim();" + // 活動地點
                 "        let eventRegisterTime = row.querySelector('.table').querySelectorAll('tr')[9].querySelectorAll('td')[1].textContent.replace(/\\s+/g,'').replace('~','起\\n')+'止'.trim();" + // 報名時間
+                "        let eventType = dialog.querySelectorAll('tr')[8].querySelectorAll('td')[1].textContent.replace(/\\s+/g,'').replace('<br>','\\n').replace('已認證，','').replace('\"','').trim();" +  // 多元認證
                 "        let eventPeople = row.querySelector('.fa-user-plus').parentElement.innerText.replace(/\\s+/g,'').replace('，','人\\n')+'人'.trim();" + // 報名人數
                 //"        console.log(eventRegisterTime);" +
                 //"        let eventDescription = row.querySelector('.small.hidden-xs').innerText.trim();" +
-                "        data[i-skip] = {name, department, state, eventSerialID, eventTime, eventLocation, eventRegisterTime, eventPeople};" +
+                "        data[i-skip] = {name, department, state, eventSerialID, eventTime, eventLocation, eventRegisterTime, eventType, eventPeople};" +
                 "    }" +
                 "    return data; " +
                 "})();";

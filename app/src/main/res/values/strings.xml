@@ -275,6 +275,7 @@
 	<string name="Event_Remark" translatable="false">&#160;Remarks&#160;</string>
 	<string name="Event_factor_authentication" translatable="false">&#160;DiverseHours&#160;</string>
 	<string name="Event_RegisterTime" translatable="false">&#160;RegisterTime&#160;</string>
+	<string name="Event_Type" translatable="false">&#160;Multi-factor&#160;</string>
 	<string name="Event_People" translatable="false">&#160;Applicants&#160;</string>
 	<string name="Event_People2" translatable="false">&#160;Status&#160;</string>
 	<string name="Event_Mail_Title" translatable="false">Hello, I have something to ask</string>

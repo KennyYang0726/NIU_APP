@@ -12,8 +12,8 @@ android {
         applicationId "com.niu.csie.edu.app"
         minSdk 24
         targetSdk 35
-        versionCode 13
-        versionName "1.0.3"
+        versionCode 14
+        versionName "1.0.4"
         //ndk {
             // noinspection ChromeOsAbiSupport
             //abiFilters "arm64-v8a", "armeabi-v7a", "x86" // 只包含所需的 ABI
@@ -50,7 +50,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-appcheck-playintegrity:18.0.0'
     implementation 'com.google.firebase:firebase-auth:23.0.0'
     implementation 'com.google.android.gms:play-services-location:15.0.1'
-    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    implementation 'com.github.mhiew:android-pdf-viewer:3.2.0-beta.1'
     implementation 'com.jakewharton.threetenabp:threetenabp:1.3.1' // 計算時間
     implementation 'com.tbuonomo:dotsindicator:4.2' // ViewPager 底下那個
     implementation 'com.squareup.okhttp3:okhttp:4.9.0'

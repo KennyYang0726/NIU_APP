@@ -1249,7 +1249,11 @@ public class Activity1_HomeActivity extends AppCompatActivity implements LoginMa
 	@SuppressLint("VisibleForTests")
 	private void CheckIfInNightMarket() {
 		if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-			showMessage(getResources().getString(R.string.Achievements_11_showMessage2));
+			// 僅顯示一次，寫入檔案後不再顯示
+			if (!FileUtil.isExistFile("/data/user/0/com.niu.csie.edu.app/Don't Show Again Location Permission")) {
+				showMessage(getResources().getString(R.string.Achievements_11_showMessage2));
+				FileUtil.writeFile("/data/user/0/com.niu.csie.edu.app/Don't Show Again Location Permission", "");
+			}
 		} else {
 			// LocationRequest 以設定位置請求參數
 			LocationRequest locationRequest = LocationRequest.create();

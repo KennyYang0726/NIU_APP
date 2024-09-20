@@ -237,6 +237,38 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:src="@drawable/ic_event_type" />
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center"
+                    android:gravity="left"
+                    android:text="@string/Event_Type"
+                    android:textColor="@color/text_color"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/textView_Event_Type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="窩不知道"
+                    android:textColor="@color/text_color"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginBottom="3dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:src="@drawable/ic_event_people" />
                 <TextView
                     android:layout_width="129dp"

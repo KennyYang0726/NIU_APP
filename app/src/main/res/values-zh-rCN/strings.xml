@@ -275,6 +275,7 @@
     <string name="Event_Remark" translatable="false">&#160;備註&#160;</string>
     <string name="Event_factor_authentication" translatable="false">&#160;多元認證&#160;</string>
     <string name="Event_RegisterTime" translatable="false">&#160;報名時間&#160;</string>
+    <string name="Event_Type" translatable="false">&#160;多元認證&#160;</string>
     <string name="Event_People" translatable="false">&#160;報名人數&#160;</string>
     <string name="Event_People2" translatable="false">&#160;報名狀態&#160;</string>
     <string name="Event_Mail_Title" translatable="false">您好，我有些事情想詢問</string>

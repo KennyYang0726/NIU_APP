@@ -79,6 +79,7 @@ public class Event_Registration_Fragment1Adapter extends BaseAdapter {
             holder.textViewEventTime = convertView.findViewById(R.id.textView_Event_Time);
             holder.textViewEventLocation = convertView.findViewById(R.id.textView_Event_Location);
             holder.textViewEventRegisterTime = convertView.findViewById(R.id.textView_Event_RegisterTime);
+            holder.textViewEventType = convertView.findViewById(R.id.textView_Event_Type);
             holder.textViewEventPeople = convertView.findViewById(R.id.textView_Event_People);
             holder.btnRegister = convertView.findViewById(R.id.btn_register);
             convertView.setTag(holder);
@@ -117,6 +118,7 @@ public class Event_Registration_Fragment1Adapter extends BaseAdapter {
             holder.textViewEventTime.setText(event.getString("eventTime"));
             holder.textViewEventLocation.setText(event.getString("eventLocation"));
             holder.textViewEventRegisterTime.setText(event.getString("eventRegisterTime"));
+            holder.textViewEventType.setText(event.getString("eventType"));
             holder.textViewEventPeople.setText(event.getString("eventPeople"));
 
             holder.btnRegister.setOnClickListener(v -> {
@@ -217,6 +219,7 @@ public class Event_Registration_Fragment1Adapter extends BaseAdapter {
         TextView textViewEventTime;
         TextView textViewEventLocation;
         TextView textViewEventRegisterTime;
+        TextView textViewEventType;
         TextView textViewEventPeople;
         Button btnRegister;
     }
