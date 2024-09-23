@@ -1,7 +1,13 @@
 package com.niu.csie.edu.app;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -18,6 +24,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -43,7 +50,7 @@ public class Activity5_Event_Registration_Fragment1 extends Fragment implements 
     private View ProgressOverlay;
 
     /**Components*/
-
+    private AlertDialog DialogEventDetail;
 
     /**Variable*/
     private String url_bottom = "https://ccsys.niu.edu.tw/MvcTeam/Act";
@@ -105,6 +112,11 @@ public class Activity5_Event_Registration_Fragment1 extends Fragment implements 
     }
 
     @Override
+    public void onDetailButtonClick(String name, String ID, String time, String location, String detail, String department, String contactInfoName, String contactInfoTel, String contactInfoMail, String Related_links, String Remark, String Multi_factor_authentication, String eventRegisterTime) {
+        showDetailDialog(name, ID, time, location, detail, department, contactInfoName, contactInfoTel, contactInfoMail, Related_links, Remark, Multi_factor_authentication, eventRegisterTime);
+    }
+
+    @Override
     public void onRegisterButtonClick(String eventID) {
         // Call the method you want to execute and pass the eventID
         RegisterEvent(eventID);
@@ -136,11 +148,24 @@ public class Activity5_Event_Registration_Fragment1 extends Fragment implements 
                 "        let eventTime = row.querySelector('.fa-calendar').parentElement.innerText.replace(/\\s+/g,'').replace('~','起\\n')+'止'.trim();" + // 活動時間
                 "        let eventLocation = row.querySelector('.fa-map-marker').parentElement.innerText.trim();" + // 活動地點
                 "        let eventRegisterTime = row.querySelector('.table').querySelectorAll('tr')[9].querySelectorAll('td')[1].textContent.replace(/\\s+/g,'').replace('~','起\\n')+'止'.trim();" + // 報名時間
-                "        let eventType = dialog.querySelectorAll('tr')[8].querySelectorAll('td')[1].textContent.replace(/\\s+/g,'').replace('<br>','\\n').replace('已認證，','').replace('\"','').trim();" +  // 多元認證
+
+
+
+                "        let eventDetail = dialog.querySelectorAll('tr')[3].querySelectorAll('td')[1].textContent.replace(/\\s+/g,'').replace('<br>','\\n').replace('\"','').trim();" + // 活動說明
+                "        let contactInfoText = dialog.querySelectorAll('tr')[5].querySelectorAll('td')[1].innerHTML;" + // 聯絡資訊(3項)
+                "        let contactInfos = contactInfoText.split('<br>').map(function(info) {" +
+                "            return info.replace(/<[^>]*>/g,'').trim();" +
+                "        });" + // 以 [index] 抓取3項資訊
+                "        let Related_links = dialog.querySelectorAll('tr')[6].querySelectorAll('td')[1].textContent.replace(/\\s+/g,'').trim();" + // 相關連結
+                "        let Remark = dialog.querySelectorAll('tr')[7].querySelectorAll('td')[1].textContent.replace(/\\s+/g,'').replace('<br>','\\n').replace('\"','').trim();" + // 備註
+
+
+
+                "        let Multi_factor_authentication = dialog.querySelectorAll('tr')[8].querySelectorAll('td')[1].textContent.replace(/\\s+/g,'').replace('<br>','\\n').replace('已認證，','').replace('\"','').trim();" +  // 多元認證
                 "        let eventPeople = row.querySelector('.fa-user-plus').parentElement.innerText.replace(/\\s+/g,'').replace('，','人\\n')+'人'.trim();" + // 報名人數
                 //"        console.log(eventRegisterTime);" +
                 //"        let eventDescription = row.querySelector('.small.hidden-xs').innerText.trim();" +
-                "        data[i-skip] = {name, department, state, eventSerialID, eventTime, eventLocation, eventRegisterTime, eventType, eventPeople};" +
+                "        data[i-skip] = {name, department, state, eventSerialID, eventTime, eventLocation, eventRegisterTime, eventDetail, contactInfoName: contactInfos[0], contactInfoTel: contactInfos[1], contactInfoMail: contactInfos[2], Related_links, Remark, Multi_factor_authentication, eventPeople};" +
                 "    }" +
                 "    return data; " +
                 "})();";
@@ -167,6 +192,82 @@ public class Activity5_Event_Registration_Fragment1 extends Fragment implements 
             }
         });
     }
+
+
+    // 顯示活動詳情 Dialog
+    private void showDetailDialog(String name, String ID, String time, String location, String detail, String department, String contactInfoName, String contactInfoTel, String contactInfoMail, String Related_links, String Remark, String Multi_factor_authentication, String eventRegisterTime) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogTheme);
+        LayoutInflater inflater = LayoutInflater.from(getContext());
+        View view = inflater.inflate(R.layout.custom_alert_dialog_event_detail, null);
+        builder.setView(view);
+        ((TextView) view.findViewById(R.id.textTitle)).setText(name);
+        ((TextView) view.findViewById(R.id.text_EventID)).setText(ID);
+        ((TextView) view.findViewById(R.id.text_EventTime)).setText(time);
+        ((TextView) view.findViewById(R.id.text_EventLocation)).setText(location);
+        ((TextView) view.findViewById(R.id.text_EventDetail)).setText(detail);
+        ((TextView) view.findViewById(R.id.text_EventDepartment)).setText(department);
+        ((TextView) view.findViewById(R.id.text_EventContactInfoName)).setText(contactInfoName);
+        ((TextView) view.findViewById(R.id.text_EventContactInfoTel)).setText(contactInfoTel);
+        ((TextView) view.findViewById(R.id.text_EventContactInfoMail)).setText(contactInfoMail);
+        ((TextView) view.findViewById(R.id.text_EventLink)).setText(Related_links);
+        ((TextView) view.findViewById(R.id.text_EventRemark)).setText(Remark);
+        ((TextView) view.findViewById(R.id.text_Event_FactorAuthentication)).setText(Multi_factor_authentication);
+        ((TextView) view.findViewById(R.id.text_EventRegisterTime)).setText(eventRegisterTime);
+        // 可互動之 TextView
+        (view.findViewById(R.id.text_EventContactInfoTel)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(ClipData.newPlainText("clipboard", ((TextView) view.findViewById(R.id.text_EventContactInfoTel)).getText().toString()));
+            }
+        });
+        (view.findViewById(R.id.text_EventContactInfoMail)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendEmail(contactInfoMail, getString(R.string.Event_Mail_Title), getString(R.string.Event_Mail_Content));
+            }
+        });
+        (view.findViewById(R.id.text_EventLink)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Related_links.length() > 7) {
+                    Intent browser = new Intent(Intent.ACTION_VIEW, Uri.parse(Related_links));
+                    startActivity(browser);
+                }
+
+            }
+        });
+
+        builder.setCancelable(true);
+        DialogEventDetail = builder.create();
+
+        view.findViewById(R.id.buttonAction).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DialogEventDetail.dismiss();
+            }
+        });
+
+        if (DialogEventDetail.getWindow() != null){
+            DialogEventDetail.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+        }
+        DialogEventDetail.show();
+    }
+
+    private void sendEmail(String recipient, String subject, String body) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // 只允許處理郵件的應用程式
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[] { recipient });
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        intent.putExtra(Intent.EXTRA_TEXT, body);
+        try {
+            startActivity(intent);
+        } catch (Exception e) {
+            // 無 mail 程式
+            showMessage(getString(R.string.Event_Mail_CannotHandle));
+        }
+
+    }
+
 
     private void RegisterEvent(String EventID) {
 

@@ -40,6 +40,7 @@ public class Event_Registration_Fragment1Adapter extends BaseAdapter {
     }
 
     public interface OnRegisterButtonClickListener {
+        void onDetailButtonClick(String name, String ID, String time, String location, String detail, String department, String contactInfoName, String contactInfoTel, String contactInfoMail, String Related_links, String Remark, String Multi_factor_authentication, String eventRegisterTime);
         void onRegisterButtonClick(String eventID);
     }
 
@@ -81,6 +82,7 @@ public class Event_Registration_Fragment1Adapter extends BaseAdapter {
             holder.textViewEventRegisterTime = convertView.findViewById(R.id.textView_Event_RegisterTime);
             holder.textViewEventType = convertView.findViewById(R.id.textView_Event_Type);
             holder.textViewEventPeople = convertView.findViewById(R.id.textView_Event_People);
+            holder.btnDetail = convertView.findViewById(R.id.btn_detail);
             holder.btnRegister = convertView.findViewById(R.id.btn_register);
             convertView.setTag(holder);
 
@@ -94,7 +96,25 @@ public class Event_Registration_Fragment1Adapter extends BaseAdapter {
         JSONObject event = eventList.get(position);
         try {
             String state = event.getString("state");
+            String name = event.getString("name");
+            String ID = event.getString("eventSerialID");
+            String time = event.getString("eventTime");
+            String location = event.getString("eventLocation");
+            String department = event.getString("department");
+
+
+            String detail = event.getString("eventDetail");
+            String contactInfoName = event.getString("contactInfoName");
+            String contactInfoTel = event.getString("contactInfoTel");
+            String contactInfoMail = event.getString("contactInfoMail");
+            String Related_links = event.getString("Related_links");
+            String Remark = event.getString("Remark");
+
+
+            String Multi_factor_authentication = event.getString("Multi_factor_authentication");
+            String eventRegisterTime = event.getString("eventRegisterTime");
             String people = event.getString("eventPeople");
+
             if ("報名中".equals(state)) {
                 holder.textViewDetailProgress.setText(context.getString(R.string.Event_State_ok));
                 holder.textViewDetailProgress.setTextColor(context.getResources().getColor(R.color.Event_OK));
@@ -112,14 +132,21 @@ public class Event_Registration_Fragment1Adapter extends BaseAdapter {
                 holder.btnRegister.setVisibility(View.GONE);
             }
 
-            holder.textViewMain.setText(event.getString("name"));
-            holder.textViewSub.setText(event.getString("department"));
-            holder.textViewEventID.setText(event.getString("eventSerialID"));
-            holder.textViewEventTime.setText(event.getString("eventTime"));
-            holder.textViewEventLocation.setText(event.getString("eventLocation"));
-            holder.textViewEventRegisterTime.setText(event.getString("eventRegisterTime"));
-            holder.textViewEventType.setText(event.getString("eventType"));
-            holder.textViewEventPeople.setText(event.getString("eventPeople"));
+            holder.textViewMain.setText(name);
+            holder.textViewSub.setText(department);
+            holder.textViewEventID.setText(ID);
+            holder.textViewEventTime.setText(time);
+            holder.textViewEventLocation.setText(location);
+            holder.textViewEventRegisterTime.setText(eventRegisterTime);
+            holder.textViewEventType.setText(Multi_factor_authentication);
+            holder.textViewEventPeople.setText(people);
+
+            holder.btnDetail.setOnClickListener(v -> {
+                if (listener != null) {
+                    listener.onDetailButtonClick(name, ID, time, location, detail, department, contactInfoName, contactInfoTel, contactInfoMail, Related_links, Remark, Multi_factor_authentication, eventRegisterTime);
+                }
+
+            });
 
             holder.btnRegister.setOnClickListener(v -> {
                 if (listener != null && "報名中".equals(state)) {
@@ -221,6 +248,7 @@ public class Event_Registration_Fragment1Adapter extends BaseAdapter {
         TextView textViewEventRegisterTime;
         TextView textViewEventType;
         TextView textViewEventPeople;
+        Button btnDetail;
         Button btnRegister;
     }
 }

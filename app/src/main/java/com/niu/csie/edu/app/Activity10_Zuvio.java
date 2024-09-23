@@ -368,15 +368,14 @@ public class Activity10_Zuvio extends AppCompatActivity {
 	}
 
 	public void SetLocation(View view) {
-		if (isGpsEnabled()) {
-			showMessage(getResources().getString(R.string.Close_GPS_Tips));
-		} else {
+		if ((ContextCompat.checkSelfPermission(Activity10_Zuvio.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_DENIED) || !isGpsEnabled()) {
 			FileUtil.writeFile("/data/user/0/com.niu.csie.edu.app/Zuvio_url", now_zuvio_url);
 			page.setClass(getApplicationContext(), Activity10_ChooseLocation.class);
 			startActivity(page);
 			overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+		} else {
+			showMessage(getResources().getString(R.string.Close_GPS_Tips));
 		}
-
 	}
 
 

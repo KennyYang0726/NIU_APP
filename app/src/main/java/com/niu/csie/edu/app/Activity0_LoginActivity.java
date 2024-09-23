@@ -360,12 +360,10 @@ public class Activity0_LoginActivity extends AppCompatActivity {
 						sharedPreferences.edit().putString("Name", Name.replaceAll("\"", "")).apply(); //取出字為 "Name"
 						// 姓名存於 sp 後 ， 跳轉至 Home ， 通常動畫也結束了
 						if (Zuvio_Login && EUNI_Login && ACADE_Login && CCSYS_Login) {
+							// 中斷計時
+							isTimerCancelled = true;
+							handler.removeCallbacks(timeoutRunnable);
 							if (app_ver.equals(app_lastest_ver)) {
-
-								// 中斷計時
-								isTimerCancelled = true;
-								handler.removeCallbacks(timeoutRunnable);
-
 								Intent page = new Intent(Activity0_LoginActivity.this, Activity1_HomeActivity.class);
 								startActivity(page);
 								overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);

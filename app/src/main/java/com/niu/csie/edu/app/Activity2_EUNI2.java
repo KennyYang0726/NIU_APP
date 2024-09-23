@@ -49,14 +49,22 @@ public class Activity2_EUNI2 extends AppCompatActivity {
 
 	@Override
 	public void onBackPressed() {
-		if (!now_euni_url.equals(url_bottom)) {
-			Web_M園區.loadUrl(url_bottom);
+		if (!(now_euni_url == null || url_bottom == null)) {
+			if (!now_euni_url.equals(url_bottom)) {
+				Web_M園區.loadUrl(url_bottom);
+			} else {
+				super.onBackPressed();
+				page.setClass(getApplicationContext(), Activity2_EUNI.class);
+				startActivity(page);
+				overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+			}
 		} else {
 			super.onBackPressed();
 			page.setClass(getApplicationContext(), Activity2_EUNI.class);
 			startActivity(page);
 			overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
 		}
+
 	}
 
 	// 挑選檔案的 result 處理
