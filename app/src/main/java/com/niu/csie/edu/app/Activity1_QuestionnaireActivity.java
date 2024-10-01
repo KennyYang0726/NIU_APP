@@ -192,5 +192,10 @@ public class Activity1_QuestionnaireActivity extends AppCompatActivity {
 
 	}
 
+	public void WebView_Help(View view) {
+		Intent page = new Intent(getApplicationContext(), Activity_WebviewProvider.class);
+		startActivity(page);
+	}
+
 
 }

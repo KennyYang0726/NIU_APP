@@ -32,7 +32,14 @@ public class Activity5_Event_Registration extends AppCompatActivity {
 		initialize(_savedInstanceState);
 	}
 
-	
+	@Override
+	public void onBackPressed() {
+		super.onBackPressed();
+		page.setClass(getApplicationContext(), Activity1_HomeActivity.class);
+		startActivity(page);
+		overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+	}
+
 	private void initialize(Bundle _savedInstanceState) {
 		_toolbar = findViewById(R.id._toolbar);
 		setSupportActionBar(_toolbar);

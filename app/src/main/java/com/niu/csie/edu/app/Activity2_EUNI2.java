@@ -338,6 +338,11 @@ public class Activity2_EUNI2 extends AppCompatActivity {
 		}
 	}
 
+	public void WebView_Help(View view) {
+		Intent page = new Intent(getApplicationContext(), Activity_WebviewProvider.class);
+		startActivity(page);
+	}
+
 	private void showMessage(String s) {
 		Toast.makeText(getApplicationContext(), s, Toast.LENGTH_SHORT).show();
 	}

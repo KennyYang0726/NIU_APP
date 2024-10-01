@@ -91,8 +91,11 @@ public class Activity10_Zuvio extends AppCompatActivity {
 
 		// 初始化設置
 		Web_Zuvio.getSettings().setJavaScriptEnabled(true);
-		Web_Zuvio.setWebContentsDebuggingEnabled(true); //可編輯 html 成暗黑模式
-		Web_Zuvio.getSettings().setGeolocationEnabled(true); //可讀取 GPS
+		Web_Zuvio.setWebContentsDebuggingEnabled(true); // 可編輯 html 成暗黑模式
+		Web_Zuvio.getSettings().setGeolocationEnabled(true); // 可讀取 GPS
+		Web_Zuvio.getSettings().setDomStorageEnabled(true); // 啟用 DOM 存儲
+		Web_Zuvio.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+		Web_Zuvio.getSettings().setAllowFileAccess(true);
 
 		// 載入 URL
 		String Zuvio_url = "https://irs.zuvio.com.tw/student5/irs/index";
@@ -104,8 +107,7 @@ public class Activity10_Zuvio extends AppCompatActivity {
 				view.loadUrl(request.getUrl().toString());
 				return true; // 表示我們已經處理這個 URL，不需要再外部處理，eg: 跳轉外部瀏覽器
 			}
-		});
-		Web_Zuvio.setWebViewClient(new WebViewClient() {
+
 			@Override
 			public void onPageFinished(WebView view, String url) {
 				super.onPageFinished(view, url);
@@ -459,6 +461,11 @@ public class Activity10_Zuvio extends AppCompatActivity {
 			showMessage(getResources().getString(R.string.Close_GPS_Tips));
 		}
 		return true; // 返回 true 表示事件已處理
+	}
+
+	public void WebView_Help(View view) {
+		Intent page = new Intent(getApplicationContext(), Activity_WebviewProvider.class);
+		startActivity(page);
 	}
 
 

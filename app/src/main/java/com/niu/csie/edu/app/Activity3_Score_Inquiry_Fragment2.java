@@ -209,7 +209,7 @@ public class Activity3_Score_Inquiry_Fragment2 extends Fragment {
 
     //顯示等待中
     private void showProgressOverlay() {
-        if (ProgressOverlay != null) {
+        if (ProgressOverlay != null && getActivity() != null) {
             ProgressOverlay.setVisibility(View.VISIBLE);
             // 旋轉動畫
             ImageView loadingImage = ProgressOverlay.findViewById(R.id.loading_image);

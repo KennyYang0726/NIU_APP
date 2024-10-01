@@ -351,4 +351,13 @@
     <string name="Longitude" translatable="false">經度：</string>
     <string name="Latitude" translatable="false">緯度：</string>
     <string name="Cancel_Choose" translatable="false">取消選擇\n使用「格致大樓」</string>
+    <!-- Webview Provider -->
+    <string name="Webview_Provider_Title" translatable="false">網頁無法操作？</string>
+    <string name="Webview_Provider_Message" translatable="false">若您的畫面無法對網頁進行任何 操作/回饋，那是內建 WebView Provider 導致的bug，提供兩種解決方案。</string>
+    <string name="Webview_Provider_Title1" translatable="false">1. 更新/解除更新 內建 WebView Provider</string>
+    <string name="Webview_Provider_Message1" translatable="false">內建的 WebView Provider 說實在 bug 不少，很容易導致網頁鎖死，但若不想下載額外應用程式並更換 Provider，那麼只需從這裡 更新/解除更新 您的內建 Webview Provider。\n完成後需重新登入您的 宜大app。</string>
+    <string name="Webview_Provider_Btn1" translatable="false">更新/解除更新 內建\nWebView Provider</string>
+    <string name="Webview_Provider_Title2" translatable="false">2. 下載 beta 版 Webview Provider (推薦)</string>
+    <string name="Webview_Provider_Message2" translatable="false">此beta版本相較之下穩定性較好，下載完成後開啟，點擊右上角 "Change Provider"。\n切換完成需重新登入宜大app。</string>
+    <string name="Webview_Provider_Btn2" translatable="false">下載 beta 版\nWebview Provider</string>
 </resources>

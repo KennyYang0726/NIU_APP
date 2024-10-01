@@ -26,15 +26,14 @@
         android:roundIcon="@drawable/ic_launcher_round"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
         <activity
             android:name=".Activity0_LoginActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
-            android:supportsPictureInPicture="true">
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,122 +44,130 @@
             android:name=".Activity1_HomeActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
-            android:supportsPictureInPicture="true" />
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Activity1_HuhViewPagerActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
-            android:supportsPictureInPicture="true" />
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Activity1_QuestionnaireActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
-            android:supportsPictureInPicture="true" />
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Activity2_EUNI"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
-            android:supportsPictureInPicture="true" />
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Activity2_EUNI2"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
-            android:supportsPictureInPicture="true" />
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Activity3_Score_Inquiry"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
-            android:supportsPictureInPicture="true" />
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Activity4_My_Class_Schedule"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
-            android:supportsPictureInPicture="true" />
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Activity5_Event_Registration"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
-            android:supportsPictureInPicture="true" />
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Activity6_Contact_Us"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
-            android:supportsPictureInPicture="true" />
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Activity7_Graduation_Threshold"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
-            android:supportsPictureInPicture="true" />
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Activity8_Subject_System"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
-            android:supportsPictureInPicture="true" />
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Activity9_Bus"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
-            android:supportsPictureInPicture="true" />
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Activity10_Zuvio"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
-            android:supportsPictureInPicture="true" />
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Activity10_ChooseLocation"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
-            android:supportsPictureInPicture="true" />
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Activity11_Take_Leave"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
-            android:supportsPictureInPicture="true" />
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Activity_WebviewProvider"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="adjustResize" />
 
         <meta-data
             android:name="com.google.android.gms.version"
